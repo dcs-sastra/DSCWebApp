@@ -3,10 +3,10 @@ import './contact.css'
 const Contact = () =>
 {
     return (
-    <div style={{backgroundColor:"#f2eeed"}}>
+    <div style={{backgroundColor:"#c2c2a3"}}>
         <div className="container">
             <div className="cont_body">
-            <center><span className="about_head">Contact US</span></center>
+            <center><span className="about_head">Contact Us</span></center>
             <hr></hr>
 
             </div>

@@ -9,9 +9,9 @@ const About = () =>
         <hr />
   
         <div class="d-flex flex-row bd-highlight mb-3">
-            <div><img class="img-fluid inp" src={web}/></div>
-            <div><img class="img-fluid inp" src={web}/></div>
-            <div><img class="img-fluid inp" src={web}/></div>
+            <div style={{paddingRight:"5%"}}><img class="img-fluid inp" src={web}/></div>
+            <div style={{paddingRight:"5%"}}><img class="img-fluid inp" src={web}/></div>
+            <div style={{paddingRight:"5%"}}><img class="img-fluid inp" src={web}/></div>
 
         </div>
 

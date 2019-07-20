@@ -6,7 +6,7 @@ class Navbar extends Component {
 render()
 {
 return (
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-light">
     <Link to="/" class="navbar-brand">
         <img src={dsclogo} height="75" width="90" alt="DSC" />
     </Link>
