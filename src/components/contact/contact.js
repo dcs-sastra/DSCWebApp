@@ -6,7 +6,7 @@ const Contact = () =>
     <div style={{backgroundColor:"#f2eeed"}}>
         <div className="container">
             <div className="cont_body">
-            <center><span className="about_head">Contact Us</span></center>
+            <center><span className="about_head">Contact US</span></center>
             <hr></hr>
 
             </div>
