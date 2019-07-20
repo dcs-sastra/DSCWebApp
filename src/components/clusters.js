@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import web from '../images/web.jpg';
+import './clusters.css'
 
 const About = () =>
 {
@@ -9,9 +10,9 @@ const About = () =>
         <hr />
   
         <div class="d-flex flex-row bd-highlight mb-3">
-            <div style={{paddingRight:"5%"}}><img class="img-fluid inp" src={web}/></div>
-            <div style={{paddingRight:"5%"}}><img class="img-fluid inp" src={web}/></div>
-            <div style={{paddingRight:"5%"}}><img class="img-fluid inp" src={web}/></div>
+            <div className="hover"><img class="img-fluid inp" src={web}/></div>
+            <div className="hover"><img class="img-fluid inp" src={web}/></div>
+            <div className="hover"><img class="img-fluid inp" src={web}/></div>
 
         </div>
 

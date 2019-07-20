@@ -1,0 +1,10 @@
+.hover
+{
+    padding: 0% 3%;
+    transition: transform .2s;
+}
+
+.hover:hover
+{
+    transform: scale(1.5);
+}
