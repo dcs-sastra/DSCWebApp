@@ -1,0 +1,17 @@
+.about_head
+{
+
+    font-family: "Lucida Console";
+    font-size: 35px
+}
+
+.body
+{
+    padding: 1% 15%;
+    background-color: #f2eeed
+}
+
+hr
+{
+    border: 1px solid blue;
+}
