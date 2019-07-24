@@ -10,9 +10,9 @@ export default function Routes() {
         <Switch>
             <Route exact path = '/' component = {Landing} />
             <Route exact path = '/team' component = {Team} />
-            <Route path = '/teams' component = {null} />
-            <Route path = '/events' component = {Events} />
-            <Route path = '/register/:id' component = {null} />
+            <Route exact path = '/teams' component = {null} />
+            <Route exact path = '/events' component = {Events} />
+            <Route exact path = '/register/:id' component = {null} />
         </Switch>
     )
 }
