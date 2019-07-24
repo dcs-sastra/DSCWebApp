@@ -1,4 +1,4 @@
-.team__card {
+.nonTechTeam {
     border-radius: 20px !important;
 }
 
@@ -39,16 +39,8 @@
     margin-top: 5vw;
     overflow: auto;
 }
-.webDeveloper_wrapper {
-    margin-top: 5vw;
-    overflow: auto;
-}
 
-.empty_space {
-    width: 100px;
-    height: 130px;
-    display: inline-flex;
-}
+
 
 
 @media only screen and (max-width: 600px) {
@@ -76,6 +68,3 @@
     background-image: url('../../assets/Path14.svg');
 }
 
-.nonTechTeam {
-    border-radius: 30px !important;
-}
