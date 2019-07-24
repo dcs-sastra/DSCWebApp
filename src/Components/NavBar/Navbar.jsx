@@ -30,7 +30,7 @@ class Navbar extends Component {
                        <NavLink className="nav-link" to = '/team'>Team</NavLink>
                     </li>
                     <li className="nav-item">
-                       <NavLink className="nav-link" to = '/contact'>Contact</NavLink>
+                       <a href="/#contact" className = 'nav-link'>Contact</a>
                     </li>
                     </ul>
                 </div>

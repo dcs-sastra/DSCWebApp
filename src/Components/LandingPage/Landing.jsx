@@ -9,6 +9,28 @@ import 'react-typist/dist/Typist.css';
 
 
 class Landing extends Component {
+    state = {
+        email:'',
+        phone:'',
+        message:''
+      }
+      handleChange = (e) =>
+      {
+        this.setState({
+          [e.target.id] : e.target.value
+        })
+        
+      }
+    
+      handleSubmit = (e) =>{
+        e.preventDefault();
+        console.log(this.state)
+        this.setState({
+          email:'',
+          phone:'',
+          message:''
+        })
+      }
     render() {
         return (
             <div className = 'landing_cover'>
@@ -61,17 +83,96 @@ class Landing extends Component {
                 <div className = 'clusters'>
                     <h3 className = 'text-center'>Clusters</h3>
                     <div className="divider2"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-    <div class="hovereffect">
-        <img class="img-responsive" src="http://placehold.it/316x195" alt=""/>
-            <div class="overlay">
-                <p>
-                    <a>Hello</a>
-                </p>
-            </div>
-    </div>
-</div>
+                    <div className = 'conatiner'>
+                    <div className = 'row'>
+                        <div className = 'col-md-3'>
+                            <div className="image_overlay">
+                                <div className="hovereffect">
+                                    <img className="img-responsive" src="http://placehold.it/316x195" alt=""/>
+                                        <div className="overlay">
+                                            <h2>Web</h2>
+                                            <p>
+                                                <a href = '#'>
+                                                    <i>Click to know more</i>
+                                                </a>
+                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className = 'col-md-3'>
+                            <div className="image_overlay">
+                                <div className="hovereffect">
+                                    <img className="img-responsive" src="http://placehold.it/316x195" alt=""/>
+                                        <div className="overlay">
+                                            <h2>Web</h2>
+                                            <p>
+                                                <a href = '#'>
+                                                    <i>Click to know more</i>
+                                                </a>
+                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className = 'col-md-3'>
+                            <div className="image_overlay">
+                                <div className="hovereffect">
+                                    <img className="img-responsive" src="http://placehold.it/316x195" alt=""/>
+                                        <div className="overlay">
+                                            <h2>Web</h2>
+                                            <p>
+                                                <a href = '#'>
+                                                    <i>Click to know more</i>
+                                                </a>
+                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className = 'col-md-3'>
+                            <div className="image_overlay">
+                                <div className="hovereffect">
+                                    <img className="img-responsive" src="http://placehold.it/316x195" alt=""/>
+                                        <div className="overlay">
+                                            <h2>Web</h2>
+                                            <p>
+                                                <a href = '#'>
+                                                    <i>Click to know more</i>
+                                                </a>
+                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    
+                    </div>
+                </div>
+                {/* Contact Us */}
+                <div className = 'contact_us' id = 'contact'>
+                    <div className = 'container'>
+                    <br/><br/>
+                        <h3 className ='text-center'>Contact Us</h3>
+                        <div className = 'divider'></div>
+                        <div>
+                            <form className="container form_body">
+                    <div class="form-group">
+                        <input type="email" class="form-control inp" id="email"  placeholder="Email" value={this.state.email} onChange={this.handleChange}/>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control inp" id="phone" placeholder="Phone" value={this.state.phone} onChange={this.handleChange}/>
+                    </div>
+                    <div class="form-group shadow-textarea">
+                    <textarea class="form-control z-depth-1 inp" id="message" rows="3" placeholder="Message" value={this.state.message} onChange={this.handleChange}></textarea>
+                    </div>
+                    <button type="button" class="btn btn-success send_btn" onClick={this.handleSubmit}>Send</button>
+                    </form>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         );

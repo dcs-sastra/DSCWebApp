@@ -116,7 +116,8 @@
     color: green;
 }
 
-.about__dsc {
+.about__dsc,
+.contact_us {
     background-color: #ededed;
     padding: 10vh inherit;
 
@@ -299,3 +300,37 @@
     opacity: 1;
     filter: alpha(opacity=100);
   }
+
+  .img-responsive {
+    border-radius: 10px;
+  }
+
+  .image_overlay {
+    border-radius: 10px;
+  }
+
+/* contact us */
+.cont_body
+{
+    padding: 2%
+}
+
+.inp
+{
+    border-radius: 20px
+}
+
+::placeholder
+{
+    color:red
+}
+
+.form_body
+{
+    padding: 0% 15%
+}
+
+.send_btn {
+    border-radius: 20px !important;
+    width: 100%;
+}
