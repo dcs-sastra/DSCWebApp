@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import {BrowserRouter} from 'react-router-dom';
 import './App.css';
+import Routes from './Components/Routes/Routes';
+import Navbar from './Components/NavBar/Navbar';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <h4>Hello World!</h4>
+        <>
+          <Navbar />
+          <Routes />
+        </>
       </BrowserRouter>
     );
   }
