@@ -80,7 +80,7 @@ class Landing extends Component {
                         </p>
                     </div>
                 </div>
-                <div className = 'clusters'>
+                {/* <div className = 'clusters'>
                     <h3 className = 'text-center'>Clusters</h3>
                     <div className="divider2"></div>
                     <div className = 'container'>
@@ -149,7 +149,7 @@ class Landing extends Component {
                     </div>
                     
                     </div>
-                </div>
+                </div> */}
                 {/* Contact Us */}
                 <div className = 'contact_us' id = 'contact'>
                     <div className = 'container'>

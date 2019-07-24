@@ -9,7 +9,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-white">
-                <NavLink className = "navbar-brand navbar__brand">
+                <NavLink className = "navbar-brand navbar__brand" to = '/'>
                     <img src = {logo} alt = ' ' className = 'navbar__logo'/>
                     DSC SASTRA
                 </NavLink>
@@ -20,7 +20,7 @@ class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <NavLink to = '/blog' className="nav-link">Blog</NavLink>
+                        <a href="https://medium.com" target = '_blank' className = 'nav-link'>Blog</a>
                     </li>
                     <li className="nav-item">
                         <NavLink to = '/events' className="nav-link">Events</NavLink>
