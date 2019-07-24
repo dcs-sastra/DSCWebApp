@@ -334,3 +334,15 @@
     border-radius: 20px !important;
     width: 100%;
 }
+
+.footer {
+  background: #ededed;
+}
+
+.Landing__address {
+  color: #b1b1b1;
+}
+
+.Landing__address h4 {
+  color: black;
+}

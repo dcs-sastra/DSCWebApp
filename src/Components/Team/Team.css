@@ -1,0 +1,34 @@
+.team__card {
+    border-radius: 20px !important;
+}
+
+.Lead__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lead__image {
+    margin: 20px;
+}
+
+.lead__image img {
+    border-radius: 50%;
+}
+
+.tech_team {
+    width: 100%;
+}
+
+.tech_team:nth-child(1) {
+    background-image: url('../../assets/Path11.svg');
+}
+
+.tech_team:nth-child(2) {
+    background-image: url('../../assets/Path12.svg');
+}
+.tech_team:nth-child(3) {
+    background-image: url('../../assets/Path13.svg');
+}
+.tech_team:nth-child(4) {
+    background-image: url('../../assets/Path14.svg');
+}

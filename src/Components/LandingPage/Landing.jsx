@@ -83,7 +83,7 @@ class Landing extends Component {
                 <div className = 'clusters'>
                     <h3 className = 'text-center'>Clusters</h3>
                     <div className="divider2"></div>
-                    <div className = 'conatiner'>
+                    <div className = 'container'>
                     <div className = 'row'>
                         <div className = 'col-md-3'>
                             <div className="image_overlay">
@@ -158,22 +158,31 @@ class Landing extends Component {
                         <div className = 'divider'></div>
                         <div>
                             <form className="container form_body">
-                    <div class="form-group">
-                        <input type="email" class="form-control inp" id="email"  placeholder="Email" value={this.state.email} onChange={this.handleChange}/>
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control inp" id="phone" placeholder="Phone" value={this.state.phone} onChange={this.handleChange}/>
-                    </div>
-                    <div class="form-group shadow-textarea">
-                    <textarea class="form-control z-depth-1 inp" id="message" rows="3" placeholder="Message" value={this.state.message} onChange={this.handleChange}></textarea>
-                    </div>
-                    <button type="button" class="btn btn-success send_btn" onClick={this.handleSubmit}>Send</button>
-                    </form>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control inp" id="email"  placeholder="Email" value={this.state.email} onChange={this.handleChange}/>
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control inp" id="phone" placeholder="Phone" value={this.state.phone} onChange={this.handleChange}/>
+                                    </div>
+                                    <div class="form-group shadow-textarea">
+                                    <textarea class="form-control z-depth-1 inp" id="message" rows="3" placeholder="Message" value={this.state.message} onChange={this.handleChange}></textarea>
+                                    </div>
+                                    <button type="button" class="btn btn-success send_btn" onClick={this.handleSubmit}>Send</button>
+                            </form>
+                            <br/>
                         </div>
 
                     </div>
                 </div>
+                <div className = 'Landing__address container'>
+                    <br/><br/>
+                    <h4>DSC SASTRA - Powered By Google </h4>
+                    Sastra Deemed to be University,<br/>
+                    Thanjavur,<br/>
+                    Tamil Nadu
+                </div>
+                
             </div>
         );
     }

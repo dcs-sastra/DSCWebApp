@@ -11,6 +11,9 @@ class App extends Component {
         <>
           <Navbar />
           <Routes />
+          <div className="footer text-center">
+                    © Copyrights Reserved
+          </div>
         </>
       </BrowserRouter>
     );
