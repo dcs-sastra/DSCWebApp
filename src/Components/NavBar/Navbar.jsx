@@ -19,17 +19,17 @@ class Navbar extends Component {
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
-                    <li className="nav-item">
+                    <li className="nav-item text-center">
                         <a href="https://medium.com" target = '_blank' className = 'nav-link'>Blog</a>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item  text-center">
                         <NavLink to = '/events' className="nav-link">Events</NavLink>
                     </li>
                     
-                    <li className="nav-item">
+                    <li className="nav-item  text-center">
                        <NavLink className="nav-link" to = '/team'>Team</NavLink>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item  text-center">
                        <a href="/#contact" className = 'nav-link'>Contact</a>
                     </li>
                     </ul>

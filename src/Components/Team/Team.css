@@ -9,6 +9,7 @@
 }
 .lead__image {
     margin: 20px;
+    margin-left: 10px;
 }
 
 .lead__image img {
@@ -22,6 +23,7 @@
 }
 .tech_team h3{
     padding-top: 35%;
+    margin-left: -20px;
 }
 
 .team_members {
@@ -37,21 +39,53 @@
 }
 .appDevelopers_wrapper{
     margin-top: 5vw;
+    margin-left: 15px;
     overflow: auto;
 }
 
+.team_title {
+    position: absolute;
+    right: 15vw;
+}
 
 
 
 @media only screen and (max-width: 600px) {
     .team_member_wrapper{
-        padding: 1%;
+        padding: 0 3%;
         display: inline-flex;
         flex-direction: column;
         align-items: center;
     }
+    .team_member_wrapper p {
+        font-size: 70%;
+    }
     .appDevelopers_wrapper{
-        margin-top: 30px;
+        margin-top: 45px;
+    }
+    .tech_team h3{
+        padding-top: 35%;
+        margin-left: -60px;
+    }
+    .team_title {
+        position: absolute;
+        right: 12vw;
+        max-width: 100px;
+    }
+    .team_title h3 {
+        font-size: 100%;
+    }
+    .team_members {
+        border-radius: 50%;
+        width: 15vw;
+    }
+   
+    .lead__image img {
+        border-radius: 50%;
+        width: 70%;
+    }
+    .non_tech p {
+        font-size: 80%;
     }
 }
 

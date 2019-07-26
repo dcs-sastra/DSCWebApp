@@ -176,7 +176,7 @@ class Landing extends Component {
                     </div>
                 </div>
                 <div className = 'Landing__address container'>
-                    <br/><br/>
+                    <br/>
                     <h4>DSC SASTRA - Powered By Google </h4>
                     Sastra Deemed to be University,<br/>
                     Thanjavur,<br/>

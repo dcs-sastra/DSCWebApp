@@ -28,7 +28,7 @@ export default function Team() {
     
     let nonTech = data.teams.nonTech.map((person,id) => {
         return (
-            <div className = 'col-4 text-center' key = {id}>
+            <div className = 'col-4 text-center non_tech' key = {id}>
                 <img src= {person.imgUrl} alt="" className = 'team_members' />
                 <p>{person.name}</p>
                 <p>{person.team}</p>
@@ -45,6 +45,7 @@ export default function Team() {
                     <img src={teamLogo} alt="" width = "100%"/>
                 </div>
                 <div className="col-md-6">
+                    <br/><br/>
                     <div className = 'Lead__div'>
                         <div className = 'lead__image'>
                             <img src="https://i.pravatar.cc/200" alt=""/>
@@ -64,26 +65,26 @@ export default function Team() {
                     <div className = 'divider'></div>
                     <div className = 'tech_team img1'>
                         <div className = 'row'>
-                            <div className="col-8">
-                               <div className = 'appDevelopers_wrapper'>
+                            <div style = {{width: '100%'}}>
+                               <div className = 'appDevelopers_wrapper '>
                                     {appDevelopers}
                                </div>
                             
                             </div>
-                            <div className="col-4">
+                            <div className = 'team_title'>
                                 <h3 className = 'text-left'>App Developers</h3>
                             </div>
                         </div>
                     </div>
                     <div className = 'tech_team img2'>
                         <div className = 'row'>
-                        <div className="col-8">
+                        <div style = {{width: '100%'}}>
                                <div className = 'appDevelopers_wrapper'>
                                     {appDevelopers}
                                </div>
                             
                             </div>
-                            <div className="col-4">
+                            <div className="team_title">
                                 <h3 className = 'text-left text-white'>Web Developers</h3>
                             </div>
                         </div>
@@ -91,27 +92,27 @@ export default function Team() {
                     </div>
                     <div className = 'tech_team img3'>
                     <div className = 'row'>
-                            <div className="col-8">
+                            <div style = {{width: '100%'}}>
                                <div className = 'appDevelopers_wrapper'>
                                     {appDevelopers}
                                </div>
                             
                             </div>
-                            <div className="col-4">
-                                <h3 className = 'text-left'>Machine Learning Enthusiasts</h3>
+                            <div className="team_title">
+                                <h3 className = 'text-center'>Machine Learning Enthusiasts</h3>
                             </div>
                         </div>
                     </div>
                     <div className = 'tech_team img4'>
                         <div className="row">   
-                        <div className="col-8">
+                        <div style = {{width: '100%'}}>
                                <div className = 'appDevelopers_wrapper'>
                                     {appDevelopers}
                                </div>
                             
                             </div>
-                            <div className="col-4">
-                                <h3 className = 'text-left text-white'>Blockchain / AR / VR</h3>
+                            <div className="team_title">
+                                <h3 className = 'text-left text-white'>Blockchain / AR </h3>
                             </div>
                         </div>
                     </div>
