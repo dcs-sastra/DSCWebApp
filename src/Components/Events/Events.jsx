@@ -20,23 +20,23 @@ export default class Events extends Component {
             <div class="Body timeline">
                 
                 {list.events.map(data=>
-                        <div class={data.id%2==0?this.side[0]:this.side[1]}>
-                        <div class="content">
+                        <div className={data.id%2===0?this.side[0]:this.side[1]}>
+                        <div className="content">
                         <h2>{data.name}</h2>
                         <h4>{data.date} : {data.venue}</h4>
                         <p>{data.description}</p>
-                        <button type="button" class="btn btn-success" id={data.id} data-toggle="modal" data-target="#myModal" onClick={this.modalPasser}>
+                        <button type="button" className="btn btn-success" id={data.id} data-toggle="modal" data-target="#myModal" onClick={this.modalPasser}>
                                 Learn more..
                         </button>
                         </div>
 
-                        <div class="container">
+                        <div clasName="container">
  
 
 
-                    <div class="modal fade" id="myModal">
-                        <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
+                    <div className="modal fade" id="myModal">
+                        <div className="modal-dialog modal-dialog-centered">
+                        <div className="modal-content">
                         
                             <div class="modal-header">
                             <h4 class="modal-title">{list.events[this.state.tempId].name}</h4>
