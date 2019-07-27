@@ -12,7 +12,8 @@ class Landing extends Component {
     state = {
         email:'',
         phone:'',
-        message:''
+        message:'',
+        typerLine: 0
       }
       handleChange = (e) =>
       {
@@ -30,6 +31,11 @@ class Landing extends Component {
           phone:'',
           message:''
         })
+      }
+      incrementLine = () => {
+          this.setState({
+              typerLine: this.state.typerLine + 1
+          });
       }
     render() {
         return (
@@ -54,20 +60,21 @@ class Landing extends Component {
                         <p>Terminal</p>
                     </div>
                     <div className = 'terminal_content container'>
-                        <Typist >
                         <div>
-                        <span className = 'terminal_root_user'>dsc@sastra:</span><span>~/</span>$   &nbsp; We code
+                        <span className = 'terminal_root_user'>dsc@sastra:</span><span>~/</span>$  <Typist className = 'terminal_typing' onTypingDone = {this.incrementLine} cursor={{ hideWhenDone: true }} avgTypingDelay={50}> &nbsp; We code </Typist>
                         </div>
-                        <div>
-                        <span className = 'terminal_root_user'>dsc@sastra:</span><span>~/</span>$  &nbsp;  We Organise
-                        </div><div>
-                        <span className = 'terminal_root_user'>dsc@sastra:</span><span>~/</span>$  &nbsp;  We Learn
-                        </div><div>
-                        <span className = 'terminal_root_user'>dsc@sastra:</span><span>~/</span>$  &nbsp;  We Teach
-                        </div><div>
-                        <span className = 'terminal_root_user'>dsc@sastra:</span><span>~/</span>$  &nbsp;  We are team DSC!
-                        </div>
-                        </Typist>
+                        {this.state.typerLine >= 1 && <div>
+                        <span className = 'terminal_root_user'>dsc@sastra:</span><span>~/</span>$  <Typist className = 'terminal_typing' onTypingDone = {this.incrementLine} cursor={{ hideWhenDone: true }} avgTypingDelay={50}> &nbsp; We Organise </Typist>
+                        </div>}
+                        {this.state.typerLine >= 2 &&<div>
+                        <span className = 'terminal_root_user'>dsc@sastra:</span><span>~/</span>$  <Typist className = 'terminal_typing' onTypingDone = {this.incrementLine} cursor={{ hideWhenDone: true }} avgTypingDelay={50}> &nbsp; We Learn </Typist>
+                        </div>}
+                        {this.state.typerLine >= 3 &&<div>
+                        <span className = 'terminal_root_user'>dsc@sastra:</span><span>~/</span>$  <Typist className = 'terminal_typing' onTypingDone = {this.incrementLine} cursor={{ hideWhenDone: true }} avgTypingDelay={50}> &nbsp; We Teach </Typist>
+                        </div>}
+                        {this.state.typerLine >= 4 && <div>
+                        <span className = 'terminal_root_user'>dsc@sastra:</span><span>~/</span>$  <Typist className = 'terminal_typing' onTypingDone = {this.incrementLine} avgTypingDelay={50}> &nbsp; We are team DSC! </Typist>
+                        </div>}
                     </div>
                 </div>
                 <div className = 'about__dsc'>
@@ -80,76 +87,13 @@ class Landing extends Component {
                         </p>
                     </div>
                 </div>
-                {/* <div className = 'clusters'>
-                    <h3 className = 'text-center'>Clusters</h3>
-                    <div className="divider2"></div>
-                    <div className = 'container'>
-                    <div className = 'row'>
-                        <div className = 'col-md-3'>
-                            <div className="image_overlay">
-                                <div className="hovereffect">
-                                    <img className="img-responsive" src="http://placehold.it/316x195" alt=""/>
-                                        <div className="overlay">
-                                            <h2>Web</h2>
-                                            <p>
-                                                <a href = '#'>
-                                                    <i>Click to know more</i>
-                                                </a>
-                                            </p>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className = 'col-md-3'>
-                            <div className="image_overlay">
-                                <div className="hovereffect">
-                                    <img className="img-responsive" src="http://placehold.it/316x195" alt=""/>
-                                        <div className="overlay">
-                                            <h2>Web</h2>
-                                            <p>
-                                                <a href = '#'>
-                                                    <i>Click to know more</i>
-                                                </a>
-                                            </p>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className = 'col-md-3'>
-                            <div className="image_overlay">
-                                <div className="hovereffect">
-                                    <img className="img-responsive" src="http://placehold.it/316x195" alt=""/>
-                                        <div className="overlay">
-                                            <h2>Web</h2>
-                                            <p>
-                                                <a href = '#'>
-                                                    <i>Click to know more</i>
-                                                </a>
-                                            </p>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className = 'col-md-3'>
-                            <div className="image_overlay">
-                                <div className="hovereffect">
-                                    <img className="img-responsive" src="http://placehold.it/316x195" alt=""/>
-                                        <div className="overlay">
-                                            <h2>Web</h2>
-                                            <p>
-                                                <a href = '#'>
-                                                    <i>Click to know more</i>
-                                                </a>
-                                            </p>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                       
+                {/* Clusters */}
+                <div className = 'clusters'>
+                    <div className="container">
+                        <h3 className ='text-center'>Clusters</h3>
+                        <div className = 'divider'></div>
                     </div>
-                    
-                    </div>
-                </div> */}
+                </div>
                 {/* Contact Us */}
                 <div className = 'contact_us' id = 'contact'>
                     <div className = 'container'>

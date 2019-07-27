@@ -103,6 +103,9 @@
     color: #65748E !important;  
 }
 
+.terminal_typing{
+    display: inline;
+}
 
 .terminal_content {
     padding: 10px;
