@@ -43,8 +43,8 @@ export default function Team() {
         <p>{person.name}</p>
         <span className="social nontech_social">
           <a href="https://linkedin.com" className="fab fa-linkedin"></a>
-          <a className="fab fa-github"></a>
-          <a className="fas fa-basketball-ball"></a>
+          <a href="https://github.com" className="fab fa-github"></a>
+          <a href="https://dribble.com" className="fas fa-basketball-ball"></a>
         </span>
       </div>
     );
@@ -53,7 +53,12 @@ export default function Team() {
   return (
     <div className="container">
       <br />
-      <h3 className="text-center"> Some good caption here </h3>
+      <h3 className="text-center">
+        {" "}
+        The Parent Classes; get ready to derive everything from them{" "}
+      </h3>
+      <div className="divider"></div>
+      <br />
       <div className="row">
         <div className="col-md-6">
           <img src={teamLogo} alt="" width="100%" />
@@ -151,15 +156,12 @@ export default function Team() {
             <div className="container">
               <br />
               <h4 className="text-center">Graphic Designing</h4>
-
               <div className="row ">{nonTech}</div>
-              <br />
+              <hr />
               <h4 className="text-center">Content Writing</h4>
-
               <div className="row ">{nonTech}</div>
-              <br />
+              <hr />
               <h4 className="text-center">Marketing</h4>
-
               <div className="row ">{nonTech}</div>
               <br />
             </div>

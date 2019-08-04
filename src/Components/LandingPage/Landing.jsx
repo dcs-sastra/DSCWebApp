@@ -171,32 +171,32 @@ class Landing extends Component {
             <div className="divider"></div>
             <div>
               <form className="container form_body">
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     type="email"
-                    class="form-control inp"
+                    className="form-control inp"
                     id="email"
                     placeholder="Email"
                     value={this.state.email}
                     onChange={this.handleChange}
                   />
-                  <small id="emailHelp" class="form-text text-muted">
+                  <small id="emailHelp" className="form-text text-muted">
                     We'll never share your email with anyone else.
                   </small>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     type="text"
-                    class="form-control inp"
+                    className="form-control inp"
                     id="phone"
                     placeholder="Phone"
                     value={this.state.phone}
                     onChange={this.handleChange}
                   />
                 </div>
-                <div class="form-group shadow-textarea">
+                <div className="form-group shadow-textarea">
                   <textarea
-                    class="form-control z-depth-1 inp"
+                    className="form-control z-depth-1 inp"
                     id="message"
                     rows="3"
                     placeholder="Message"
@@ -206,7 +206,7 @@ class Landing extends Component {
                 </div>
                 <button
                   type="button"
-                  class="btn btn-success send_btn"
+                  className="btn btn-success send_btn"
                   onClick={this.handleSubmit}
                 >
                   Send
