@@ -84,7 +84,7 @@ export default function Team() {
         <div className="container">
           <h3 className="text-center"> Tech Team </h3>
           <div className="divider"></div>
-          <div className="tech_team img1">
+          <div className="tech_team img1" id="android">
             <div className="row">
               <div style={{ width: "100%" }}>
                 <div className="appDevelopers_wrapper ">{appDevelopers}</div>
@@ -94,7 +94,7 @@ export default function Team() {
               </div>
             </div>
           </div>
-          <div className="tech_team img2">
+          <div className="tech_team img2" id="flutter">
             <div className="row">
               <div style={{ width: "100%" }}>
                 <div className="appDevelopers_wrapper">{appDevelopers}</div>
@@ -104,7 +104,7 @@ export default function Team() {
               </div>
             </div>
           </div>
-          <div className="tech_team img3">
+          <div className="tech_team img3" id="web">
             <div className="row">
               <div style={{ width: "100%" }}>
                 <div className="appDevelopers_wrapper">{appDevelopers}</div>
@@ -114,7 +114,7 @@ export default function Team() {
               </div>
             </div>
           </div>
-          <div className="tech_team img4">
+          <div className="tech_team img4" id="ML">
             <div className="row">
               <div style={{ width: "100%" }}>
                 <div className="appDevelopers_wrapper">{appDevelopers}</div>
@@ -126,7 +126,7 @@ export default function Team() {
               </div>
             </div>
           </div>
-          <div className="tech_team img1">
+          <div className="tech_team img1" id="cloud">
             <div className="row">
               <div style={{ width: "100%" }}>
                 <div className="appDevelopers_wrapper ">{appDevelopers}</div>
@@ -136,7 +136,7 @@ export default function Team() {
               </div>
             </div>
           </div>
-          <div className="tech_team img2">
+          <div className="tech_team img2" id="ar_vr">
             <div className="row">
               <div style={{ width: "100%" }}>
                 <div className="appDevelopers_wrapper ">{appDevelopers}</div>
@@ -155,14 +155,20 @@ export default function Team() {
           <div className="card nonTechTeam">
             <div className="container">
               <br />
-              <h4 className="text-center">Graphic Designing</h4>
-              <div className="row ">{nonTech}</div>
+              <div id="graphics">
+                <h4 className="text-center">Graphic Designing</h4>
+                <div className="row ">{nonTech}</div>
+              </div>
               <hr />
-              <h4 className="text-center">Content Writing</h4>
-              <div className="row ">{nonTech}</div>
+              <div id="content_writing">
+                <h4 className="text-center">Content Writing</h4>
+                <div className="row ">{nonTech}</div>
+              </div>
               <hr />
-              <h4 className="text-center">Marketing</h4>
-              <div className="row ">{nonTech}</div>
+              <div id="marketing">
+                <h4 className="text-center">Marketing</h4>
+                <div className="row ">{nonTech}</div>
+              </div>
               <br />
             </div>
           </div>

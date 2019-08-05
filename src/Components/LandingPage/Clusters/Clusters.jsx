@@ -19,12 +19,14 @@ export default function Clusters() {
     if (cluster) {
       return (
         <div className="col-md-3 col-sm-6" key={id}>
-          <div className="card cluster_card">
-            <img src={clusters[`${cluster.img}`]} alt="" />
-            <div className={`card-overlay ${cluster.backgroundColor}`}>
-              <div className="card-info ">{cluster.name}</div>
+          <a href={cluster.link}>
+            <div className="card cluster_card">
+              <img src={clusters[`${cluster.img}`]} alt="" />
+              <div className={`card-overlay ${cluster.backgroundColor}`}>
+                <div className="card-info ">{cluster.name}</div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       );
     }
