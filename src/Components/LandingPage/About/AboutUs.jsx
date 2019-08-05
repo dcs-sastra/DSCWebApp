@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+import data from "../../../Store";
 
 export default function AboutUs() {
   return (
@@ -10,15 +11,8 @@ export default function AboutUs() {
           <br />
           <h3 className="text-center">About Developer Students Club</h3>
           <div className="divider "></div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam rerum
-            voluptate minus eaque provident adipisci, ducimus fugiat dignissimos
-            necessitatibus quod a laboriosam saepe, culpa fuga dolorum, sapiente
-            aliquid veniam molestiae. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quisquam minus asperiores incidunt voluptatem,
-            aliquid iusto natus placeat, at maxime eius harum tempore suscipit
-            beatae praesentium saepe est eveniet officiis vel.
-          </p>
+          {/* Change the content in Store.js to see the changes */}
+          <p>{data.aboutDSC}</p>
         </div>
       </div>
     </>

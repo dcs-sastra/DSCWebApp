@@ -1,5 +1,64 @@
 export default {
+  aboutDSC: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam rerum
+              voluptate minus eaque provident adipisci, ducimus fugiat dignissimos
+              necessitatibus quod a laboriosam saepe, culpa fuga dolorum, sapiente
+              aliquid veniam molestiae. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Quisquam minus asperiores incidunt voluptatem,
+              aliquid iusto natus placeat, at maxime eius harum tempore suscipit
+              beatae praesentium saepe est eveniet officiis vel.`,
+  clusters: [
+    {
+      name: "Android",
+      img: "android.svg",
+      backgroundColor: "green_bg"
+    },
+    {
+      name: "Flutter",
+      img: "flutterio-icon.svg",
+      backgroundColor: "blue_bg"
+    },
+    {
+      name: "Machine Learning",
+      img: "setting.svg",
+      backgroundColor: "blue_bg"
+    },
+    {
+      name: "Web",
+      img: "coding.svg",
+      backgroundColor: "green_bg"
+    },
+    {
+      name: "Cloud",
+      img: "learning.svg",
+      backgroundColor: "blue_bg"
+    },
+    {
+      name: "VR / AR",
+      img: "vr-glasses.svg",
+      backgroundColor: "red_bg"
+    },
+    {
+      name: "Content Writing",
+      img: "article.svg",
+      backgroundColor: "yellow_bg"
+    },
+    {
+      name: "Graphic Designing",
+      img: "tools.svg",
+      backgroundColor: "green_bg"
+    },
+    {
+      name: "Marketing",
+      img: "report.svg",
+      backgroundColor: "yellow_bg"
+    }
+  ],
   teams: {
+    lead: {
+      name: "Kavin Raju S",
+      imgUrl: "https://i.pravatar.cc/200",
+      role: "DSC Lead, App Developer"
+    },
     app: [
       {
         name: "John Doe",

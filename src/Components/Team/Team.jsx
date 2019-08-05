@@ -68,11 +68,11 @@ export default function Team() {
           <br />
           <div className="Lead__div">
             <div className="lead__image">
-              <img src="https://i.pravatar.cc/200" alt="" />
+              <img src={data.teams.lead.imgUrl} alt="" />
             </div>
             <div>
-              <h3>Kavin Raju S</h3>
-              <small className="text-secondary">DSC Lead, App Developer</small>
+              <h3>{data.teams.lead.name}</h3>
+              <small className="text-secondary">{data.teams.lead.role}</small>
             </div>
           </div>
         </div>
