@@ -1,0 +1,43 @@
+.cont_body {
+    padding: 2%
+}
+
+.inp {
+    border-radius: 20px;
+    border: 0px;
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+.form-group small {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+::placeholder {
+    color: red
+}
+
+.form_body {
+    margin: auto;
+}
+
+.send_btn {
+    border-radius: 20px !important;
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .inp {
+        width: 80%;
+    }
+
+    .send_btn {
+        width: 80%;
+    }
+}

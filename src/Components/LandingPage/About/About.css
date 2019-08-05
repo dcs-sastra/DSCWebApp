@@ -1,0 +1,11 @@
+.about__dsc,
+.contact_us {
+    background-color: #ededed;
+    padding: 10vh inherit;
+
+}
+
+.about__dsc p {
+    color: #acacac;
+    padding-bottom: 7vh;
+}

@@ -1,0 +1,141 @@
+.jumbotron__wrapper {
+    background: #4285F4;
+    color: white;
+    width: 100%;
+    padding: 100px 0 250px 0;
+    margin-bottom: 45vh;
+}
+
+.jumbotron__wrapper div {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.abstract__wrapper {
+    width: 100%;
+}
+
+.landing__abstract {
+    position: absolute;
+    top: 0px;
+    margin: 0;
+    padding: 0px;
+    z-index: 0;
+}
+
+
+.landing__abstract:nth-child(1) {
+    width: 70px;
+    top: 15vh;
+    left: 0;
+}
+
+.landing__abstract:nth-child(2) {
+    width: 140px;
+    top: 50vh;
+    left: 0;
+}
+
+.landing__abstract:nth-child(3) {
+    width: 200px;
+    top: 15vh;
+    right: 0;
+}
+
+.landing__abstract:nth-child(4) {
+    width: 200px;
+    top: 33vh;
+    right: 0;
+}
+
+.terminal {
+    margin-top: -40px;
+    margin: auto;
+    width: 70%;
+    height: 300px;
+    background: #300A24;
+    z-index: 100;
+    position: absolute;
+    top: 70vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.terminal_menu {
+    height: 33px;
+    background: #626262;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    padding-left: 10px;
+}
+
+.terminal_menu span {
+    padding: 5px;
+    margin: 5px 7px;
+    font-weight: 100;
+    background: #a5a5a5;
+    border-radius: 50%;
+    font-size: 65%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.terminal_menu span:nth-child(1) {
+    background: #F4753F;
+    font-size: 97%;
+}
+
+.terminal_menu p {
+    padding: 4px;
+    color: white;
+}
+
+.terminal_root_user {
+    color: #689C0E;
+}
+
+.terminal_root_user span {
+    color: #65748E !important;
+}
+
+.terminal_typing {
+    display: inline;
+}
+
+.terminal_content {
+    padding: 10px;
+    color: white;
+    font-size: 1.3em;
+}
+
+.cursor {
+    height: 1.3rem;
+    width: 10px;
+    color: green;
+}
+
+@media only screen and (max-width: 600px) {
+    .terminal {
+        margin-top: -40px;
+        margin: auto;
+        width: 90%;
+        height: 300px;
+        background: #300A24;
+        z-index: 100;
+        position: absolute;
+        top: 70vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 80%;
+    }
+}
