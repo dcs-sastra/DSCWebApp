@@ -3,6 +3,18 @@ import "./Events.css";
 import list from "../../Store.js";
 import task from "../../assets/menu.svg";
 
+function importAll(r) {
+  let images = {};
+  r.keys().map(item => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
+
+const eventPoster = importAll(
+  require.context("../../assets/posters", false, /\.(png|jpe?g|svg)$/)
+);
+
 export default class Events extends Component {
   state = {
     tempId: 0
@@ -105,13 +117,19 @@ export default class Events extends Component {
 
                 <div className="modal-body">
                   <h5>Speaker(s): {list.events[this.state.tempId].speakers}</h5>
+                  <div>
+                  <img 
+                    src = {eventPoster[`${list.events[this.state.tempId].poster}`]}
+                    alt="..." className = "event_poster"
+                  />
+                  </div>
                   {list.events[this.state.tempId].main}
                 </div>
 
                 <div className="modal-footer">
                   <a
                     className="btn btn-danger"
-                    href="/"
+                    href={list.events[this.state.tempId].register_link}
                     target="_blank"
                     style={{ textDecoration: "none" }}
                   >

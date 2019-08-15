@@ -65,162 +65,194 @@ export default {
   teams: {
     lead: {
       name: "Kavin Raju S",
-      imgUrl: "https://i.pravatar.cc/200",
+      imgUrl: "Kavin Raju",
       role: "DSC Lead, App Developer"
     },
     app: [
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Kathir Thaniyarasu",
+        imgUrl: "Kathir"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "TANVEER AHMAD H",
+        imgUrl: "Tanveer Ahmad"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Arun Balaji TSR",
+        imgUrl: "arun"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Sibi N",
+        imgUrl: "Sibi Nehru"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Karthikeyan",
+        imgUrl: "Karthikeyan K"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Ashwin Ram",
+        imgUrl: "Ashwin Ram"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Seshan",
+        imgUrl: "male"
+      } 
+    ],
+    flutter : [
+      {
+        name: "Ashwin Ram",
+        imgUrl: "Ashwin Ram"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
-      },
-      {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
-      },
-      {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Seshan",
+        imgUrl: "male"
       }
     ],
     web: [
       {
-        name: "Johanthan",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Aravind Srinivasan",
+        imgUrl: "Aravind Srinivasan"
       },
       {
-        name: "Johanthan",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "G Sai Svas",
+        imgUrl: "male"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Srivathsan S",
+        imgUrl: "Sri Vathsan"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Vashanth Saravanan",
+        imgUrl: "Vashanth Saravanan"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "K Vamsi Krishna",
+        imgUrl: "karanam vamsi"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "T Manikanta Reddy",
+        imgUrl: "tmanikanta reddy"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Jaikanth",
+        imgUrl: "male"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "PV Lakshmi Narayanan",
+        imgUrl: "male"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/100"
+        name: "Sharath Sriram",
+        imgUrl: "male"
+      },
+    ],
+    ml: [
+      {
+        name: "Anjineyulu TV",
+        imgUrl: "male"
+      },
+      {
+        name: "P Vijay Rama Raju",
+        imgUrl: "male"
+      },
+      {
+        name: "Sreenithi Balasubramanian",
+        imgUrl: "Sreenithi Balasubramanian"
+      },
+      {
+        name: "Vishal R",
+        imgUrl: "Vishal R"
+      },
+      {
+        name: "S Giteka",
+        imgUrl: "giteka senthilkumar"
+      },
+      {
+        name: "Sivaneshwar P",
+        imgUrl: "Sivaneshwar P"
+      },
+      {
+        name: "Gokul",
+        imgUrl: "male"
       }
     ],
-    nonTech: [
+    cloud: [
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/150",
-        team: "Content Writing"
+        name: "Sivaneshwar P",
+        imgUrl: "Sivaneshwar P"
       },
       {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/150",
-        team: "Content Writing"
-      },
-      {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/150",
-        team: "Content Writing"
-      },
-      {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/150",
-        team: "Content Writing"
-      },
-      {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/150",
-        team: "Content Writing"
-      },
-      {
-        name: "John Doe",
-        imgUrl: "https://i.pravatar.cc/150",
-        team: "Content Writing"
+        name: "Rohith",
+        imgUrl: "male"
       }
-    ]
+    ],
+    nonTech: {
+      graphic: [
+        {
+          name: "Kapil",
+          imgUrl: "male"
+        }
+      ],
+      content: [
+        {
+          name: "Rogini S",
+          imgUrl: "Rogini"
+        },
+        {
+          name: "Akhil Bharadwaj",
+          imgUrl: "male"
+        },
+        {
+          name: "Subhashri",
+          imgUrl: "female"
+        }
+      ],
+      marketing: [
+        {
+          name: "Nishanth S",
+          imgUrl: "Nishanth Sekar"
+        },
+        {
+          name: "Umesh Kanna",
+          imgUrl: "male"
+        },
+        {
+          name: "Syed Irfan",
+          imgUrl: "male"
+        },
+        {
+          name: "Mukunt B Surya",
+          imgUrl: "male"
+        }
+      ]
+    }
   },
   events: [
     {
       id: 0,
-      name: "GCP Study jam",
-      date: "9th August",
-      description: "Study jam about Google cloud platform",
+      name: "GCP Study Jam - Career Readiness Program",
+      date: "9th August 2019",
+      description: "Wanna become a cloud platform engineer? Here is the first step to become one! Exclusively sponsered by Google",
       main:
         "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-      venue: "ASK 2",
-      speakers: "Kavin Raju"
+      venue: "Tifac Core III Floor",
+      speakers: "Kavin Raju",
+      poster: "gcp_poster.jpeg",
+      register_link: "https://google.com"
     },
     {
       id: 1,
-      name: "GitHub tutorial",
-      date: "10th August",
-      description: "Will be declared soon...",
+      name: "Machine Learning Workshop",
+      date: "31st March 2019",
+      description: "Ever wondered will we ever use the concepts studied in Maths? Join Us for the workshop.",
       main:
         "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-      venue: "Chith Vihar",
-      speakers: "Srivatsan"
-    },
-    {
-      id: 2,
-      name: "GitHub tutorial",
-      date: "10th August",
-      description: "Will be declared soon...",
-      main:
-        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-      venue: "Chith Vihar",
-      speakers: "Srivatsan"
-    },
-    {
-      id: 3,
-      name: "GitHub tutorial",
-      date: "10th August",
-      description: "Will be declared soon...",
-      main:
-        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-      venue: "Chith Vihar",
-      speakers: "Srivatsan"
+      venue: "VV Auditorium",
+      speakers: "Vishal, Anjeneyulu",
+      poster: "mlposter.jpeg",
+      register_link: "https://google.com"
     }
   ]
 };
+
+

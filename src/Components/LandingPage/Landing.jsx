@@ -15,7 +15,7 @@ class Landing extends Component {
         <ContactUs />
         <div className="Landing__address container">
           <br />
-          <h4>DSC SASTRA - Powered By Google </h4>
+          <h4>DSC SASTRA - Powered By Google Developers</h4>
           Sastra Deemed to be University,
           <br />
           Thanjavur,

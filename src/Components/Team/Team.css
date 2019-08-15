@@ -1,5 +1,6 @@
 .nonTechTeam {
     border-radius: 20px !important;
+    box-shadow: 5px 5px 30px #adadaa;
 }
 
 .Lead__div {
@@ -19,7 +20,7 @@
 
 .tech_team {
     width: 100%;
-    min-height: 61.5vw;
+    min-height: 51vw;
     height: 100%;
 }
 
@@ -98,6 +99,10 @@
     .non_tech p {
         font-size: 80%;
     }
+}
+
+.non_tech p {
+    margin: 0;
 }
 
 .img1 {
@@ -185,7 +190,7 @@
 
 .user-card:hover {
     clip-path: circle(100%);
-    height: 180px;
+    height: 200px;
 }
 
 
@@ -237,4 +242,10 @@
 
 .nontech_social {
     margin-bottom: 10px !important;
+}
+
+
+
+#cloud {
+    min-height: 15vh;
 }

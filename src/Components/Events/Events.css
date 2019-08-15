@@ -693,3 +693,11 @@ form {
   font-size: 4rem !important;
   font-family: 'Libre Barcode 128 Text', cursive !important;
 }
+
+.event_poster {
+  width: 100%;  
+  display: block;
+  margin: 10% auto;
+  border-radius: 10px; 
+  box-shadow: 5px 5px 10px #adadad;
+}

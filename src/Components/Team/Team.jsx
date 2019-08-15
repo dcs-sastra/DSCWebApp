@@ -1,54 +1,38 @@
 import React from "react";
 import "./Team.css";
 import teamLogo from "../../assets/team.svg";
+import { Tech, nonTech } from "./helper";
 import data from "../../Store.js";
 
-export default function Team() {
-  let appDevelopers = [];
-  let iterator = 0;
-  for (let i = 1; i <= 5; i++) {
-    for (let j = 1; j <= i; j++) {
-      let person = data.teams.app[iterator++];
-      if (person) {
-        console.log(person.imgUrl);
-        let url = person.imgUrl;
-        let name = person.name;
-        let jsx = (
-          <div className="user-card" key={iterator}>
-            <div className="front-side">
-              <img src={url} alt="" />
-              <h6>{name}</h6>
-              <span className="social">
-                <a href="https://linkedin.com" className="fab fa-linkedin"></a>
-                <a className="fab fa-github"></a>
-                <a className="fas fa-basketball-ball"></a>
-              </span>
-            </div>
-          </div>
-        );
-        appDevelopers.push(jsx);
-      }
-    }
-    appDevelopers.push(
-      <>
-        <br id={iterator} />
-      </>
-    );
-  }
-
-  let nonTech = data.teams.nonTech.map((person, id) => {
-    return (
-      <div className="col-4 text-center non_tech" key={id}>
-        <img src={person.imgUrl} alt="" className="team_members" />
-        <p>{person.name}</p>
-        <span className="social nontech_social">
-          <a href="https://linkedin.com" className="fab fa-linkedin"></a>
-          <a href="https://github.com" className="fab fa-github"></a>
-          <a href="https://dribble.com" className="fas fa-basketball-ball"></a>
-        </span>
-      </div>
-    );
+function importAll(r) {
+  let images = {};
+  r.keys().map(item => {
+    images[item.replace("./", "")] = r(item);
   });
+  return images;
+}
+
+const profileImage = importAll(
+  require.context("../../assets/members", false, /\.(png|jpe?g|svg)$/)
+);
+
+export default function Team() {
+  let appDevelopers = [],
+    webDevelopers = [],
+    mlexperts = [],
+    flutter = [],
+    cloud = [],
+    graphics = [],
+    content = [],
+    marketing = [];
+  appDevelopers = Tech("app");
+  webDevelopers = Tech("web");
+  mlexperts = Tech("ml");
+  flutter = Tech("flutter");
+  cloud = Tech("cloud");
+  graphics = nonTech("graphic");
+  content = nonTech("content");
+  marketing = nonTech("marketing");
 
   return (
     <div className="container">
@@ -68,7 +52,7 @@ export default function Team() {
           <br />
           <div className="Lead__div">
             <div className="lead__image">
-              <img src={data.teams.lead.imgUrl} alt="" />
+              <img src={profileImage[`${data.teams.lead.imgUrl}.jpg`]} alt="" />
             </div>
             <div>
               <h3>{data.teams.lead.name}</h3>
@@ -94,58 +78,56 @@ export default function Team() {
               </div>
             </div>
           </div>
-          <div className="tech_team img2" id="flutter">
+          {/* <div className="tech_team img2" id="flutter">
             <div className="row">
               <div style={{ width: "100%" }}>
-                <div className="appDevelopers_wrapper">{appDevelopers}</div>
+                <div className="appDevelopers_wrapper">{flutter}</div>
               </div>
               <div className="team_title">
                 <h3 className="text-left text-white">Flutter Developers</h3>
               </div>
             </div>
-          </div>
-          <div className="tech_team img3" id="web">
+          </div> */}
+          <div className="tech_team img2" id="web">
             <div className="row">
               <div style={{ width: "100%" }}>
-                <div className="appDevelopers_wrapper">{appDevelopers}</div>
+                <div className="appDevelopers_wrapper">{webDevelopers}</div>
               </div>
               <div className="team_title">
-                <h3 className="text-center">Web Developers</h3>
+                <h3 className="text-center text-white">Web Developers</h3>
               </div>
             </div>
           </div>
-          <div className="tech_team img4" id="ML">
+          <div className="tech_team img3" id="ML">
             <div className="row">
               <div style={{ width: "100%" }}>
-                <div className="appDevelopers_wrapper">{appDevelopers}</div>
+                <div className="appDevelopers_wrapper">{mlexperts}</div>
               </div>
               <div className="team_title">
-                <h3 className="text-left text-white">
-                  Machine Learning Enthusiasts
-                </h3>
+                <h3 className="text-center">Machine Learning Enthusiasts</h3>
               </div>
             </div>
           </div>
-          <div className="tech_team img1" id="cloud">
+          <div className="tech_team img4" id="cloud">
             <div className="row">
               <div style={{ width: "100%" }}>
-                <div className="appDevelopers_wrapper ">{appDevelopers}</div>
+                <div className="appDevelopers_wrapper ">{cloud}</div>
               </div>
               <div className="team_title">
-                <h3 className="text-left">Cloud Engineers</h3>
+                <h3 className="text-left text-white">Cloud and AR / VR </h3>
               </div>
             </div>
           </div>
-          <div className="tech_team img2" id="ar_vr">
+          {/* <div className="tech_team img2" id="ar_vr">
             <div className="row">
               <div style={{ width: "100%" }}>
-                <div className="appDevelopers_wrapper ">{appDevelopers}</div>
+                <div className="appDevelopers_wrapper ">{cloud}</div>
               </div>
               <div className="team_title">
                 <h3 className="text-left text-white">AR / VR</h3>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <br />
         <br />
@@ -157,17 +139,17 @@ export default function Team() {
               <br />
               <div id="graphics">
                 <h4 className="text-center">Graphic Designing</h4>
-                <div className="row ">{nonTech}</div>
+                <div className="row ">{graphics}</div>
               </div>
               <hr />
               <div id="content_writing">
                 <h4 className="text-center">Content Writing</h4>
-                <div className="row ">{nonTech}</div>
+                <div className="row ">{content}</div>
               </div>
               <hr />
               <div id="marketing">
                 <h4 className="text-center">Marketing</h4>
-                <div className="row ">{nonTech}</div>
+                <div className="row ">{marketing}</div>
               </div>
               <br />
             </div>
