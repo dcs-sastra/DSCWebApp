@@ -15,7 +15,14 @@ class ContactUs extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+    fetch('http://dscsastra.herokuapp.com/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state)
+    });
     this.setState({
       email: "",
       phone: "",
