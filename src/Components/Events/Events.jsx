@@ -17,8 +17,21 @@ const eventPoster = importAll(
 
 export default class Events extends Component {
   state = {
-    tempId: 0
+    tempId: 0,
+    events: list.events // interim loading until api returns correct data.
   };
+
+  componentDidMount(){
+    fetch("https://dscsastra.herokuapp.com/events").then( resp => {
+        resp.json().then( dataj => {
+          if(dataj[0].poster){ // interim loading until api returns correct data.
+            this.setState({
+              events: dataj
+            })
+          }
+        })
+      })
+  }
 
   modalPasser = e => {
     this.setState({
@@ -27,7 +40,7 @@ export default class Events extends Component {
   };
 
   render() {
-    let events = list.events.map((data, id) => {
+    let events = this.state.events.map((data, id) => {
       return (
         <div className="cd-timeline-block" key={id}>
           <div className="cd-timeline-img cd-picture">
@@ -116,20 +129,20 @@ export default class Events extends Component {
                 </div>
 
                 <div className="modal-body">
-                  <h5>Speaker(s): {list.events[this.state.tempId].speakers}</h5>
+                  <h5>Speaker(s): {this.state.events[this.state.tempId].speakers}</h5>
                   <div>
                   <img 
-                    src = {eventPoster[`${list.events[this.state.tempId].poster}`]}
+                    src = {eventPoster[`${this.state.events[this.state.tempId].poster}`]}
                     alt="..." className = "event_poster"
                   />
                   </div>
-                  {list.events[this.state.tempId].main}
+                  {this.state.events[this.state.tempId].main}
                 </div>
 
                 <div className="modal-footer">
                   <a
                     className="btn btn-danger"
-                    href={list.events[this.state.tempId].register_link}
+                    href={this.state.events[this.state.tempId].register_link}
                     target="_blank"
                     style={{ textDecoration: "none" }}
                   >

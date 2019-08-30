@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../../Store.js";
+//import data from "../../Store.js";
 
 function importAll(r) {
   let images = {};
@@ -13,12 +13,12 @@ const profileImage = importAll(
   require.context("../../assets/members", false, /\.(png|jpe?g|svg)$/)
 );
 
-export const Tech = name => {
+export const Tech = (name,teams) => {
   let array = [];
   let iterator = 0;
   for (let i = 1; i <= 6; i++) {
     for (let j = 1; j <= i; j++) {
-      let person = data.teams[`${name}`][iterator++];
+      let person = teams[`${name}`][iterator++];
       if (person) {
         let url = person.imgUrl;
         let name = person.name;
@@ -47,8 +47,8 @@ export const Tech = name => {
   return array;
 };
 
-export const nonTech = name => {
-  return data.teams.nonTech[`${name}`].map((person, id) => {
+export const nonTech = (name,teams) => {
+  return teams.nonTech[`${name}`].map((person, id) => {
     return (
       <div className="col-4 text-center non_tech" key={id}>
         <img

@@ -1,4 +1,4 @@
-import React from "react";
+import React , { useEffect, useState } from "react";
 import "./Team.css";
 import teamLogo from "../../assets/team.svg";
 import { Tech, nonTech } from "./helper";
@@ -17,6 +17,15 @@ const profileImage = importAll(
 );
 
 export default function Team() {
+  const [Tdata, setData] = useState(data.teams);
+  useEffect(() =>
+    fetch("https://dscsastra.herokuapp.com/MembersbyCluster")
+      .then(res => {
+        if(res.status == 200){
+          res.json().then( JsonData => setData(JsonData))
+        }
+      })
+  );
   let appDevelopers = [],
     webDevelopers = [],
     mlexperts = [],
@@ -25,14 +34,14 @@ export default function Team() {
     graphics = [],
     content = [],
     marketing = [];
-  appDevelopers = Tech("app");
-  webDevelopers = Tech("web");
-  mlexperts = Tech("ml");
-  flutter = Tech("flutter");
-  cloud = Tech("cloud");
-  graphics = nonTech("graphic");
-  content = nonTech("content");
-  marketing = nonTech("marketing");
+  appDevelopers = Tech("app",Tdata);
+  webDevelopers = Tech("web",Tdata);
+  mlexperts = Tech("ml",Tdata);
+  flutter = Tech("flutter",Tdata);
+  cloud = Tech("cloud",Tdata);
+  graphics = nonTech("graphic",Tdata);
+  content = nonTech("content",Tdata);
+  marketing = nonTech("marketing",Tdata);
 
   return (
     <div className="container">
