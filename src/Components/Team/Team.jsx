@@ -19,7 +19,7 @@ const profileImage = importAll(
 export default function Team() {
   const [Tdata, setData] = useState(data.teams); // interim loading and error reserve.
   useEffect(() =>
-    fetch("https://dscsastra.herokuapp.com/MembersbyCluster")
+    fetch("https://dscsastraapi.herokuapp.com/MembersbyCluster")
       .then(res => {
         if(res.status == 200){
           res.json().then( JsonData => setData(JsonData))

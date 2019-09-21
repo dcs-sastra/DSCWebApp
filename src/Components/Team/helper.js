@@ -48,7 +48,7 @@ export const Tech = (name,teams) => {
 };
 
 export const nonTech = (name,teams) => {
-  return teams.nonTech[`${name}`].map((person, id) => {
+  return teams[`${name}`].map((person, id) => {
     return (
       <div className="col-4 text-center non_tech" key={id}>
         <img

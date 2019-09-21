@@ -22,7 +22,7 @@ export default class Events extends Component {
   };
 
   componentDidMount(){
-    fetch("https://dscsastra.herokuapp.com/events").then( resp => {
+    fetch("https://dscsastraapi.herokuapp.com/events").then( resp => {
         resp.json().then( dataj => {
           if(dataj[0].poster){ // interim loading until api returns correct data.
             this.setState({

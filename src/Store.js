@@ -186,7 +186,7 @@ export default {
         imgUrl: "male"
       }
     ],
-    nonTech: {
+  
       graphic: [
         {
           name: "Kapil",
@@ -225,7 +225,7 @@ export default {
           imgUrl: "male"
         }
       ]
-    }
+    
   },
   events: [
     {
