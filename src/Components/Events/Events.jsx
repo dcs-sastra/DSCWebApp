@@ -11,6 +11,13 @@ function importAll(r) {
   return images;
 }
 
+function formatedDate(raw){
+	let date = new Date(raw);
+	let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+	return date.toLocaleString("en-IN", options)
+	
+}
+
 const eventPoster = importAll(
   require.context("../../assets/posters", false, /\.(png|jpe?g|svg)$/)
 );
@@ -71,7 +78,7 @@ export default class Events extends Component {
               </button>
             </div>
 
-            <span className="cd-date">{data.date}</span>
+            <span className="cd-date">{formatedDate(data.date)}</span>
           </div>
         </div>
       );
