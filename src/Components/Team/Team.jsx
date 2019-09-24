@@ -18,13 +18,11 @@ const profileImage = importAll(
 
 export default function Team() {
   const [Tdata, setData] = useState(data.teams); // interim loading and error reserve.
-  useEffect(() =>
+  useEffect(() => {
     fetch("https://dscsastraapi.herokuapp.com/MembersbyCluster")
-      .then(res => {
-        if(res.status == 200){
-          res.json().then( JsonData => setData(JsonData))
-        }
-      })
+      .then(res => res.json()) 
+      .then( jsonData => setData(jsonData[0]) )
+    },[setData]
   );
   let appDevelopers = [],
     webDevelopers = [],
@@ -61,11 +59,11 @@ export default function Team() {
           <br />
           <div className="Lead__div">
             <div className="lead__image">
-              <img src={profileImage[`${data.teams.lead.imgUrl}.jpg`]} alt="" />
+              <img src={profileImage[`${Tdata.lead.imgUrl}.jpg`]} alt="" />
             </div>
             <div>
-              <h3>{data.teams.lead.name}</h3>
-              <small className="text-secondary">{data.teams.lead.role}</small>
+              <h3>{Tdata.lead.name}</h3>
+              <small className="text-secondary">{Tdata.lead.role}</small>
             </div>
           </div>
         </div>
