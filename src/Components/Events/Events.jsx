@@ -49,7 +49,7 @@ export default class Events extends Component {
   render() {
     let events = this.state.events.map((data, id) => {
       return (
-        <div className="cd-timeline-block" key={id}>
+        <div className="cd-timeline-block" key={data.id}>
           <div className="cd-timeline-img cd-picture">
             <img src={task} alt="" />
           </div>
@@ -69,7 +69,7 @@ export default class Events extends Component {
               <button
                 type="button"
                 className="load_more_button"
-                id={data.id}
+                id={id}
                 data-toggle="modal"
                 data-target="#myModal"
                 onClick={this.modalPasser}
@@ -128,7 +128,7 @@ export default class Events extends Component {
               <div className="modal-content">
                 <div className="modal-header">
                   <h4 className="modal-title">
-                    {list.events[this.state.tempId].name}
+                    {this.state.events[this.state.tempId].name}
                   </h4>
                   <button type="button" className="close" data-dismiss="modal">
                     &times;
@@ -139,8 +139,8 @@ export default class Events extends Component {
                   <h5>Speaker(s): {this.state.events[this.state.tempId].speakers}</h5>
                   <div>
                   <img 
-                    src = {eventPoster[`${this.state.events[this.state.tempId].poster}`]}
-                    alt="..." className = "event_poster"
+                    src = {this.state.events[this.state.tempId].poster}
+                    alt="" className = "event_poster"
                   />
                   </div>
                   {this.state.events[this.state.tempId].main}
