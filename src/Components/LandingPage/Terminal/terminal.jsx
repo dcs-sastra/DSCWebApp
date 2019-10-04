@@ -27,8 +27,8 @@ class Terminal extends Component {
         </div>
         <div className="jumbotron__wrapper text-center">
           <div>
-            <h1>Some attractive caption!</h1>
-            <h6>By line comes here</h6>
+            <h1>Convert Yourself into binary and back into high level</h1>
+            <h6>Let's grow together!</h6>
           </div>
         </div>
         <div className="terminal">
