@@ -11,10 +11,12 @@
 
 .footer {
     background: #ededed;
+    padding: 5px 0px;
 }
 
 .Landing__address {
     color: #b1b1b1;
+    padding: 7px 15px;
 }
 
 .Landing__address h4 {
