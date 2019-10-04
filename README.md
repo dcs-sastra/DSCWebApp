@@ -1,6 +1,4 @@
----
-permalink: /index.html
----
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c702f21b-5fed-4b8c-be8b-22ae74e2a07c/deploy-status)](https://github.com/dsc-sastra-university/DSC-Website)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
