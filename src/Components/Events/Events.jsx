@@ -148,7 +148,7 @@ export default class Events extends Component {
 
                 <div className="modal-footer">
                   <a
-                    className="btn btn-danger"
+                    className={new Date(this.state.events[this.state.tempId].date)<new Date()?"btn btn-danger disabled":"btn btn-danger"}
                     href={this.state.events[this.state.tempId].register_link}
                     target="_blank"
                     style={{ textDecoration: "none" }}
