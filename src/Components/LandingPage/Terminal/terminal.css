@@ -72,6 +72,8 @@
     border-top-right-radius: 20px;
     display: flex;
     padding-left: 10px;
+    cursor: default;
+    user-select: none; 
 }
 
 .terminal_menu span {
@@ -123,6 +125,18 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .jumbotron__wrapper div {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h6 {
+        font-size: 0.9rem;
+    }
+
     .terminal {
         margin-top: -40px;
         margin: auto;
