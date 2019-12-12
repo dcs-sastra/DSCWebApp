@@ -118,23 +118,23 @@ export default function Team() {
           <div className="tech_team img4" id="cloud">
             <div className="row">
               <div style={{ width: "100%" }}>
-                <div className="appDevelopers_wrapper ">{cloud}</div>
+                <div className="appDevelopers_wrapper ">{arvr}</div>
               </div>
               <div className="team_title">
-                <h3 className="text-left text-white">Cloud and AR / VR </h3>
+                <h3 className="text-left text-white">AR / VR </h3>
               </div>
             </div>
           </div>
-          {/* <div className="tech_team img2" id="ar_vr">
+           <div className="tech_team img2" id="ar_vr">
             <div className="row">
               <div style={{ width: "100%" }}>
                 <div className="appDevelopers_wrapper ">{cloud}</div>
               </div>
               <div className="team_title">
-                <h3 className="text-left text-white">AR / VR</h3>
+                <h3 className="text-left text-white">Cloud</h3>
               </div>
             </div>
-          </div> */}
+          </div> 
         </div>
         <br />
         <br />
