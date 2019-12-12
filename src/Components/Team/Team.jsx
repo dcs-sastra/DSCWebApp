@@ -32,6 +32,7 @@ export default function Team() {
     graphics = [],
     content = [],
     arvr = [],
+    eventcoverage = [],
     marketing = [];
   appDevelopers = Tech("app",Tdata);
   webDevelopers = Tech("web",Tdata);
@@ -42,7 +43,7 @@ export default function Team() {
   graphics = nonTech("graphic",Tdata);
   content = nonTech("content",Tdata);
   marketing = nonTech("marketing",Tdata);
-
+  eventcoverage = nonTech("eventcoverage", Tdata);
   return (
     <div className="container">
       <br />
@@ -159,6 +160,11 @@ export default function Team() {
               <div id="marketing">
                 <h4 className="text-center">Marketing</h4>
                 <div className="row ">{marketing}</div>
+              </div>
+	      <hr />
+              <div id="eventcoverage">
+                <h4 className="text-center">Event Coverage</h4>
+                <div className="row ">{eventcoverage}</div>
               </div>
               <br />
             </div>

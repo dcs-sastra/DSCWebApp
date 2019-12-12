@@ -1,11 +1,6 @@
 export default {
-  aboutDSC: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam rerum
-              voluptate minus eaque provident adipisci, ducimus fugiat dignissimos
-              necessitatibus quod a laboriosam saepe, culpa fuga dolorum, sapiente
-              aliquid veniam molestiae. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quisquam minus asperiores incidunt voluptatem,
-              aliquid iusto natus placeat, at maxime eius harum tempore suscipit
-              beatae praesentium saepe est eveniet officiis vel.`,
+  aboutDSC: `Developer Student Clubs is a community where everyone is welcome. We help students bridge the gap between theory and practice and grow their knowledge by providing a peer-to-peer learning environment, by conducting workshops, study jams and building solutions for local businesses.
+Developer Student Clubs is a program supported by Google Developers.`,
   clusters: [
     {
       name: "Android",
@@ -186,6 +181,17 @@ export default {
         imgUrl: "male"
       }
     ],
+
+    arvr: [
+      {
+        name: "Sivaneshwar P",
+        imgUrl: "Sivaneshwar P"
+      },
+      {
+        name: "Rohith",
+        imgUrl: "male"
+      }
+    ],
   
       graphic: [
         {
@@ -208,6 +214,24 @@ export default {
         }
       ],
       marketing: [
+        {
+          name: "Nishanth S",
+          imgUrl: "Nishanth Sekar"
+        },
+        {
+          name: "Umesh Kanna",
+          imgUrl: "male"
+        },
+        {
+          name: "Syed Irfan",
+          imgUrl: "male"
+        },
+        {
+          name: "Mukunt B Surya",
+          imgUrl: "male"
+        }
+      ],
+      eventcoverage: [
         {
           name: "Nishanth S",
           imgUrl: "Nishanth Sekar"
