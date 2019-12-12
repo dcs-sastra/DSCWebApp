@@ -35,7 +35,7 @@ export default function Team() {
     marketing = [];
   appDevelopers = Tech("app",Tdata);
   webDevelopers = Tech("web",Tdata);
-  arvr = Tech("arvr",Tdata),
+  arvr = Tech("arvr",Tdata);
   mlexperts = Tech("ml",Tdata);
   flutter = Tech("flutter",Tdata);
   cloud = Tech("cloud",Tdata);
