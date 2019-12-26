@@ -1,251 +1,240 @@
 .nonTechTeam {
-    border-radius: 20px !important;
-    box-shadow: 5px 5px 30px #adadaa;
+     border-radius: 20px !important;
+     box-shadow: 5px 5px 30px #adadaa;
 }
 
 .Lead__div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 .lead__image {
-    margin: 20px;
-    margin-left: 10px;
+     margin: 20px;
+     margin-left: 10px;
 }
 
 .lead__image img {
-    border-radius: 50%;
+     border-radius: 50%;
 }
 
 .tech_team {
-    width: 100%;
-    min-height: 51vw;
-    height: 100%;
+     width: 100%;
+     min-height: 48.8vw;
+     height: 100%;
 }
 
 .tech_team h3 {
-    padding-top: 35%;
-    margin-left: -20px;
+     padding-top: 35%;
+     margin-left: -20px;
 }
 
 .team_members {
-    border-radius: 50%;
-    width: 7vw;
+     border-radius: 50%;
+     width: 7vw;
 }
 
 .team_member_wrapper {
-    padding: 3%;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
+     padding: 3%;
+     display: inline-flex;
+     flex-direction: column;
+     align-items: center;
 }
 
 .appDevelopers_wrapper {
-    margin-top: 6vw;
-    margin-left: 15px;
-    overflow: hidden;
+     margin-top: 6vw;
+     margin-left: 15px;
+     overflow: hidden;
 }
 
 .team_title {
-    position: absolute;
-    right: 15vw;
-    margin-top: 10px;
+     position: absolute;
+     right: 18vw;
+     margin-top: 10px;
 }
 
-
-
 @media only screen and (max-width: 600px) {
-    .team_member_wrapper {
-        padding: 0 3%;
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-    }
+     .team_member_wrapper {
+          padding: 0 3%;
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+     }
 
-    .team_member_wrapper p {
-        font-size: 70%;
-    }
+     .team_member_wrapper p {
+          font-size: 70%;
+     }
 
-    .appDevelopers_wrapper {
-        margin-top: 45px;
-    }
+     .appDevelopers_wrapper {
+          margin-top: 45px;
+     }
 
-    .tech_team h3 {
-        padding-top: 35%;
-        margin-left: -60px;
-    }
+     .tech_team h3 {
+          padding-top: 35%;
+          margin-left: -60px;
+     }
 
-    .team_title {
-        position: absolute;
-        right: 12vw;
-        max-width: 100px;
-    }
+     .team_title {
+          position: absolute;
+          right: 12vw;
+          max-width: 100px;
+     }
 
-    .team_title h3 {
-        font-size: 100%;
-    }
+     .team_title h3 {
+          font-size: 100%;
+     }
 
-    .team_members {
-        border-radius: 50%;
-        width: 15vw;
-    }
+     .team_members {
+          border-radius: 50%;
+          width: 15vw;
+     }
 
-    .lead__image img {
-        border-radius: 50%;
-        width: 70%;
-    }
+     .lead__image img {
+          border-radius: 50%;
+          width: 70%;
+     }
 
-    .non_tech p {
-        font-size: 80%;
-    }
+     .non_tech p {
+          font-size: 80%;
+     }
 }
 
 .non_tech p {
-    margin: 0;
+     margin: 0;
 }
 
 .img1 {
-    background-image: url('../../assets/Path111.svg');
+     background-image: url("../../assets/Path111.svg");
 }
 
 .img2 {
-    background-image: url('../../assets/Path12.svg');
+     background-image: url("../../assets/Path12.svg");
 }
 
 .img3 {
-    background-image: url('../../assets/Path13.svg');
+     background-image: url("../../assets/Path13.svg");
 }
 
 .img4 {
-    background-image: url('../../assets/Path14.svg');
+     background-image: url("../../assets/Path14.svg");
 }
 
 /* Teams modified */
 
-
 .user-card {
-    width: 120px;
-    height: 100px;
-    border-radius: 10px;
-    padding: 10px;
-    clip-path: circle(50px at 60px 60px);
-    background: transparent;
-    transition: clip-path .5s ease-in-out, height .2s linear;
-    background-color: #fff;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 20px;
+     width: 120px;
+     height: 100px;
+     border-radius: 10px;
+     padding: 10px;
+     clip-path: circle(50px at 60px 60px);
+     background: transparent;
+     transition: clip-path 0.5s ease-in-out, height 0.2s linear;
+     background-color: #fff;
+     display: inline-flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     margin: 20px;
 }
 
-
-
 .front-side img {
-    border-radius: 10px;
-    width: 100px;
+     border-radius: 10px;
+     width: 100px;
 }
 
 .front-side h6 {
-    margin-top: 10px;
+     margin-top: 10px;
 }
 
 .social {
-    font-size: 1.4rem;
+     font-size: 1.4rem;
 }
 
 .social a {
-    margin-right: 5px;
-    cursor: pointer;
-    text-decoration: none;
+     margin-right: 5px;
+     cursor: pointer;
+     text-decoration: none;
 }
 
-
 .social a:nth-child(1) {
-    color: #0077b5;
+     color: #0077b5;
 }
 
 .social a:nth-child(1):visited {
-    color: #0077b5;
+     color: #0077b5;
 }
 
-
 .social a:nth-child(2) {
-    color: #000;
+     color: #000;
 }
 
 .social a:nth-child(2):visited {
-    color: #000;
+     color: #000;
 }
 
 .social a:nth-child(3) {
-    color: #ea4c89;
+     color: #ea4c89;
 }
 
 .social a:nth-child(3):visited {
-    color: #ea4c89;
+     color: #ea4c89;
 }
-
 
 .user-card:hover {
-    clip-path: circle(100%);
-    height: 200px;
+     clip-path: circle(100%);
+     height: 200px;
 }
 
-
 .front-side p {
-    position: absolute;
+     position: absolute;
 }
 
 @media only screen and (max-width: 600px) {
-    .front-side img {
-        width: 50px;
-        margin: auto;
-    }
+     .front-side img {
+          width: 50px;
+          margin: auto;
+     }
 
-    .front-side h6 {
-        font-size: 99%;
-    }
+     .front-side h6 {
+          font-size: 99%;
+     }
 
-    .user-card {
-        width: 60px;
-        height: 60px;
-        clip-path: circle(24px at 29px 29px);
-        font-size: 65%;
-        padding: 5px;
-        margin: 10px;
-    }
+     .user-card {
+          width: 60px;
+          height: 60px;
+          clip-path: circle(24px at 29px 29px);
+          font-size: 65%;
+          padding: 5px;
+          margin: 10px;
+     }
 
-    .user-card:hover {
-        clip-path: circle(100%);
-        height: 120px;
-    }
+     .user-card:hover {
+          clip-path: circle(100%);
+          height: 120px;
+     }
 
-    .social {
-        font-size: 15px;
-    }
+     .social {
+          font-size: 15px;
+     }
 
-    .social a {
-        margin-right: 3px;
-    }
+     .social a {
+          margin-right: 3px;
+     }
 
-    .social a:nth-child(3) {
-        margin-right: 0;
-    }
+     .social a:nth-child(3) {
+          margin-right: 0;
+     }
 }
 
 .nonTechTeam p {
-    margin-top: 10px;
-    margin-bottom: 0;
+     margin-top: 10px;
+     margin-bottom: 0;
 }
 
 .nontech_social {
-    margin-bottom: 10px !important;
+     margin-bottom: 10px !important;
 }
 
-
-
 #cloud {
-    min-height: 15vh;
+     min-height: 15vh;
 }
