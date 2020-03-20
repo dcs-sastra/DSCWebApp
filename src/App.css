@@ -11,6 +11,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 34px;
 }
 
 h3 {
@@ -21,6 +31,10 @@ h3 {
 p {
   font-size: 16px;
   line-height: 2;
+}
+
+nav {
+  height: 7vh;
 }
 
 .bg1 {
@@ -41,32 +55,86 @@ p {
   z-index: -1;
 }
 
+.jumbotron {
+  position: relative;
+  background-image: url("./Backgrounds/team-bg.jpg");
+  height: 95vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.loader {
+  width: 80%;
+  margin: 25vh auto;
+  text-align: center;
+}
+
+.loader img {
+  width: 200px;
+}
+
+.jumbotron::after {
+  content: "";
+  opacity: 0.5;
+}
+.jumbotron img {
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.quote-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5vh 0;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.quote-wrapper h1,
+h2 {
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+.quote-wrapper h1 {
+  margin: 30px 0;
+}
+
+.scroller {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scroller img {
+  width: 50px;
+  animation: hover 1.5s infinite;
+}
 .lead {
   max-width: 80%;
   margin: 3vh auto;
   position: relative;
 }
 
-/* .lead::after {
-  content: "";
-  background: url("./Backgrounds/BG_1.png");
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-} */
+.lead h3 {
+  font-size: 34px !important;
+}
+
+.lead p {
+  font-size: 20px;
+}
 
 .lead div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 15vh 0 !important;
 }
 
 .lead div img {
-  border: 4px solid var(--blue);
+  border: 5px solid var(--blue);
   border-radius: 50%;
   outline: none;
 }
@@ -84,6 +152,7 @@ p {
 
 .cluster {
   margin: 5vh 0;
+  transition: 1s ease-in-out;
 }
 
 .cluster section {
@@ -101,7 +170,7 @@ p {
 
 .cluster section h3 {
   text-align: center;
-  display: none;
+  display: block;
   position: absolute;
   z-index: 3;
   width: 100%;
@@ -124,6 +193,7 @@ p {
   z-index: 0;
   margin: 0.5% 10px;
   opacity: 0.3;
+  width: 80px;
   border-radius: 50%;
 }
 .cluster img {
@@ -140,11 +210,17 @@ p {
 
 .drawer {
   width: 100%;
-  height: 500px;
+  height: 100%;
+  padding: 5vh;
   border-radius: 40px;
   box-shadow: 0 0 40px var(--shadow-grey);
-  margin: 10vh auto;
+  margin: 5vh auto;
   position: relative;
+  z-index: 4;
+  background-color: #fff;
+  display: grid !important;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 @keyframes shake {
@@ -183,6 +259,18 @@ p {
   }
 }
 
+@keyframes hover {
+  0% {
+    transform: translateY(-15%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-15%);
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .cluster img {
     display: none;
@@ -194,7 +282,7 @@ p {
     width: 100%;
   }
   .cluster section h3 {
-    display: block;
+    display: block !important;
   }
   .cluster section img {
     display: inline;
@@ -206,6 +294,12 @@ p {
   .bg2 {
     top: 35%;
     width: 60%;
+  }
+  .drawer {
+    padding: 4vh;
+  }
+  .scroller img {
+    width: 40px;
   }
 }
 
