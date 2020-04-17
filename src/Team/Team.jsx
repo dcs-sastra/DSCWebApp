@@ -32,7 +32,7 @@ const Teams = () => {
         <img src={bg2} className="bg2" />
         <main className="jumbotron">
           <div className="quote-wrapper">
-            <h1>Alone we do so little. Together can change the world</h1>
+            <h1>Alone we do so little. Together we can change the world</h1>
             <h2>We are team DSC SASTRA </h2>
           </div>
           <a href="#main-team" className="scroller">

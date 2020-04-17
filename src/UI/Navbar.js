@@ -32,6 +32,13 @@ const Links = styled.li`
     margin-top: 4%;
     width: 100%;
   }
+  & > a {
+    text-decoration: none;
+    color: black;
+    &: hover {
+      color: grey;
+    }
+  }
 `;
 
 const LinkWrapper = styled.ul`

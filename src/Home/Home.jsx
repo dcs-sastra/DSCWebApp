@@ -6,6 +6,7 @@ import path3 from "../Backgrounds/P3.svg";
 import styled from "styled-components";
 import clusters from "./data";
 import Footer from "../Footer/Footer";
+import ContactUs from "./ContactUs";
 
 const BG1 = styled.img`
   position: absolute;
@@ -99,7 +100,9 @@ const Title = styled.div`
 
 const Paragraph = styled.p`
   font-size: 1rem;
-  padding: 5% 10%;
+  text-align: center;
+  width: 80%;
+  margin: 7% auto;
   line-height: 1.7;
   @media (max-width: 768px) {
     font-size: 18px;
@@ -178,10 +181,10 @@ const Home = () => {
     <Wrapper>
       <BG1 src={path1} width="100%" />
       <Terminal />
-      <Section>
+      <Section id="about">
         <BG2 src={path2} width="100%" />
         <Card>
-          <Title width="350px">About Developers Student Clubs</Title>
+          <Title width="250px">About Us</Title>
           <Paragraph>
             Developer Student Clubs is a community where everyone is welcome. We
             help students bridge the gap between theory and practice and grow
@@ -195,15 +198,7 @@ const Home = () => {
       <br />
       <Section id="contact">
         <BG3 src={path3} width="100%" />
-        <Card>
-          <Title width="200px">Contact us</Title>
-          <Form>
-            <input type="email" placeholder="E-Mail" />
-            <input type="text" placeholder="Name" />
-            <textarea type="text" rows={5} placeholder="Message" />
-            <button>Submit</button>
-          </Form>
-        </Card>
+        <ContactUs />
       </Section>
       <Footer />
     </Wrapper>

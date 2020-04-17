@@ -32,7 +32,12 @@ const Nav = () => {
         {open && (
           <LinkWrapper>
             <Links>
-              <Link to="/blog">Blog</Link>
+              <a
+                href="https://medium.com/dsc-sastra-deemed-to-be-university"
+                target="_blank"
+              >
+                Blog
+              </a>
             </Links>
             <Links>
               <Link to="/teams">Teams</Link>
@@ -41,10 +46,11 @@ const Nav = () => {
               <Link to="/events">Events</Link>
             </Links>
             <Links>
-              <Link to="/">About Us</Link>
+              <a href="/#about">About Us</a>
             </Links>
             <Links>
-              <Link to="/#contact">Contact</Link>
+              {/* <Link to="/#contact">Contact</Link> */}
+              <a href="/#contact">Contact</a>
             </Links>
           </LinkWrapper>
         )}
