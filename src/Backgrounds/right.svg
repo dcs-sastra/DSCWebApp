@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="683" height="2359" viewBox="0 0 683 2359">
+  <g id="Ellipse" transform="translate(-1421 110)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="109" cy="109" r="109" transform="translate(1669 693)" fill="#fbbc04"/>
+    <circle id="Ellipse_14" data-name="Ellipse 14" cx="109" cy="109" r="109" transform="translate(1849 55)" fill="#1a73e8"/>
+    <path id="Path_1" data-name="Path 1" d="M109,0A109,109,0,1,1,0,109,109,109,0,0,1,109,0Z" transform="translate(1421 1355)" fill="#f66868"/>
+    <circle id="Ellipse_5" data-name="Ellipse 5" cx="109" cy="109" r="109" transform="translate(1886 2031)" fill="#fbbc04"/>
+    <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(1681 1758)" fill="#1a73e8" stroke="#707070" stroke-width="1">
+      <circle cx="40" cy="40" r="40" stroke="none"/>
+      <circle cx="40" cy="40" r="39.5" fill="none"/>
+    </g>
+    <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(1662 -88)" fill="#f66868" stroke="#707070" stroke-width="1">
+      <circle cx="40" cy="40" r="40" stroke="none"/>
+      <circle cx="40" cy="40" r="39.5" fill="none"/>
+    </g>
+    <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(1640 -110)" fill="#34a853" stroke="#707070" stroke-width="1">
+      <circle cx="40" cy="40" r="40" stroke="none"/>
+      <circle cx="40" cy="40" r="39.5" fill="none"/>
+    </g>
+    <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(1877 816)" fill="#f66868" stroke="#707070" stroke-width="1">
+      <circle cx="40" cy="40" r="40" stroke="none"/>
+      <circle cx="40" cy="40" r="39.5" fill="none"/>
+    </g>
+  </g>
+</svg>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./cluster.css";
-import git from "./Logos/github.svg";
-import linkedin from "./Logos/linkedin.svg";
+import git from "../Logos/github.svg";
+import linkedin from "../Logos/linkedin.svg";
 
 function importAll(r) {
   let images = {};
@@ -12,7 +12,7 @@ function importAll(r) {
 }
 
 const clusters = importAll(
-  require.context("./clusters", false, /\.(png|jpe?g|svg)$/)
+  require.context("../clusters", false, /\.(png|jpe?g|svg)$/)
 );
 
 function getRandomNumber() {
@@ -80,6 +80,9 @@ const Cluster = props => {
         className="cluster"
         onClick={() => handleClusterClick(0)}
         style={newStyles}
+        id={capitalizeFirstLetter(props.name)
+          .split(" ")
+          .join("_")}
       >
         <section className={props.color} style={sectionStyle}>
           {title}
@@ -96,6 +99,9 @@ const Cluster = props => {
         className="cluster"
         onClick={() => handleClusterClick(0)}
         style={newStyles}
+        id={capitalizeFirstLetter(props.name)
+          .split(" ")
+          .join("_")}
       >
         {!clusterState && <img src={clusters[`${props.img}.svg`]} />}
         {!clusterState && <h3>{capitalizeFirstLetter(props.name)}</h3>}

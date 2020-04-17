@@ -1,38 +1,3 @@
-:root {
-  --blue: #4285f4;
-  --red: #db4437;
-  --yellow: #f4b400;
-  --green: #0f9d58;
-  --shadow-grey: rgb(165, 165, 165);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-  scroll-behavior: smooth;
-}
-
-h1 {
-  font-size: 48px;
-  line-height: 1;
-}
-
-h2 {
-  font-size: 34px;
-}
-
-h3 {
-  font-size: 24px;
-  line-height: 2;
-}
-
-p {
-  font-size: 16px;
-  line-height: 2;
-}
-
 nav {
   height: 7vh;
 }
@@ -57,20 +22,10 @@ nav {
 
 .jumbotron {
   position: relative;
-  background-image: url("./Backgrounds/team-bg.jpg");
+  background-image: url("../Backgrounds/team-bg.jpg");
   height: 95vh;
   background-size: cover;
   background-position: center;
-}
-
-.loader {
-  width: 80%;
-  margin: 25vh auto;
-  text-align: center;
-}
-
-.loader img {
-  width: 200px;
 }
 
 .jumbotron::after {
