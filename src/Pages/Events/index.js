@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Events from "./Events";
-import loader from "../loader.gif";
+import loader from "../../loader.gif";
 
 const eventsPerPage = 5;
 const EventMain = () => {

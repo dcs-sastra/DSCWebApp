@@ -1,11 +1,11 @@
 import React from "react";
-import left from "../Backgrounds/left.svg";
-import right from "../Backgrounds/right.svg";
+import left from "../../Backgrounds/left.svg";
+import right from "../../Backgrounds/right.svg";
 import {
   BackgroundWrapper,
   LeftImage,
-  RightImage
-} from "../UI/Events/Background";
+  RightImage,
+} from "../../UI/Events/Background";
 
 const Background = () => {
   return (

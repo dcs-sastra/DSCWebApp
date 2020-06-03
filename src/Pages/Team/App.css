@@ -22,7 +22,7 @@ nav {
 
 .jumbotron {
   position: relative;
-  background-image: url("../Backgrounds/team-bg.jpg");
+  background-image: url("../../Backgrounds/team-bg.jpg");
   height: 95vh;
   background-size: cover;
   background-position: center;

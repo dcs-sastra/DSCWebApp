@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import bg1 from "../Backgrounds/BG_1.png";
-import bg2 from "../Backgrounds/BG_2.png";
+import bg1 from "../../Backgrounds/BG_1.png";
+import bg2 from "../../Backgrounds/BG_2.png";
 import Cluster from "./Cluster";
 import arrow from "../Logos/down-arrow.svg";
-import loader from "../loader.gif";
+import loader from "../../loader.gif";
 import Footer from "../Footer/Footer";
 
 function getRandomNumber() {

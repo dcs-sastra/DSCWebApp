@@ -5,14 +5,14 @@ import linkedin from "../Logos/linkedin.svg";
 
 function importAll(r) {
   let images = {};
-  r.keys().map(item => {
+  r.keys().map((item) => {
     images[item.replace("./", "")] = r(item);
   });
   return images;
 }
 
 const clusters = importAll(
-  require.context("../clusters", false, /\.(png|jpe?g|svg)$/)
+  require.context("../../clusters", false, /\.(png|jpe?g|svg)$/)
 );
 
 function getRandomNumber() {
@@ -23,7 +23,7 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-const Cluster = props => {
+const Cluster = (props) => {
   const [clusterState, setClusterState] = useState(false);
   const handleClusterClick = () => {
     setClusterState(!clusterState);
@@ -60,11 +60,11 @@ const Cluster = props => {
   ));
 
   const newStyles = {
-    flexFlow: clusterState ? "column" : ""
+    flexFlow: clusterState ? "column" : "",
   };
   const sectionStyle = {
     width: clusterState ? "40%" : "",
-    height: clusterState ? "8vh" : ""
+    height: clusterState ? "8vh" : "",
   };
   let title = "";
   if (width < 600) {
@@ -80,9 +80,7 @@ const Cluster = props => {
         className="cluster"
         onClick={() => handleClusterClick(0)}
         style={newStyles}
-        id={capitalizeFirstLetter(props.name)
-          .split(" ")
-          .join("_")}
+        id={capitalizeFirstLetter(props.name).split(" ").join("_")}
       >
         <section className={props.color} style={sectionStyle}>
           {title}
@@ -99,9 +97,7 @@ const Cluster = props => {
         className="cluster"
         onClick={() => handleClusterClick(0)}
         style={newStyles}
-        id={capitalizeFirstLetter(props.name)
-          .split(" ")
-          .join("_")}
+        id={capitalizeFirstLetter(props.name).split(" ").join("_")}
       >
         {!clusterState && <img src={clusters[`${props.img}.svg`]} />}
         {!clusterState && <h3>{capitalizeFirstLetter(props.name)}</h3>}

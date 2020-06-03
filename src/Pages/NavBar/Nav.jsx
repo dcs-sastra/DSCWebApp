@@ -10,7 +10,7 @@ import {
   LinkWrapper,
   Links,
   Brand,
-} from "../UI/Navbar";
+} from "../../UI/Navbar";
 
 const Nav = () => {
   const width = window.innerWidth;
