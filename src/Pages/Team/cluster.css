@@ -1,0 +1,21 @@
+.member {
+  display: flex;
+  flex-direction: column;
+}
+
+.member img {
+  border-radius: 50%;
+  margin: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .member img {
+    display: inline;
+  }
+}
+
+.social img {
+  border-radius: 0;
+  width: 24px;
+  margin: 10px 5px;
+}
