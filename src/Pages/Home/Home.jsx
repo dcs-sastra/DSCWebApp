@@ -1,14 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Terminal from "./Terminal";
 import path1 from "../../Backgrounds/P1.svg";
 import path2 from "../../Backgrounds/P2.svg";
 import path3 from "../../Backgrounds/P3.svg";
 import styled from "styled-components";
 import clusters from "./data";
-import Footer from "../Footer/Footer";
 import ContactUs from "./ContactUs";
-import { TwitterButton, TwitterTimeline, TwitterFeed } from "./Twitter";
-import "./Home.css";
 
 const BG1 = styled.img`
   position: absolute;
@@ -57,16 +54,10 @@ const BG4 = styled.img`
     width: 100vh;
   }
 `;
-const Wrapper = styled.div`
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 91vh;
-`;
 const Section = styled.section`
   position: relative;
+  height: 100vh;
   display: ${(props) => (props.sm ? "none" : "flex")};
-  height: 100%;
   @media (max-width: 768px) {
     display: ${(props) => (props.sm ? "block" : "")};
   }
@@ -163,7 +154,6 @@ const ClusterCard = styled.div`
 `;
 
 const Home = () => {
-  const [twitterOpened, setTwitterOpened] = useState(false);
   const clusterData = clusters.map((cluster, id) => {
     if (cluster) {
       return (
@@ -181,9 +171,11 @@ const Home = () => {
     }
   });
   return (
-    <Wrapper>
-      <BG1 src={path1} width="100%" />
-      <Terminal />
+    <>
+      <Section>
+        <BG1 src={path1} width="100%" />
+        <Terminal />
+      </Section>
       <Section id="about">
         <BG2 src={path2} width="100%" />
         <Card>
@@ -203,36 +195,7 @@ const Home = () => {
         <BG3 src={path3} width="100%" />
         <ContactUs />
       </Section>
-
-      {/* Twitter starts here */}
-
-      <TwitterFeed>
-        <TwitterTimeline isOpen={twitterOpened ? "open" : "closed"}>
-          <a
-            className="twitter-timeline"
-            href="https://twitter.com/dsc_sastra?ref_src=twsrc%5Etfw"
-            data-height={window.innerWidth > 768 ? 400 : 250}
-            data-width={window.innerWidth > 768 ? 400 : 200}
-            data-chrome="nofooter noheader  noscrollbar"
-          >
-            Tweets by dsc_sastra
-          </a>
-        </TwitterTimeline>
-        <TwitterButton
-          onClick={() => {
-            setTwitterOpened(!twitterOpened);
-          }}
-          isOpen={twitterOpened ? "open" : "closed"}
-        >
-          {twitterOpened ? (
-            <i class="fa fa-times fa-2x"></i>
-          ) : (
-            <i className="fa fa-twitter fa-2x" aria-hidden="true" />
-          )}
-        </TwitterButton>
-      </TwitterFeed>
-      <Footer />
-    </Wrapper>
+    </>
   );
 };
 

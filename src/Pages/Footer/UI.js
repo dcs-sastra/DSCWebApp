@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Address = styled.div`
-  position: relative;
+  width: 100%;
   color: grey;
   background-color: #f2f2f2;
   padding: 2% 10%;
