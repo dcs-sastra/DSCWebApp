@@ -28,8 +28,9 @@ const Cluster = (props) => {
   const handleClusterClick = () => {
     setClusterState(!clusterState);
   };
-  const thumbs = props.data.map((person, id) => (
+  const thumbs = props.data.map((person) => (
     <img
+      key={person._id}
       src={
         person.imgUrl === ""
           ? `https://randomuser.me/api/portraits/men/${getRandomNumber()}.jpg`
@@ -38,8 +39,8 @@ const Cluster = (props) => {
     />
   ));
   const width = window.screen.width;
-  const members = props.data.map((person, id) => (
-    <div key={id} className="member">
+  const members = props.data.map((person) => (
+    <div key={person._id} className="member">
       <img
         src={
           person.imgUrl === ""
