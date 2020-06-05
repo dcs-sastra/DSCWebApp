@@ -16,7 +16,7 @@ const BG1 = styled.img`
   transform: translate(-50%, -50%);
   @media (max-width: 768px) {
     top: 2vh;
-    width: 200vh;
+    width: 200vw;
   }
 `;
 
@@ -29,7 +29,7 @@ const BG2 = styled.img`
   transform: translate(-50%, -50%);
   @media (max-width: 768px) {
     top: 40vh;
-    width: 200vh;
+    width: 200vw;
   }
 `;
 const BG3 = styled.img`
@@ -40,7 +40,7 @@ const BG3 = styled.img`
   transform: translate(-50%, -50%);
   @media (max-width: 768px) {
     top: 40vh;
-    width: 200vh;
+    width: 200vw;
   }
 `;
 const BG4 = styled.img`
@@ -51,12 +51,12 @@ const BG4 = styled.img`
   width: 80%;
   @media (max-width: 768px) {
     top: 10vh;
-    width: 100vh;
+    width: 200vw;
   }
 `;
 const Section = styled.section`
   position: relative;
-  height: 100vh;
+  height: 91vh;
   display: ${(props) => (props.sm ? "none" : "flex")};
   @media (max-width: 768px) {
     display: ${(props) => (props.sm ? "block" : "")};
