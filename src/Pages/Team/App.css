@@ -108,15 +108,27 @@ h2 {
 .cluster {
   margin: 5vh 0;
   transition: 1s ease-in-out;
+  /* Enable hardware acceleration to fix laggy transitions */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .cluster section {
+  position: relative;
   width: 60%;
   height: 10vh;
   border-radius: 50px;
   box-shadow: 0 0 40px var(--shadow-grey);
   transition: 0.4s ease-in;
-  position: relative;
+  /* Enable hardware acceleration to fix laggy transitions */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 /*
 .cluster h3 {
