@@ -1,57 +1,77 @@
 import React, { useState } from "react";
 import Address from "./UI";
-import { Button, TwitterTimeline } from "./Twitter";
+import { Button, TwitterTimeline, CloseButton } from "./Twitter";
+import styled from "styled-components";
+import instagram from "./instagram.svg";
+import twitter from "./twitter.svg";
+import linkedin from "./linkedin.svg";
+import close from "./close.svg";
+
+const Overlay = styled.div`
+  position: fixed;
+  display: ${(props) => props.overlay};
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: pointer;
+`;
 
 const Footer = () => {
-  const [twitterOpened, setTwitterOpened] = useState(false);
+  const [overlayOpen, setOverlayOpen] = useState("none");
   return (
     <>
-      <TwitterTimeline
-        isOpen={twitterOpened ? "open" : "closed"}
-        position={window.innerWidth > 768 ? "85%" : "50%"}
-      >
-        <a
-          className="twitter-timeline"
-          href="https://twitter.com/dsc_sastra?ref_src=twsrc%5Etfw"
-          data-height="400"
-          data-width="600"
-          data-chrome="nofooter noheader"
-        >
-          Tweets by dsc_sastra
-        </a>
-      </TwitterTimeline>
+      <Overlay overlay={overlayOpen} onClick={() => setOverlayOpen("none")}>
+        <TwitterTimeline>
+          <a
+            className="twitter-timeline"
+            href="https://twitter.com/dsc_sastra?ref_src=twsrc%5Etfw"
+            data-height="500"
+            data-width="1000"
+            data-chrome="nofooter"
+          >
+            Tweets by dsc_sastra
+          </a>
+        </TwitterTimeline>
+        <CloseButton onClick={() => setOverlayOpen("none")}>
+          <img src={close} width="20px"></img>
+        </CloseButton>
+      </Overlay>
       <Button
         onClick={() => {
-          setTwitterOpened(!twitterOpened);
+          setOverlayOpen("block");
+          console.log("deepakh");
         }}
         position={window.innerWidth > 768 ? "95%" : "50%"}
-        color={twitterOpened ? "#CA0B00" : "#059ff5"}
+        color="#059ff5"
       >
-        {twitterOpened ? (
-          <i class="fa fa-times fa-2x"></i>
-        ) : (
-          <i className="fa fa-twitter fa-2x" aria-hidden="true" />
-        )}
+        <img src={twitter} width="20px"></img>
       </Button>
+
       <Button
         onClick={() => {
-          window.location.href =
-            "https://www.instagram.com/dsc.sastra.university/";
+          window.open("https://www.instagram.com/dsc.sastra.university/");
         }}
         position={window.innerWidth > 768 ? "90%" : "20%"}
         color="#ca37ac"
       >
-        <i className="fa fa-instagram fa-2x" aria-hidden="true" />
+        <img src={instagram} width="20px"></img>
       </Button>
+
       <Button
         onClick={() => {
-          window.location.href = "https://www.linkedin.com/company/dsc-sastra";
+          window.open("https://www.linkedin.com/company/dsc-sastra");
         }}
         position={window.innerWidth > 768 ? "85%" : "80%"}
         color="#0073b0"
       >
-        <i className="fa fa-linkedin fa-2x" aria-hidden="true" />
+        <img src={linkedin} width="20px"></img>
       </Button>
+
       <Address>
         <br />
         <h4>DSC SASTRA - Powered By Google Developers</h4>

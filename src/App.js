@@ -19,19 +19,17 @@ const Loader = () => {
 
 const App = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <Nav />
-        <Suspense fallback={<Loader />}>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/events" component={EventMain} />
-            <Route exact path="/teams" component={Teams} />
-          </Switch>
-        </Suspense>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Nav />
+      <Suspense fallback={<Loader />}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/events" component={EventMain} />
+          <Route exact path="/teams" component={Teams} />
+        </Switch>
+      </Suspense>
+      <Footer />
+    </BrowserRouter>
   );
 };
 
