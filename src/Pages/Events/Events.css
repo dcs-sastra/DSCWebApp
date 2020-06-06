@@ -65,7 +65,7 @@
   cursor: pointer;
 }
 
-/* .learn-more {
+.learn-more {
   background-color: var(--green);
   color: white;
   padding: 10px 70px;
@@ -73,12 +73,18 @@
   font-size: 20px;
   outline: none;
   border: none;
-  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  /* position: absolute; */
   border-radius: 40px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  bottom: -45px;
-} */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* bottom: -45px; */
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
 
 @media only screen and (max-width: 600px) {
   .container {
