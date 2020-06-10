@@ -6,7 +6,6 @@ import path3 from "../../Backgrounds/P3.svg";
 import styled from "styled-components";
 import clusters from "./data";
 import ContactUs from "./ContactUs";
-import Footer from "../Footer/Footer";
 
 const BG1 = styled.img`
   position: absolute;
@@ -196,7 +195,6 @@ const Home = () => {
         <BG3 src={path3} width="100%" />
         <ContactUs />
       </Section>
-      <Footer links={true}/>
     </>
   );
 };

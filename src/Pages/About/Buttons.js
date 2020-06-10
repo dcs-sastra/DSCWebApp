@@ -10,7 +10,7 @@ import twitter from "./assets/twitter.png"
 const Buttons = ({type}) => {
     if(type===1){
         return(
-            <div className="Contact-primaryButton">
+            <div className="Contact-primaryButton ">
                 <button> Contact Us </button>
             </div>
         );

@@ -5,7 +5,6 @@ import bg2 from "../../Backgrounds/BG_2.png";
 import Cluster from "./Cluster";
 import arrow from "../Logos/down-arrow.svg";
 import loader from "../../loader.gif";
-import Footer from "../Footer/Footer";
 
 function getRandomNumber() {
   return parseInt(1 + Math.random() * 99);
@@ -132,7 +131,6 @@ const Teams = () => {
           </section>
         </main>
         <br />
-        <Footer links={true}/>
       </div>
     );
   }

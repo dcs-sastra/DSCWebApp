@@ -30,7 +30,7 @@ const App = () => {
           <Route exact path="/about" component={About} />
         </Switch>
       </Suspense>
-      {/* Msg :- Add Footer component individulally for the pages */}
+      <Footer />
     </BrowserRouter>
   );
 };

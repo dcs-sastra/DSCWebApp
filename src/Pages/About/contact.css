@@ -1,6 +1,7 @@
 .Contact{
     margin-top: 15px;
     display:flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     /* flex-wrap: wrap; */
     /* border: 1px solid red; */
@@ -20,6 +21,9 @@
     border: 1px solid red;
 
 } */
+.Contact-details > *{
+    padding: 15px;
+}
 .Contact-img{
     order:0;
 }
@@ -52,6 +56,7 @@
     height: 50px;
     /* opacity: 0; */
     outline: none;
+    border: none;
 }
 .Contact-mediaButtons > * :hover{
     cursor: pointer;
@@ -78,11 +83,32 @@
     font-weight: 400;
     border-radius: 32px; 
     outline: none;
+    animation: float 1.8s linear alternate infinite;
+    /* border: none; */
+}
+.button-float {
+
+}
+
+@keyframes float {
+    50% {
+    transform: translateY(-px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
 }
 .Contact-primaryButton :hover{
     cursor: pointer;
-    background-color: #0f9d58;
-    border-color: #0f9d58;
+    background-color: white;
+    border-color:5px solid #5791f4;
+    color:#5791f4;
+    font-weight: 900;
+    animation: none;
+
+}
+.Contact-primaryButton :hover .button-float{
+    
 }
 /* mediaQuery */
 @media only screen and (max-width: 770px){
@@ -94,9 +120,6 @@
     .Contact-details{
         text-align: center;
         max-width: 100vw;
-        /* display: flex;
-        flex-direction: column;
-        justify-content: space-around; */
     
     }
     .Contact-details-msg{
