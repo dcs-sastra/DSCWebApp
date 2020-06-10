@@ -30,7 +30,7 @@ const Buttons = ({type}) => {
                 <img  src={twitter} alt="twitter" width="40px" />
             </button>
             <button  onClick={() => {
-                window.open("#");
+                window.open("https://www.facebook.com/dscsastra");
               }}>
                 <img src={fb} alt="fb" width="40px" />
             </button>
@@ -49,12 +49,12 @@ const Buttons = ({type}) => {
             </button>
             <button  
                 onClick={() => {
-                window.open("#");
+                window.open("https://www.youtube.com/dscsastra");
               }}>
                 <img src={youTube} alt="you tube" width="40px"  />
             </button>
             <button  onClick={() => {
-                window.open("#");
+                window.open("https://play.google.com/store/apps/details?id=dsc.sastra.dsc_sastra_university");
               }}>
                 <img id="playStore" src={playStore} alt="playStore" width="20px"  />
             </button>
