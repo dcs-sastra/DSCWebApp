@@ -3,6 +3,7 @@ import "./Events.css";
 import Model from "./Event_Modal";
 import Background from "./Background";
 import styled from "styled-components";
+import Footer from "../Footer/Footer"
 const colors = ["#4285f4", "#db4437", "#f4b400", "#0f9d58"];
 
 const Pagination = styled.div`
@@ -79,6 +80,7 @@ const Events = (props) => {
           />
         </Pagination>
         <br />
+        <Footer links={true} />
       </div>
     );
   }

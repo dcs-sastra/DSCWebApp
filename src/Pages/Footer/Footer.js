@@ -21,10 +21,12 @@ const Overlay = styled.div`
   cursor: pointer;
 `;
 
-const Footer = () => {
+const Footer = ({links}) => {
   const [overlayOpen, setOverlayOpen] = useState("none");
   return (
-    <>
+    <div>
+    {links===true ?(
+      <div>
       <Overlay overlay={overlayOpen} onClick={() => setOverlayOpen("none")}>
         <TwitterTimeline>
           <a
@@ -71,7 +73,6 @@ const Footer = () => {
       >
         <img src={linkedin} width="20px"></img>
       </Button>
-
       <Address>
         <br />
         <h4>DSC SASTRA - Powered By Google Developers</h4>
@@ -81,7 +82,21 @@ const Footer = () => {
         <br />
         Tamil Nadu
       </Address>
-    </>
+      </div>
+    ):(
+      <Address>
+        <br />
+        <h4>DSC SASTRA - Powered By Google Developers</h4>
+        Sastra Deemed to be University,
+        <br />
+        Thanjavur,
+        <br />
+        Tamil Nadu
+      </Address>
+    )}
+  
+      
+    </div>
   );
 };
 

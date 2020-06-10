@@ -28,7 +28,7 @@
     max-width: 30vw;
 }
 .Contact-primaryButton{
-    /* margin-right:25%; */
+    margin-right:25%;
     align-self: flex-end;
     justify-self: flex-end;
     /* justify-content: center; */
@@ -111,7 +111,7 @@
         /* font-size: large; */
     }
     .Contact-primaryButton{
-        /* margin-right:25%; */
+        margin-right:0%;
         align-self: center;
         justify-self: center;
         /* justify-content: center; */
