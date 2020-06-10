@@ -46,7 +46,8 @@ const Nav = () => {
               <Link to="/events">Events</Link>
             </Links>
             <Links>
-              <a href="/#about">About Us</a>
+              {/*<a href="/#about">About Us</a>*/}
+              <Link to="/about">About Us</Link>
             </Links>
             <Links>
               {/* <Link to="/#contact">Contact</Link> */}

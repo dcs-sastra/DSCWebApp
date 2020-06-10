@@ -8,6 +8,7 @@ import Footer from "./Pages/Footer/Footer";
 const Teams = lazy(() => import("./Pages/Team/Team"));
 const Home = lazy(() => import("./Pages/Home/Home"));
 const EventMain = lazy(() => import("./Pages/Events"));
+const About = lazy(() => import("./Pages/About/About"))
 
 const Loader = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/events" component={EventMain} />
           <Route exact path="/teams" component={Teams} />
+          <Route exact path="/about" component={About} />
         </Switch>
       </Suspense>
       <Footer />
