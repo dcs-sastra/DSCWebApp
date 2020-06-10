@@ -51,27 +51,19 @@
     width: 50px;
     height: 50px;
     /* opacity: 0; */
+    outline: none;
+}
+.Contact-mediaButtons > * :hover{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
 }
 
 .Contact-mediaButtons > button > img {
     border-radius:50% ;
 }
 
-#linkedIn{
-    border-radius:0% ;
-}
-.linkedIn{
-    width: 45px;
-    height: 45px;
-    border-color: rgb(5, 159, 245);;
-    background-color: rgb(5, 159, 245);;
-}
-.twitter{
-    width: 45px;
-    height: 45px;
-    border-color: rgb(5, 159, 245);;
-    background-color: rgb(5, 159, 245);;
-}
+
 #playStore{
     justify-self: end;
     border-radius: 0%;
@@ -85,8 +77,13 @@
     font-size: 30px;
     font-weight: 400;
     border-radius: 32px; 
+    outline: none;
 }
-
+.Contact-primaryButton :hover{
+    cursor: pointer;
+    background-color: #0f9d58;
+    border-color: #0f9d58;
+}
 /* mediaQuery */
 @media only screen and (max-width: 770px){
     .Contact{
