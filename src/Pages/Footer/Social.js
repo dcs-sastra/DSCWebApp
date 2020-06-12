@@ -51,8 +51,8 @@ export const CloseButton = styled.button`
   left: 50%;
   top: 85%;
   background-color: #ca0b00;
-  height: min(10vw, 50px);
-  width: min(10vw, 50px);
+  height: 50px;
+  width: 50px;
   color: white;
   border: none;
   border-radius: 45px;
@@ -61,6 +61,6 @@ export const CloseButton = styled.button`
   cursor: pointer;
   outline: none;
   &:hover {
-    box-shadow: ${(props) => "10px 8px 15px #ca0b00"};
+    box-shadow: 10px 8px 15px #ca0b00;
   }
 `;
