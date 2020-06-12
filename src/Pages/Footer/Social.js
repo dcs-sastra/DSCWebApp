@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const TwitterTimeline = styled.div`
   position: absolute;
   top: 40%;
@@ -9,21 +10,31 @@ export const TwitterTimeline = styled.div`
   align-items: center;
   width: 80%;
 `;
-export const Button = styled.button`
-  transform: translateX(-50%) translateY(35%);
-  position: absolute;
+
+export const SocialButtons = styled.div`
+  width: 85%;
+  margin: auto;
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  left: ${(props) => (props.position ? props.position : "50%")};
+  justify-content: flex-end;
+  @media (max-width: 768px) {
+    justify-content: space-evenly;
+  }
+`;
+
+export const Button = styled.button`
+  transform: translateY(-50%);
+  display: inline-block;
+  margin-right: 20px;
+  padding-top: 5px;
   background-color: ${(props) => props.color};
-  height: min(10vw, 50px);
-  width: min(10vw, 50px);
+  height: 50px;
+  width: 50px;
   color: white;
   border: none;
   border-radius: 45px;
   box-shadow: 10px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: background-color, box-shadow 0.3s ease 0s;
+  transition: box-shadow 0.3s ease 0s;
   cursor: pointer;
   outline: none;
   &:hover {
@@ -46,7 +57,7 @@ export const CloseButton = styled.button`
   border: none;
   border-radius: 45px;
   box-shadow: 7px 4px 15px rgba(0, 0, 0, 0.1);
-  transition: background-color, box-shadow 0.3s ease 0s;
+  transition: box-shadow 0.3s ease 0s;
   cursor: pointer;
   outline: none;
   &:hover {
