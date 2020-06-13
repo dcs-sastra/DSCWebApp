@@ -42,6 +42,7 @@ const Cluster = (props) => {
   const members = props.data.map((person) => (
     <div key={person._id} className="member">
       <img
+        className="person-image"
         src={
           person.imgUrl === ""
             ? `https://randomuser.me/api/portraits/men/${getRandomNumber()}.jpg`

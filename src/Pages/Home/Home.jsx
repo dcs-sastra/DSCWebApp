@@ -5,10 +5,7 @@ import path2 from "../../Backgrounds/P2.svg";
 import path3 from "../../Backgrounds/P3.svg";
 import styled from "styled-components";
 import clusters from "./data";
-import Footer from "../Footer/Footer";
 import ContactUs from "./ContactUs";
-import Twitter from  './Twitter'
-import './Home.css'
 
 const BG1 = styled.img`
   position: absolute;
@@ -19,7 +16,7 @@ const BG1 = styled.img`
   transform: translate(-50%, -50%);
   @media (max-width: 768px) {
     top: 2vh;
-    width: 200vh;
+    width: 200vw;
   }
 `;
 
@@ -32,7 +29,7 @@ const BG2 = styled.img`
   transform: translate(-50%, -50%);
   @media (max-width: 768px) {
     top: 40vh;
-    width: 200vh;
+    width: 200vw;
   }
 `;
 const BG3 = styled.img`
@@ -43,7 +40,7 @@ const BG3 = styled.img`
   transform: translate(-50%, -50%);
   @media (max-width: 768px) {
     top: 40vh;
-    width: 200vh;
+    width: 200vw;
   }
 `;
 const BG4 = styled.img`
@@ -54,19 +51,13 @@ const BG4 = styled.img`
   width: 80%;
   @media (max-width: 768px) {
     top: 10vh;
-    width: 100vh;
+    width: 200vw;
   }
-`;
-const Wrapper = styled.div`
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 91vh;
 `;
 const Section = styled.section`
   position: relative;
+  height: 91vh;
   display: ${(props) => (props.sm ? "none" : "flex")};
-  height: 100%;
   @media (max-width: 768px) {
     display: ${(props) => (props.sm ? "block" : "")};
   }
@@ -180,9 +171,11 @@ const Home = () => {
     }
   });
   return (
-    <Wrapper>
-      <BG1 src={path1} width="100%" />
-      <Terminal />
+    <>
+      <Section>
+        <BG1 src={path1} width="100%" />
+        <Terminal />
+      </Section>
       <Section id="about">
         <BG2 src={path2} width="100%" />
         <Card>
@@ -202,12 +195,8 @@ const Home = () => {
         <BG3 src={path3} width="100%" />
         <ContactUs />
       </Section>
-      <div className="customTweetContainer" style={{display:'flex',justifyContent:'center'}}>
-        <Twitter />
-      </div>
-      <Footer />
-    </Wrapper>
-  )
+    </>
+  );
 };
 
 export default Home;
