@@ -23,6 +23,16 @@ const PageNo = styled.div`
   background-color: ${colors[2]};
 `;
 
+function truncateString(str, len) {
+  return (str.length <= len) 
+            ? <span className="card-text">{str}</span> 
+            : <span className="card-text">
+                {str.slice(0, len-1) + "..."} <span className="more">(more)</span>
+              </span>;
+}
+
+const MAX_DESCRIPTION_LENGTH = 150;
+
 const Events = (props) => {
   const [modalState, setModal] = useState(false);
   const [selectedItem, setItem] = useState(false);
@@ -32,18 +42,15 @@ const Events = (props) => {
       ? props.events.map((event) => {
           colorId = colorId % 4;
           return (
-            <div className="card" key={event.id}>
+            <div  className="card" 
+                  key={event.id} 
+                  onClick = {() => {
+                    setItem({...event}); 
+                    setModal(true)
+                  }}
+            >
               <h2 style={{ color: colors[colorId++] }}>{event.name}</h2>
-              <p>{event.description}</p>
-              <button
-                className="learn-more"
-                onClick={() => {
-                  setItem({ ...event });
-                  setModal(true);
-                }}
-              >
-                Learn More
-              </button>
+              <p>{truncateString(event.description, MAX_DESCRIPTION_LENGTH)}</p>
             </div>
           );
         })
