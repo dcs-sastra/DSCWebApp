@@ -38,6 +38,7 @@ const EventMain = () => {
   } else {
     return (
       <Events events={eventsRendered} page={pageNo} next={next} prev={prev} />
+      // <Events events={events} />
     );
   }
 };

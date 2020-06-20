@@ -1,5 +1,5 @@
-.container {
-  width: 70%;
+.events-container {
+  width: 90%;
   margin: 5vh auto;
   position: relative;
 }
@@ -15,6 +15,9 @@
 
 .cards-wrapper {
   margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .card-text {
@@ -22,18 +25,21 @@
 }
 
 .card {
-  border-radius: 40px;
+  flex: 1 0 300px;
+  margin: 10px;
+  border-radius: 10px;
   box-shadow: 1px 1px 40px var(--shadow-grey);
-  padding: 50px 30px;
+  padding: 20px 20px;
   background-color: white;
   position: relative;
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
   transition: 0.15s;
-  overflow: hidden;
+  max-height: 400px;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .card:hover {
@@ -41,16 +47,16 @@
   transform: scale(1.05);
 }
 
-.card > h2 {
+.card > h3 {
   text-align: center;
   line-height: 2;
   color: black;
 }
 
 .card > p {
-  padding: 10px;
+  /* padding: 10px; */
   text-align: justify;
-  font-size: 24px;
+  font-size: 1.25rem;
 }
 
 .more {
