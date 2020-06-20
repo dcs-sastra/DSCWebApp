@@ -49,7 +49,7 @@ const Events = (props) => {
                     setModal(true)
                   }}
             >
-              <h2 style={{ color: colors[colorId++] }}>{event.name}</h2>
+              <h3 style={{ color: colors[colorId++] }}>{event.name}</h3>
               <p>{truncateString(event.description, MAX_DESCRIPTION_LENGTH)}</p>
             </div>
           );
@@ -62,7 +62,7 @@ const Events = (props) => {
     return (
       <div className="event-wrapper">
         <Background />
-        <div className="container">
+        <div className="events-container">
           <h1 className="event-title"> Our Events</h1>
           <div className="cards-wrapper">{events}</div>
         </div>
