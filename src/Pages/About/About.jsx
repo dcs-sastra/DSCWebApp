@@ -74,27 +74,28 @@ const About = () => {
       </main>
 
       <AboutUs id="about">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi quae non
-        deserunt culpa iste maxime, natus cum quam quasi commodi. Lorem, ipsum
-        dolor sit amet consectetur adipisicing elit. Unde possimus ut numquam
-        cum magni cumque asperiores quos magnam atque enim?
+        We are the team behind DSC SASTRA. We are a proud community of passionate
+        programmers who continuously strive to both improve ourselves and also 
+        help others in their programming endavours. We aim to foster an inclusive
+        society wherein our beloved members have an opportunity to Network, Learn 
+        and Grow as both individuals and a team.
       </AboutUs>
 
       <Principles>
         {principle(
           connect,
           "Connect",
-          "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id accusantium! Soluta corporis beatae error quibusdam sunt fugit odit dicta. Ipsa repudiandae id doloribus, reiciendis ipsum natus deserunt nihil cum!"
+          "  Meet other students on campus interested in developer technologies. All are welcome, including those with diverse backgrounds and different majors."
         )}
         {principle(
           learn,
           "Learn",
-          "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id accusantium! Soluta corporis beatae error quibusdam sunt fugit odit dicta. Ipsa repudiandae id doloribus, reiciendis ipsum natus deserunt nihil cum!"
+          "  Learn about a wide range of technical topics where new skills are gained through hands-on workshops, in-person training and project building activities"
         )}
         {principle(
           grow,
           "Grow",
-          "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, id accusantium! Soluta corporis beatae error quibusdam sunt fugit odit dicta. Ipsa repudiandae id doloribus, reiciendis ipsum natus deserunt nihil cum!"
+          "  Apply your new learnings and connections to build great solutions for local problems. Advance your skills, career and network. Give back to your community by helping others learn as well."
         )}
       </Principles>
       <Contact />
