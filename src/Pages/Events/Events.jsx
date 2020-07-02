@@ -78,11 +78,14 @@ const Events = (props) => {
           <img
             src="https://img.icons8.com/ios/50/000000/long-arrow-left.png"
             onClick={props.prev}
+            className={props.direction==="left" ? 'hide':''}
           />
           <PageNo>{props.page}</PageNo>
           <img
             src="https://img.icons8.com/ios/50/000000/long-arrow-right.png"
             onClick={props.next}
+            id="right"
+            className={props.direction==="right" ? 'hide':''}
           />
         </Pagination>
         <br />

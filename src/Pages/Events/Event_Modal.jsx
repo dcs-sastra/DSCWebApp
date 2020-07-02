@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import "./modal.css";
 
 function formatedDate(raw) {
@@ -15,6 +15,19 @@ function formatedDate(raw) {
 }
 
 const Modal = ({ isOpen, closeModal, data }) => {
+
+  useEffect(() => {
+      if(isOpen==true)
+      {
+        let d1=new Date()
+        let d2=new Date(data.date)
+        if(d1>d2)
+        setregister(false)
+      }
+  });
+
+  const [register, setregister] = useState(true)
+
   if (isOpen === true) {
     return (
       <div className="modal-wrapper">
@@ -38,9 +51,9 @@ const Modal = ({ isOpen, closeModal, data }) => {
                   <span className="green-text">{formatedDate(data.date)}</span>
                 </span>
               </div>
-              <a href={data.register_link} target="_blank" className="learn-more">
+              {register ? (<a href={data.register_link} target="_blank" className="learn-more">
                 Register
-              </a>
+              </a>) : ''}
             </div>
             <div className="poster-wrapper">
               <img src={data.poster} className="poster" />
