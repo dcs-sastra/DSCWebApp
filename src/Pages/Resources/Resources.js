@@ -1,15 +1,47 @@
 import React, {useState, useEffect} from 'react';
 import loader from "../../loader.gif";
 import Modal from './Modal';
+import styled from "styled-components";
 import './Resources.css';
 
+/******************** Constants ********************/
 const MAX_DESCRIPTION_LENGTH = 150;
+const NUMBER_OF_RESOURCES_PER_PAGE = 6;
 
+/******************** Styled Components ********************/
+const Pagination = styled.div`
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+`;
+
+const PageNo = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 800;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    background-color: #db4437;
+`;
+
+/******************** The Resource Component ********************/
 export default function Resources () {
+
+    /********** State **********/
     const [resources, setResources] = useState([]);
-    const [filter, setFilter] = useState("");
+    const [filteredResources, setFilteredResources] = useState([]);
     const [waitingForData, setWaitingForData] = useState(true);
     const [selectedResource, setSelectedResource] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+
+
+    /********** Effects **********/
 
     // Get the resources from the backend
     useEffect(() => {
@@ -17,98 +49,42 @@ export default function Resources () {
         async function getResourcesFromServer() {
             const data = await fetch('https://dscsastraapi.herokuapp.com/resources');
             const resources = await data.json();
-            const sample_resources = [{
-                    id: '1',
-                    name: 'Freecodecamp',
-                    description: 'A free code camp',
-                    resource_url: 'https://freecodecamp.org',
-                    image_url: 'https://images.unsplash.com/photo-1588336443962-49d88df004a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80'
-                }, {
-                    id: '2',
-                    name: 'Freecodecamp',
-                    description: 'This a line, this is line one, this is a line. This a line, this is line two, this is a line. This a line, this is line three, this is a line.',
-                    resource_url: 'https://freecodecamp.org',
-                    image_url: 'https://images.unsplash.com/photo-1588336443962-49d88df004a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80'
-                }, {
-                    id: '3',
-                    name: 'Freecodecamp',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                    resource_url: 'https://freecodecamp.org',
-                    image_url: 'https://images.unsplash.com/photo-1588336443962-49d88df004a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80'
-                }, {
-                    id: '4',
-                    name: 'Freecodecamp',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                    resource_url: 'https://freecodecamp.org',
-                    image_url: 'https://images.unsplash.com/photo-1588336443962-49d88df004a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80'
-                }, {
-                    id: '6',
-                    name: 'Freecodecamp',
-                    description: 'A free code camp',
-                    resource_url: 'https://freecodecamp.org',
-                    image_url: 'https://images.unsplash.com/photo-1588336443962-49d88df004a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80'
-                }, {
-                    id: '5',
-                    name: 'Freecodecamp',
-                    description: 'A free code camp',
-                    resource_url: 'https://freecodecamp.org',
-                    image_url: 'https://images.unsplash.com/photo-1588336443962-49d88df004a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80'
-                }, {
-                    id: '7',
-                    name: 'Freecodecamp',
-                    description: 'A free code camp',
-                    resource_url: 'https://freecodecamp.org',
-                    image_url: 'https://images.unsplash.com/photo-1588336443962-49d88df004a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80'
-                }, {
-                    id: '8',
-                    name: 'Freecodecamp',
-                    description: 'A free code camp',
-                    resource_url: 'https://freecodecamp.org',
-                    image_url: 'https://images.unsplash.com/photo-1588336443962-49d88df004a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80'
-                }, {
-                    id: '9',
-                    name: 'Freecodecamp',
-                    description: 'A free code camp',
-                    resource_url: 'https://freecodecamp.org',
-                    image_url: 'https://images.unsplash.com/photo-1588336443962-49d88df004a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80'
-                }
-            ]
-            setResources(sample_resources);
+            console.log(resources);
+            setResources(resources);
+            setFilteredResources(resources);
             setWaitingForData(false);
         }
     }, []);
 
+
+    /********** Functions used by the component  **********/
+
+    function goToPrevPage() {
+        if(currentPage == 1) return;
+        setCurrentPage(currentPage => currentPage > 1 ? currentPage - 1 : currentPage);
+    }
+
+    function goToNextPage() {
+        if(currentPage == Math.ceil(filteredResources.length / NUMBER_OF_RESOURCES_PER_PAGE)) return;
+        setCurrentPage(currentPage => currentPage < Math.ceil(filteredResources.length / NUMBER_OF_RESOURCES_PER_PAGE) ? currentPage + 1 : currentPage);
+    }
+
     function getResources() {
-        if(resources.length === 0) {
-            return (
-                <div>
-                    No Resources Found
-                </div>
-            )
-        }
+        if(resources.length === 0) return <div>No Resources Found</div>
 
-        const filteredResources = resources.filter(resource => resource.name.toLowerCase().includes(filter.toLowerCase())
-                                                                || resource.description.toLowerCase().includes(filter.toLowerCase()));
+        if(filteredResources.length === 0) return <div>No match found for the searched term</div>
 
-        if(filteredResources.length === 0) {
-            return (
-                <div>
-                    {`No resource's name contains ${filter}`}
-                </div>
-            )
-        }
+        const resourcesInCurrentPage = filteredResources.slice((currentPage - 1) * NUMBER_OF_RESOURCES_PER_PAGE , currentPage * NUMBER_OF_RESOURCES_PER_PAGE);
 
-        return filteredResources.map(resource => (
+        return resourcesInCurrentPage.map(resource => (
             <div className="resource" key={resource.id}>
                 <div className="resource-poster">
                     <img className="img-fluid" src={resource.image_url} />
                 </div>
                 <div className="resource-content">
                     <h2>{resource.name}</h2>
-                    <p>
-                        {truncateString(resource.description, MAX_DESCRIPTION_LENGTH, () => setSelectedResource(resource))}
-                    </p>
-                    <a className="btn btn-primary btn-rounded" href={resource.resource_url} target="_blank" rel = "noopener noreferrer" >Learn more</a>
+                    <p>{truncateString(resource.description, MAX_DESCRIPTION_LENGTH, () => setSelectedResource(resource))}</p>
+                    <a className="btn btn-primary btn-rounded" href={resource.resource_url} target="_blank" rel = "noopener noreferrer">Learn more</a>
                 </div>
             </div>
         ));
@@ -116,15 +92,26 @@ export default function Resources () {
 
     function search(e) {
         e.preventDefault();
-        setFilter(e.target[0].value);
+        const filter = e.target[0].value;
+        let filtered = resources.filter(resource => resource.name.toLowerCase().includes(filter.toLowerCase())
+                                                                || resource.description.toLowerCase().includes(filter.toLowerCase()));  
+        setFilteredResources(filtered);
+        setCurrentPage(1);
     }
+
+
+
+    /********** JSX Rendered by the Component **********/
 
     return (
         <div className="resources-page">
+            {/***** The Image in the top *****/}
             <div className="overlay">
                 <h2>Resources Section</h2>
                 <h3>Never let anything to stop you learning</h3>
             </div>
+
+            {/***** Search Bar *****/}
             <div className="resources">
                 <div className="search">
                     <form onSubmit = {search}>
@@ -135,6 +122,8 @@ export default function Resources () {
                         
                     </form>
                 </div>
+
+                {/***** Modal *****/}
                 {
                     selectedResource !== null &&
                     <Modal className="resources-modal" closeModal = {() => setSelectedResource(null)}>
@@ -151,13 +140,34 @@ export default function Resources () {
                         </div>
                     </Modal>
                 }
-                
+
+
+                {/***** The Resource Cards *****/}
                 {waitingForData ? <div className="loader"><img src={loader} /></div> : getResources()}
+
+
+                {/***** Pagination Controls *****/}
+                <Pagination>
+                    <img
+                        src="https://img.icons8.com/ios/50/000000/long-arrow-left.png"
+                        onClick={goToPrevPage}
+                        style={currentPage <= 1 ? {opacity: 0.2} : {}}
+                    />
+                    <PageNo>{currentPage}</PageNo>
+                    <img
+                        src="https://img.icons8.com/ios/50/000000/long-arrow-right.png"
+                        onClick={goToNextPage}
+                        style={currentPage >= Math.ceil(filteredResources.length / NUMBER_OF_RESOURCES_PER_PAGE) ? {opacity: 0.2} : {}}
+                    />
+                </Pagination>
+
             </div>
         </div>
     );
 }
 
+
+/******************** Utility Functions ********************/
 function truncateString(str, len, onClickMore) {
     return (str.length <= len) 
                 ? <span>{str}</span> 
