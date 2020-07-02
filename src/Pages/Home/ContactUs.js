@@ -3,13 +3,12 @@ import styled from "styled-components";
 
 const Card = styled.div`
   background-color: white;
-  width: 50%;
+  width: 90%;
   margin: auto auto;
   border-radius: 30px;
   position: relative;
   box-shadow: 1px 1px 15px var(--shadow-grey);
   @media (max-width: 768px) {
-    width: 90%;
     padding-top: 20px;
   }
 `;
@@ -94,7 +93,7 @@ const ContactUs = (props) => {
         name: "",
         message: "",
       });
-      console.log("Responce noted!");
+      console.log("Response noted!");
     }
   };
 
