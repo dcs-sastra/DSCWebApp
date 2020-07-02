@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Terminal from "./Terminal";
 import path1 from "../../Backgrounds/P1.svg";
 import path2 from "../../Backgrounds/P2.svg";
@@ -154,6 +154,10 @@ const ClusterCard = styled.div`
 `;
 
 const Home = () => {
+  useEffect(() => {
+    if(window.location.hash==="#contact")
+    document.getElementById("contact").scrollIntoView({ block: 'center',  behavior: 'smooth' }) 
+  })
   const clusterData = clusters.map((cluster, id) => {
     if (cluster) {
       return (
