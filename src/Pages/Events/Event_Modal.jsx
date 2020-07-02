@@ -51,7 +51,7 @@ const Modal = ({ isOpen, closeModal, data }) => {
                   <span className="green-text">{formatedDate(data.date)}</span>
                 </span>
               </div>
-              {register ? (<a href={data.register_link} target="_blank" className="learn-more" id="register">
+              {register ? (<a href={data.register_link} target="_blank" className="learn-more">
                 Register
               </a>) : ''}
             </div>
