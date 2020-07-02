@@ -108,3 +108,8 @@
     font-size: 20px;
   }
 }
+
+.hide
+{
+  opacity: 0;
+}
