@@ -24,8 +24,7 @@
   justify-content: flex-end;
   position: relative;
 }
-.quote-wrapper h1,
-h2 {
+.quote-wrapper h1, .quote-wrapper h2 {
   text-align: center;
   width: 100%;
   color: white;

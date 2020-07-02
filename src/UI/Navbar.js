@@ -25,6 +25,7 @@ const Brand = styled.img`
 `;
 
 const Links = styled.li`
+  margin-left: 15px;
   display: inline;
   list-style: none;
   text-align: center;
@@ -42,9 +43,10 @@ const Links = styled.li`
 `;
 
 const LinkWrapper = styled.ul`
+  flex-grow: 1;
   display: flex;
-  justify-content: space-evenly;
-  width: 40%;
+  justify-content: flex-end;
+  
   align-items: center;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -63,7 +65,6 @@ const Link = styled(Linker)`
 const BrandWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%;
 `;
 
 const Hamburger = styled.img`
