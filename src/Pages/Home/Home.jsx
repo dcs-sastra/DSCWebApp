@@ -175,6 +175,10 @@ const TwitterFeed = styled.div`
   @media (max-width: 768px) {
     margin: 0 auto;
   }
+  & > iframe {
+    box-shadow: 1px 1px 15px var(--shadow-grey);
+    border-radius: 15px;
+  }
 `;
 
 const Home = () => {
