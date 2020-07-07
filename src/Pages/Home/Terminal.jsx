@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Typist from "react-typist";
 import { useState } from "react";
 import "react-typist/dist/Typist.css";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Container = styled.div`
   width: 85%;
@@ -54,7 +55,7 @@ const Button = styled.div`
   height: 25px;
   border-radius: 100px;
   margin: 0 10px;
-  background-color: ${props => `var(--${props.color})`};
+  background-color: ${(props) => `var(--${props.color})`};
   @media (max-width: 768px) {
     margin: 0 4px;
     width: 15px;
@@ -121,7 +122,7 @@ const TypedHead = styled.h3`
 `;
 const BlackSpan = styled.span`
   color: black;
-  margin-left: ${props => (props.noMargin ? "0" : "5%")};
+  margin-left: ${(props) => (props.noMargin ? "0" : "5%")};
 `;
 const GreenSpan = styled.span`
   color: var(--green);
@@ -225,34 +226,34 @@ const Terminal = () => {
         <Title>Teams</Title>
         <ul>
           <Content>
-            <a href="/teams/#Android">android</a>
+            <Link to="/teams/#Android">android</Link>
           </Content>
           <Content>
-            <a href="/teams/#Web">web</a>
+            <Link to="/teams/#Web">web</Link>
           </Content>
           <Content>
-            <a href="/teams/#Flutter">flutter</a>
+            <Link to="/teams/#Flutter">flutter</Link>
           </Content>
           <Content>
-            <a href="/teams/#Cloud">cloud</a>
+            <Link to="/teams/#Cloud">cloud</Link>
           </Content>
           <Content>
-            <a href="/teams/#Machine_learning">machine learning</a>
+            <Link to="/teams/#Machine_learning">machine learning</Link>
           </Content>
           <Content>
-            <a href="/teams/#AR_/_VR">ar / vr</a>
+            <Link to="/teams/#AR_/_VR">ar / vr</Link>
           </Content>
           <Content>
-            <a href="/teams/#Graphic_Designing">graphic designing</a>
+            <Link to="/teams/#Graphic_Designing">graphic designing</Link>
           </Content>
           <Content>
-            <a href="/teams/#Content_Writing">content writing</a>
+            <Link to="/teams/#Content_Writing">content writing</Link>
           </Content>
           <Content>
-            <a href="/teams/#Marketing">marketing</a>
+            <Link to="/teams/#Marketing">marketing</Link>
           </Content>
           <Content>
-            <a href="/teams/#Event_Coverage">event coverage</a>
+            <Link to="/teams/#Event_Coverage">event coverage</Link>
           </Content>
         </ul>
       </Sidebar>
