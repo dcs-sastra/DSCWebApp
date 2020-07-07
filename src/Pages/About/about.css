@@ -1,16 +1,16 @@
-.jumbotron {
+.about-jumbotron {
   position: relative;
-  background-image: url("../../Backgrounds/team-bg.jpg");
-  height: 95vh;
+  background-image: url("../../Backgrounds/about.png");
+  height: 50vh;
   background-size: cover;
   background-position: center;
 }
 
-.jumbotron::after {
+.about-jumbotron::after {
   content: "";
   opacity: 0.5;
 }
-.jumbotron img {
+.about-jumbotron img {
   width: 100%;
   margin-bottom: 10%;
 }
@@ -19,12 +19,16 @@
   width: 80%;
   margin: 0 auto;
   padding: 5vh 0;
-  display: flex !important;
+  height: 50vh;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
+
+  justify-content: center;
   position: relative;
 }
-.quote-wrapper h1, .quote-wrapper h2 {
+.quote-wrapper h2,
+.quote-wrapper h3 {
   text-align: center;
   width: 100%;
   color: white;
@@ -48,7 +52,6 @@
 .Contact {
   margin-top: 15px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   /* flex-wrap: wrap; */
   /* border: 1px solid red; */
@@ -117,7 +120,7 @@
   justify-self: end;
   border-radius: 0%;
 }
-.Contact-primaryButton > button {
+.AboutContactBtn > button {
   background-color: #5791f4;
   border-color: #5791f4;
   color: white;
@@ -127,7 +130,7 @@
   font-weight: 400;
   border-radius: 32px;
   outline: none;
-  animation: float 1.8s linear alternate infinite;
+  border: 0;
   /* border: none; */
 }
 .button-float {
@@ -141,16 +144,16 @@
     transform: translateY(-10px);
   }
 }
-.Contact-primaryButton :hover {
+.AboutContactBtn :hover {
   cursor: pointer;
-  background-color: white;
+  background-color: #bbd4ff7e;
   border-color: 5px solid #5791f4;
   color: #5791f4;
   font-weight: 900;
   animation: none;
+  transition: 0.5s ease;
 }
-.Contact-primaryButton :hover .button-float {
-}
+
 /* mediaQuery */
 @media only screen and (max-width: 770px) {
   .Contact {
@@ -170,7 +173,7 @@
     font-weight: 300;
     /* font-size: large; */
   }
-  .Contact-primaryButton {
+  .AboutContactBtn {
     margin-right: 0%;
     align-self: center;
     justify-self: center;

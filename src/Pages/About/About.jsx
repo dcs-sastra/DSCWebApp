@@ -57,14 +57,13 @@ const principle = (icon, title, text) => (
 const About = () => {
   return (
     <div>
-      <main className="jumbotron">
+      <main className="about-jumbotron">
         <div className="quote-wrapper">
-          <h1>Alone we do so little. Together we can change the world</h1>
-          <h2>We are team DSC SASTRA </h2>
+          <h2>About Developers Student Club</h2>
+          <h3>
+            We are inspired by the energy created when people come together
+          </h3>
         </div>
-        <a href="#about" className="scroller">
-          <img src={arrow} />
-        </a>
       </main>
 
       <AboutUs id="about">

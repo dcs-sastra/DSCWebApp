@@ -182,12 +182,6 @@ const TwitterFeed = styled.div`
 `;
 
 const Home = () => {
-  useEffect(() => {
-    if (window.location.hash === "#contact")
-      document
-        .getElementById("contact")
-        .scrollIntoView({ block: "center", behavior: "smooth" });
-  });
   const clusterData = clusters.map((cluster, id) => {
     if (cluster) {
       return (
@@ -225,7 +219,7 @@ const Home = () => {
         </Card>
       </Section>
       <br />
-      <TwitterAndContact>
+      <TwitterAndContact id="contact">
         <BG3 src={path3} width="100%" />
         <ContactUs />
         <TwitterFeed>
