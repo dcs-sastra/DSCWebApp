@@ -14,7 +14,7 @@ const NavBar = styled.nav`
   @media (max-width: 768px) {
     flex-flow: column;
     justify-content: space-evenly;
-    padding: 5vh 5vw;
+    padding: 2vh 2vw;
   }
 `;
 
@@ -23,7 +23,6 @@ const Brand = styled.img`
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 4% 0;
-    max-width: 200px;
   }
 `;
 
