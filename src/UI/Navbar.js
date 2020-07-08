@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link as Linker } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const NavBar = styled.nav`
   display: flex;
@@ -48,7 +49,6 @@ const LinkWrapper = styled.ul`
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
-  
   align-items: center;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -58,6 +58,15 @@ const LinkWrapper = styled.ul`
 
 const Link = styled(Linker)`
   text-decoration: none;
+  width: 100%;
+  color: black;
+  &: hover {
+    color: grey;
+  }
+`;
+const HashedLink = styled(HashLink)`
+  text-decoration: none;
+  width: 100%;
   color: black;
   &: hover {
     color: grey;
@@ -74,6 +83,10 @@ const BrandWrapper = styled.div`
     align-items: center;
     justify-content: center;
   }
+
+  & > a {
+    width: auto;
+  }
 `;
 
 const Hamburger = styled.img`
@@ -85,4 +98,13 @@ const Hamburger = styled.img`
   }
 `;
 
-export { NavBar, Hamburger, BrandWrapper, Link, LinkWrapper, Links, Brand };
+export {
+  NavBar,
+  Hamburger,
+  BrandWrapper,
+  Link,
+  LinkWrapper,
+  Links,
+  Brand,
+  HashedLink,
+};

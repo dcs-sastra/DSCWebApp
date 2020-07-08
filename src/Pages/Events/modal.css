@@ -104,10 +104,11 @@
 .close {
   position: absolute;
   top: -1px;
-  right: 0px;
+  left: 0px;
   color: white;
-  background-color: red;
-  border-radius: 40%;
+  background: red;
+
+  border-radius: 0 !important;
   width: 2rem;
   height: 2rem;
   border: 0;

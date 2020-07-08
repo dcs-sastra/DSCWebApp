@@ -18,18 +18,12 @@ const AboutUs = styled.div`
 `;
 
 const Principles = styled.div`
-  padding: 7vh 10%;
+  padding: 50px;
   background-color: #f1f1f1;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
   justify-content: space-evenly;
-  grid-column-gap: 5%;
-  @media (max-width: 768px) {
-    padding: 7vh 5%;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    grid-row-gap: 5vh;
-  }
+  grid-row-gap: 50px;
 `;
 
 const Principle = styled.div`
@@ -63,22 +57,21 @@ const principle = (icon, title, text) => (
 const About = () => {
   return (
     <div>
-      <main className="jumbotron">
+      <main className="about-jumbotron">
         <div className="quote-wrapper">
-          <h1>Alone we do so little. Together we can change the world</h1>
-          <h2>We are team DSC SASTRA </h2>
+          <h2>About Developers Student Club</h2>
+          <h3>
+            We are inspired by the energy created when people come together
+          </h3>
         </div>
-        <a href="#about" className="scroller">
-          <img src={arrow} />
-        </a>
       </main>
 
       <AboutUs id="about">
-        We are the team behind DSC SASTRA. We are a proud community of passionate
-        programmers who continuously strive to both improve ourselves and also 
-        help others in their programming endavours. We aim to foster an inclusive
-        society wherein our beloved members have an opportunity to Network, Learn 
-        and Grow as both individuals and a team.
+        We are the team behind DSC SASTRA. We are a proud community of
+        passionate programmers who continuously strive to both improve ourselves
+        and also help others in their programming endavours. We aim to foster an
+        inclusive society wherein our beloved members have an opportunity to
+        Network, Learn and Grow as both individuals and a team.
       </AboutUs>
 
       <Principles>

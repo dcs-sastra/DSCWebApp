@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Terminal from "./Terminal";
 import path1 from "../../Backgrounds/P1.svg";
 import path2 from "../../Backgrounds/P2.svg";
@@ -36,7 +36,7 @@ const BG3 = styled.img`
   position: absolute;
   left: 50%;
   z-index: -10;
-  top: 50vh;
+  top: 55vh;
   transform: translate(-50%, -50%);
   @media (max-width: 768px) {
     top: 40vh;
@@ -153,11 +153,35 @@ const ClusterCard = styled.div`
   min-width: 240px;
 `;
 
+const TwitterAndContact = styled.div`
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-row-gap: 5%;
+  justify-content: space-space-evenly;
+  width: 100%;
+  padding: 0 5%;
+  height: 91vh;
+  @media (max-width: 768px) {
+    height: 182vh;
+  }
+`;
+const TwitterFeed = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
+  & > iframe {
+    box-shadow: 1px 1px 15px var(--shadow-grey);
+    border-radius: 15px;
+  }
+`;
+
 const Home = () => {
-  useEffect(() => {
-    if(window.location.hash==="#contact")
-    document.getElementById("contact").scrollIntoView({ block: 'center',  behavior: 'smooth' }) 
-  })
   const clusterData = clusters.map((cluster, id) => {
     if (cluster) {
       return (
@@ -195,10 +219,21 @@ const Home = () => {
         </Card>
       </Section>
       <br />
-      <Section id="contact">
+      <TwitterAndContact id="contact">
         <BG3 src={path3} width="100%" />
         <ContactUs />
-      </Section>
+        <TwitterFeed>
+          <a
+            className="twitter-timeline"
+            href="https://twitter.com/dsc_sastra?ref_src=twsrc%5Etfw"
+            data-height="550"
+            data-width="1400"
+            data-chrome="nofooter"
+          >
+            Tweets by dsc_sastra
+          </a>
+        </TwitterFeed>
+      </TwitterAndContact>
     </>
   );
 };

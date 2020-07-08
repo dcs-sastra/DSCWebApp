@@ -10,6 +10,7 @@ import {
   LinkWrapper,
   Links,
   Brand,
+  HashedLink,
 } from "../../UI/Navbar";
 
 const Nav = () => {
@@ -49,11 +50,11 @@ const Nav = () => {
               <Link to="/resources">Resources</Link>
             </Links>
             <Links>
-              <Link to="/about">About Us</Link>
+              <Link to="/about">About</Link>
             </Links>
             <Links>
               {/* <Link to="/#contact">Contact</Link> */}
-              <a href="/#contact">Contact</a>
+              <HashedLink to="/#contact">Contact</HashedLink>
             </Links>
           </LinkWrapper>
         )}

@@ -14,8 +14,16 @@
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: "Google Sans";
+  src: url("./fonts/GoogleSans-Regular-v1.27.ttf");
+}
+
+* {
+  font-family: "Google Sans" !important;
+}
+
 body {
-  font-family: "Josefin Sans", sans-serif !important;
   margin: 0px;
   padding: 0px;
   height: 100%;
