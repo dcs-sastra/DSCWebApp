@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 
 const NavBar = styled.nav`
   display: flex;
-  padding: 20px;
+  padding: 10px 2vw;
   justify-content: space-between;
   align-items: center;
   height: 100%;
@@ -14,13 +14,14 @@ const NavBar = styled.nav`
   @media (max-width: 768px) {
     flex-flow: column;
     justify-content: space-evenly;
+    padding: 2vh 2vw;
   }
 `;
 
 const Brand = styled.img`
-  width: 20vw;
-  min-width: 250px;
+  max-width: 180px;
   @media (max-width: 768px) {
+    width: 100%;
     margin-top: 4% 0;
   }
 `;
@@ -72,15 +73,27 @@ const HashedLink = styled(HashLink)`
 `;
 
 const BrandWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  
+  position: relative;
+  
+  @media (max-width: 786px) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & > a {
+    width: auto;
+  }
 `;
 
 const Hamburger = styled.img`
-  display: "inline";
-  @media (min-width: 768px) {
-    display: none;
+  display: none;
+  @media (max-width: 768px) {
+    display: inline;
+    position: absolute;
+    right: 0px;  
   }
 `;
 
