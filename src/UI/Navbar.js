@@ -29,7 +29,7 @@ const Brand = styled.img`
 `;
 
 const Links = styled.li`
-  margin-left: 15px;
+  margin-left: 2vw;
   display: inline;
   list-style: none;
   text-align: center;
