@@ -33,6 +33,11 @@
   color: white;
   margin-top: 4vh;
 }
+
+.quote-wrapper h3 {
+  font-weight: 500;
+}
+
 .quote-wrapper h1 {
   margin: 30px 0;
 }

@@ -168,6 +168,10 @@ h2 {
   width: 100px;
 }
 
+#Event_Coverage img {
+  width: auto;
+}
+
 .person-image {
   object-fit: cover;
 }

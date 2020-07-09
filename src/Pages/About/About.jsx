@@ -9,7 +9,7 @@ import connect from "../Logos/connect.svg";
 
 const AboutUs = styled.div`
   font-size: 1.25rem;
-  line-height: 1.75rem;
+  line-height: 2rem;
   text-align: justify;
   text-align-last: center;
   width: 80%;
@@ -17,6 +17,7 @@ const AboutUs = styled.div`
   margin: auto;
   @media (max-width: 768px) {
     font-size: 1rem;
+    line-height: 1.75rem;
   }
 `;
 

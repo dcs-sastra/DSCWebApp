@@ -49,7 +49,7 @@ const Teams = () => {
           <section className="others">
             <Cluster
               name="android"
-              img="android"
+              img="android.svg"
               color="green"
               right={true}
               id={0}
@@ -57,7 +57,7 @@ const Teams = () => {
             />
             <Cluster
               name="web"
-              img="coding"
+              img="coding.svg"
               right={false}
               color="blue"
               id={1}
@@ -65,7 +65,7 @@ const Teams = () => {
             />
             <Cluster
               name="machine learning"
-              img="learning"
+              img="learning.svg"
               color="yellow"
               right={true}
               id={2}
@@ -74,7 +74,7 @@ const Teams = () => {
 
             <Cluster
               name="AR / VR"
-              img="vr-glasses"
+              img="vr-glasses.svg"
               right={false}
               color="red"
               id={3}
@@ -82,7 +82,7 @@ const Teams = () => {
             />
             <Cluster
               name="Flutter"
-              img="flutterio-icon"
+              img="flutterio-icon.svg"
               color="blue"
               right={true}
               id={4}
@@ -90,7 +90,7 @@ const Teams = () => {
             />
             <Cluster
               name="Cloud"
-              img="setting"
+              img="setting.svg"
               right={false}
               color="yellow"
               id={5}
@@ -98,7 +98,7 @@ const Teams = () => {
             />
             <Cluster
               name="Graphic Designing"
-              img="tools"
+              img="tools.svg"
               color="green"
               right={true}
               id={6}
@@ -106,7 +106,7 @@ const Teams = () => {
             />
             <Cluster
               name="Content Writing"
-              img="report"
+              img="report.svg"
               right={false}
               color="blue"
               id={7}
@@ -114,7 +114,7 @@ const Teams = () => {
             />
             <Cluster
               name="Marketing"
-              img="setting"
+              img="setting.svg"
               color="red"
               right={true}
               id={8}
@@ -122,7 +122,7 @@ const Teams = () => {
             />
             <Cluster
               name="Event Coverage"
-              img="android"
+              img="camera.jpg"
               right={false}
               color="yellow"
               id={9}
