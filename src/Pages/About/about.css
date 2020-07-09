@@ -15,7 +15,7 @@
   margin-bottom: 10%;
 }
 
-.quote-wrapper {
+.about-jumbotron > .quote-wrapper {
   width: 80%;
   margin: 0 auto;
   padding-bottom: 4vh;
@@ -26,19 +26,19 @@
   justify-content: center;
   position: relative;
 }
-.quote-wrapper h2,
-.quote-wrapper h3 {
+.about-jumbotron > .quote-wrapper h2,
+.about-jumbotron > .quote-wrapper h3 {
   text-align: center;
   width: 100%;
   color: white;
   margin-top: 4vh;
 }
 
-.quote-wrapper h3 {
+.about-jumbotron > .quote-wrapper h3 {
   font-weight: 500;
 }
 
-.quote-wrapper h1 {
+.about-jumbotron > .quote-wrapper h1 {
   margin: 30px 0;
 }
 
