@@ -168,7 +168,7 @@ h2 {
   width: 100px;
 }
 
-#Event_Coverage img {
+#Event_Coverage > img {
   width: auto;
 }
 
