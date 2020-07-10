@@ -1,7 +1,7 @@
 .about-jumbotron {
   position: relative;
   background-image: url("../../Backgrounds/about.png");
-  height: 50vh;
+  min-height: 40vh;
   background-size: cover;
   background-position: center;
 }
@@ -15,25 +15,30 @@
   margin-bottom: 10%;
 }
 
-.quote-wrapper {
+.about-jumbotron > .quote-wrapper {
   width: 80%;
   margin: 0 auto;
-  padding: 5vh 0;
-  height: 50vh;
+  padding-bottom: 4vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   justify-content: center;
   position: relative;
 }
-.quote-wrapper h2,
-.quote-wrapper h3 {
+.about-jumbotron > .quote-wrapper h2,
+.about-jumbotron > .quote-wrapper h3 {
   text-align: center;
   width: 100%;
   color: white;
+  margin-top: 4vh;
 }
-.quote-wrapper h1 {
+
+.about-jumbotron > .quote-wrapper h3 {
+  font-weight: 500;
+}
+
+.about-jumbotron > .quote-wrapper h1 {
   margin: 30px 0;
 }
 
@@ -50,7 +55,7 @@
 }
 
 .Contact {
-  margin-top: 15px;
+  margin-top: 5vh;
   display: flex;
   justify-content: space-evenly;
   /* flex-wrap: wrap; */
@@ -120,7 +125,7 @@
   justify-self: end;
   border-radius: 0%;
 }
-.AboutContactBtn > button {
+.AboutContactBtn button {
   background-color: #5791f4;
   border-color: #5791f4;
   color: white;
@@ -154,6 +159,11 @@
   transition: 0.5s ease;
 }
 
+.Contact-details-detail {
+  font-weight: 300;
+  /* font-size: large; */
+}
+
 /* mediaQuery */
 @media only screen and (max-width: 770px) {
   .Contact {
@@ -169,10 +179,7 @@
     font-weight: 800;
     /* font-size: x-large; */
   }
-  .Contact-details-detail {
-    font-weight: 300;
-    /* font-size: large; */
-  }
+  
   .AboutContactBtn {
     margin-right: 0%;
     align-self: center;
