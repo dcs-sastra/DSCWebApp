@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Terminal from "./Terminal";
 import path1 from "../../Backgrounds/P1.svg";
 import path2 from "../../Backgrounds/P2.svg";
@@ -222,16 +223,13 @@ const Home = () => {
       <TwitterAndContact id="contact">
         <BG3 src={path3} width="100%" />
         <ContactUs />
+
         <TwitterFeed>
-          <a
-            className="twitter-timeline"
-            href="https://twitter.com/dsc_sastra?ref_src=twsrc%5Etfw"
-            data-height="550"
-            data-width="1400"
-            data-chrome="nofooter"
-          >
-            Tweets by dsc_sastra
-          </a>
+          <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="dsc_sastra"
+            options={{ height: 550, width: 1400 }}
+          />
         </TwitterFeed>
       </TwitterAndContact>
     </>
