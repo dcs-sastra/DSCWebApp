@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 
 const Address = styled.div`
   padding: 0 10% 50px 10%;
-  position: absolute;
+  position: relative;
   width: 100%;
   color: grey;
   background-color: #f2f2f2;

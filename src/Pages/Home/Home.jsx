@@ -156,24 +156,24 @@ const ClusterCard = styled.div`
 
 const TwitterAndContact = styled.div`
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-row-gap: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-space-evenly;
   align-items: center;
   width: 100%;
-  padding: 0 5%;
-  height: 91vh;
-  @media (max-width: 768px) {
-    height: 182vh;
-  }
+  min-height: 91vh;
+  margin-bottom: 10vh;
 `;
 const TwitterFeed = styled.div`
   margin: 0 auto;
-  display: inline;
-  box-shadow: 2px 4px 15px;
+  width: 40%;
+  height: 520px;
+  box-shadow: 1px 1px 15px var(--shadow-grey);
   @media (max-width: 768px) {
     margin: 0 auto;
+    margin-top: 10vh;
+    width: 90%;
   }
 `;
 
@@ -223,7 +223,7 @@ const Home = () => {
           <TwitterTimelineEmbed
             sourceType="profile"
             screenName="dsc_sastra"
-            options={{ height: 520, width: 700 }}
+            options={{ height: 520, width: 1000 }}
           />
         </TwitterFeed>
       </TwitterAndContact>

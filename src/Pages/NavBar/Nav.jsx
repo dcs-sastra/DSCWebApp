@@ -3,6 +3,7 @@ import styled from "styled-components";
 import logo from "../Logos/dsc-logo.jpg";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import "./nav.css";
 import {
   NavBar,
   Hamburger,
@@ -40,92 +41,59 @@ const Nav = () => {
                 href="https://medium.com/dsc-sastra-deemed-to-be-university"
                 target="_blank"
               >
-                Blog
+                <span className="no-underline">Blog</span>
               </a>
             </Links>
             <Links>
               <Link to="/">
                 {location.pathname == "/" ? (
-                  <span
-                    style={{
-                      fontWeight: "bold",
-                      textShadow: "0.5px 0.5px 2px #727272",
-                    }}
-                  >
-                    Home
-                  </span>
+                  <span className="underline">Home</span>
                 ) : (
-                  "Home"
+                  <span className="no-underline">Home</span>
                 )}
               </Link>
             </Links>
             <Links>
               <Link to="/teams">
                 {location.pathname == "/teams" ? (
-                  <span
-                    style={{
-                      fontWeight: "bold",
-                      textShadow: "0.5px 0.5px 2px #727272",
-                    }}
-                  >
-                    Teams
-                  </span>
+                  <span className="underline">Teams</span>
                 ) : (
-                  "Teams"
+                  <span className="no-underline">Teams</span>
                 )}
               </Link>
             </Links>
             <Links>
               <Link to="/events">
                 {location.pathname == "/events" ? (
-                  <span
-                    style={{
-                      fontWeight: "bold",
-                      textShadow: "0.5px 0.5px 2px #727272",
-                    }}
-                  >
-                    Events
-                  </span>
+                  <span className="underline">Events</span>
                 ) : (
-                  "Events"
+                  <span className="no-underline">Events</span>
                 )}
               </Link>
             </Links>
             <Links>
               <Link to="/resources">
                 {location.pathname == "/resources" ? (
-                  <span
-                    style={{
-                      fontWeight: "bold",
-                      textShadow: "0.5px 0.5px 2px #727272",
-                    }}
-                  >
-                    Resources
-                  </span>
+                  <span className="underline">Resources</span>
                 ) : (
-                  "Resources"
+                  <span className="no-underline">Resources</span>
                 )}
               </Link>
             </Links>
             <Links>
               <Link to="/about">
                 {location.pathname == "/about" ? (
-                  <span
-                    style={{
-                      fontWeight: "bold",
-                      textShadow: "0.5px 0.5px 2px #727272",
-                    }}
-                  >
-                    About
-                  </span>
+                  <span className="underline">About</span>
                 ) : (
-                  "About"
+                  <span className="no-underline">About</span>
                 )}
               </Link>
             </Links>
             <Links>
               {/* <Link to="/#contact">Contact</Link> */}
-              <HashedLink to="/#contact">Contact</HashedLink>
+              <HashedLink to="/#contact">
+                <span className="no-underline">Contact</span>
+              </HashedLink>
             </Links>
           </LinkWrapper>
         )}

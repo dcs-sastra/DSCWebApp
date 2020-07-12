@@ -1,0 +1,38 @@
+.underline {
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+
+.no-underline {
+  text-decoration: none;
+  position: relative;
+}
+.underline:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  bottom: -4px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  background: black;
+}
+
+.no-underline:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  bottom: -4px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 0;
+  transition: 0.5s;
+}
+
+.no-underline:hover:after {
+  width: 80%;
+  background: orange;
+}
