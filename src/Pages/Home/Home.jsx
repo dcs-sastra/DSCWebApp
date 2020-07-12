@@ -170,7 +170,11 @@ const TwitterFeed = styled.div`
   width: 40%;
   height: 520px;
   box-shadow: 1px 1px 15px var(--shadow-grey);
-  border-radius: 10px;
+  border-radius: 30px;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: white;
   @media (max-width: 768px) {
     margin: 0 auto;
     margin-top: 10vh;
@@ -224,7 +228,10 @@ const Home = () => {
           <TwitterTimelineEmbed
             sourceType="profile"
             screenName="dsc_sastra"
-            options={{ height: 520, width: 1000 }}
+            options={{
+              height: 520,
+              width: 1000,
+            }}
           />
         </TwitterFeed>
       </TwitterAndContact>

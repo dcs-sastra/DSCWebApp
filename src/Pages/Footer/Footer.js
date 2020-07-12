@@ -7,7 +7,7 @@ import linkedin from "../Logos/linkedin-white.svg";
 import { useLocation } from "react-router-dom";
 
 const Address = styled.div`
-  padding: 0 10% 50px 10%;
+  padding: 0 0 50px 10%;
   position: relative;
   width: 100%;
   color: grey;
