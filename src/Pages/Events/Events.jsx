@@ -9,6 +9,7 @@ const Pagination = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-bottom: 10vh;
 `;
 
 const PageNo = styled.div`
@@ -24,11 +25,13 @@ const PageNo = styled.div`
 `;
 
 function truncateString(str, len) {
-  return (str.length <= len) 
-            ? <span className="card-text">{str}</span> 
-            : <span className="card-text">
-                {str.slice(0, len-1) + "..."} <span className="more">(more)</span>
-              </span>;
+  return str.length <= len ? (
+    <span className="card-text">{str}</span>
+  ) : (
+    <span className="card-text">
+      {str.slice(0, len - 1) + "..."} <span className="more">(more)</span>
+    </span>
+  );
 }
 
 const MAX_DESCRIPTION_LENGTH = 150;
@@ -42,12 +45,13 @@ const Events = (props) => {
       ? props.events.map((event) => {
           colorId = colorId % 4;
           return (
-            <div  className="card" 
-                  key={event.id} 
-                  onClick = {() => {
-                    setItem({...event}); 
-                    setModal(true)
-                  }}
+            <div
+              className="card"
+              key={event.id}
+              onClick={() => {
+                setItem({ ...event });
+                setModal(true);
+              }}
             >
               <h3 style={{ color: colors[colorId++] }}>{event.name}</h3>
               <p>{truncateString(event.description, MAX_DESCRIPTION_LENGTH)}</p>
@@ -78,17 +82,16 @@ const Events = (props) => {
           <img
             src="https://img.icons8.com/ios/50/000000/long-arrow-left.png"
             onClick={props.prev}
-            className={props.direction==="left" ? 'hide':''}
+            className={props.direction === "left" ? "hide" : ""}
           />
           <PageNo>{props.page}</PageNo>
           <img
             src="https://img.icons8.com/ios/50/000000/long-arrow-right.png"
             onClick={props.next}
             id="right"
-            className={props.direction==="right" ? 'hide':''}
+            className={props.direction === "right" ? "hide" : ""}
           />
         </Pagination>
-        <br />
       </div>
     );
   }

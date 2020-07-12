@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Terminal from "./Terminal";
 import path1 from "../../Backgrounds/P1.svg";
 import path2 from "../../Backgrounds/P2.svg";
@@ -155,29 +156,29 @@ const ClusterCard = styled.div`
 
 const TwitterAndContact = styled.div`
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-row-gap: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-space-evenly;
+  align-items: center;
   width: 100%;
-  padding: 0 5%;
-  height: 91vh;
-  @media (max-width: 768px) {
-    height: 182vh;
-  }
+  min-height: 91vh;
+  margin-bottom: 10vh;
 `;
 const TwitterFeed = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
-  width: 80%;
+  width: 40%;
+  height: 520px;
+  box-shadow: 1px 1px 15px var(--shadow-grey);
+  border-radius: 30px;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: white;
   @media (max-width: 768px) {
     margin: 0 auto;
-  }
-  & > iframe {
-    box-shadow: 1px 1px 15px var(--shadow-grey);
-    border-radius: 15px;
+    margin-top: 10vh;
+    width: 90%;
   }
 `;
 
@@ -222,16 +223,16 @@ const Home = () => {
       <TwitterAndContact id="contact">
         <BG3 src={path3} width="100%" />
         <ContactUs />
+
         <TwitterFeed>
-          <a
-            className="twitter-timeline"
-            href="https://twitter.com/dsc_sastra?ref_src=twsrc%5Etfw"
-            data-height="550"
-            data-width="1400"
-            data-chrome="nofooter"
-          >
-            Tweets by dsc_sastra
-          </a>
+          <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="dsc_sastra"
+            options={{
+              height: 520,
+              width: 1000,
+            }}
+          />
         </TwitterFeed>
       </TwitterAndContact>
     </>

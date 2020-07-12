@@ -7,21 +7,20 @@ import linkedin from "../Logos/linkedin-white.svg";
 import { useLocation } from "react-router-dom";
 
 const Address = styled.div`
-  position: absolute;
+  padding: 0 0 50px 10%;
+  position: relative;
   width: 100%;
   color: grey;
-  margin-top: 40px;
   background-color: #f2f2f2;
   font-size: 20px;
   & > h4 {
-    margin-top: 5vh;
-    padding: 0 10%;
+    margin-bottom: 0.3vh;
     color: black;
     font-size: 24px;
   }
   & > p {
-    padding: 0 10%;
-    margin-bottom: 3vh;
+    font-size: 20px;
+    line-height: 1.5em;
   }
 `;
 
@@ -57,9 +56,12 @@ const Footer = () => {
               <img src={linkedin} width="20px"></img>
             </Button>
           </SocialButtons>
-        ) : null}
+        ) : (
+          <br />
+        )}
         <h4>DSC SASTRA - Powered By Google Developers</h4>
-        <p>Sastra Deemed to be University, Thanjavur, Tamil Nadu</p>
+        <p>Sastra Deemed to be University,</p>
+        <p>Thanjavur, Tamil Nadu</p>
       </Address>
     </>
   );

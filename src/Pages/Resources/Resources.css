@@ -12,10 +12,6 @@
   color: white;
 }
 
-.overlay > * {
-  margin: 1rem 0;
-}
-
 .search {
   width: 100%;
   margin: 5vh 5vw;
