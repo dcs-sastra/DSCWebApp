@@ -160,6 +160,7 @@ const TwitterAndContact = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-row-gap: 5%;
   justify-content: space-space-evenly;
+  align-items: center;
   width: 100%;
   padding: 0 5%;
   height: 91vh;
@@ -168,17 +169,11 @@ const TwitterAndContact = styled.div`
   }
 `;
 const TwitterFeed = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
-  width: 80%;
+  display: inline;
+  box-shadow: 2px 4px 15px;
   @media (max-width: 768px) {
     margin: 0 auto;
-  }
-  & > iframe {
-    box-shadow: 1px 1px 15px var(--shadow-grey);
-    border-radius: 15px;
   }
 `;
 
@@ -228,7 +223,7 @@ const Home = () => {
           <TwitterTimelineEmbed
             sourceType="profile"
             screenName="dsc_sastra"
-            options={{ height: 550, width: 1400 }}
+            options={{ height: 520, width: 700 }}
           />
         </TwitterFeed>
       </TwitterAndContact>

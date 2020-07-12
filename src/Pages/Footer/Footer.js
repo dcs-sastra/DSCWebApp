@@ -14,7 +14,7 @@ const Address = styled.div`
   background-color: #f2f2f2;
   font-size: 20px;
   & > h4 {
-    margin-bottom: 2vh;
+    margin-bottom: 0.3vh;
     color: black;
     font-size: 24px;
   }
