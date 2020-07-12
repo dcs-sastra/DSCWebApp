@@ -19,15 +19,17 @@ const NavBar = styled.nav`
 `;
 
 const Brand = styled.img`
-  max-width: 180px;
+  margin-top: 10px;
+  max-width: 250px;
   @media (max-width: 768px) {
-    width: 100%;
+    width: 80%;
     margin-top: 4% 0;
+    max-width: 300px;
   }
 `;
 
 const Links = styled.li`
-  margin-left: 15px;
+  margin-left: 2vw;
   display: inline;
   list-style: none;
   text-align: center;
@@ -85,6 +87,9 @@ const BrandWrapper = styled.div`
 
   & > a {
     width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 

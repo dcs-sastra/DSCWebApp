@@ -6,7 +6,7 @@ import Buttons from "./Buttons";
 const Details = ({ msg, detail }) => {
   return (
     <div>
-      <h1 className="Contact-details-msg">{msg}</h1>
+      <h2 className="Contact-details-msg">{msg}</h2>
       <br />
       <h3 className="Contact-details-detail">{detail}</h3>
     </div>
