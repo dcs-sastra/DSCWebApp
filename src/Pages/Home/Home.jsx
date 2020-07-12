@@ -170,6 +170,7 @@ const TwitterFeed = styled.div`
   width: 40%;
   height: 520px;
   box-shadow: 1px 1px 15px var(--shadow-grey);
+  border-radius: 10px;
   @media (max-width: 768px) {
     margin: 0 auto;
     margin-top: 10vh;
