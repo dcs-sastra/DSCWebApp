@@ -130,3 +130,8 @@
 .yellow-text {
   color: var(--yellow);
 }
+
+.preformatted-content {
+  white-space: pre-wrap;
+  width: 100%;
+}

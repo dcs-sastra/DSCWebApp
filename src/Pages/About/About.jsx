@@ -63,7 +63,7 @@ const About = () => {
     <div>
       <main className="about-jumbotron">
         <div className="quote-wrapper">
-          <h2>About Developers Student Club</h2>
+          <h2>About Developer Student Clubs</h2>
           <h3>
             We are inspired by the energy created when people come together
           </h3>
