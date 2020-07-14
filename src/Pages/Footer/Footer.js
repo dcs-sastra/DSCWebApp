@@ -7,10 +7,10 @@ import linkedin from "../Logos/linkedin-white.svg";
 import { useLocation } from "react-router-dom";
 
 const Address = styled.div`
-  padding: 0 0 50px 10%;
+  padding: 0px 10% 50px 10%;
   position: relative;
   width: 100%;
-  color: grey;
+  color: #666;
   background-color: #f2f2f2;
   font-size: 20px;
   & > h4 {
@@ -59,9 +59,9 @@ const Footer = () => {
         ) : (
           <br />
         )}
-        <h4>DSC SASTRA - Powered By Google Developers</h4>
-        <p>Sastra Deemed to be University,</p>
-        <p>Thanjavur, Tamil Nadu</p>
+        <h4 className="scalable-font">DSC SASTRA - Powered By Google Developers</h4>
+        <p className="scalable-font">Sastra Deemed to be University,</p>
+        <p className="scalable-font">Thanjavur, Tamil Nadu</p>
       </Address>
     </>
   );
