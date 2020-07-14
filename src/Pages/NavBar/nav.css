@@ -36,3 +36,13 @@
   width: 80%;
   background: orange;
 }
+
+.external-link:before {
+  content: "";
+  background: url("../Logos/link.svg");
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: -7px;
+  right: -10px;
+}

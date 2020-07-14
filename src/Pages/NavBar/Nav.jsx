@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import logo from "../Logos/dsc-logo.jpg";
+import link from "../Logos/link.svg";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./nav.css";
@@ -23,7 +24,7 @@ const Nav = () => {
   useEffect(() => {
     setState(width > 768);
   }, [width, location]);
-  
+
   return (
     <div>
       <NavBar>
@@ -38,14 +39,6 @@ const Nav = () => {
         </BrandWrapper>
         {open && (
           <LinkWrapper>
-            <Links>
-              <a
-                href="https://medium.com/dsc-sastra-deemed-to-be-university"
-                target="_blank"
-              >
-                <span className="no-underline">Blog</span>
-              </a>
-            </Links>
             <Links>
               <Link to="/">
                 {location.pathname == "/" ? (
@@ -97,6 +90,14 @@ const Nav = () => {
                 <span className="no-underline">Contact</span>
               </HashedLink>
             </Links>
+            <Links>
+              <a
+                href="https://medium.com/dsc-sastra-deemed-to-be-university"
+                target="_blank"
+              >
+                <span className="no-underline external-link">Blog</span>
+              </a>
+            </Links>
           </LinkWrapper>
         )}
       </NavBar>
@@ -105,12 +106,12 @@ const Nav = () => {
 };
 
 function useWindowSize() {
-  const isClient = typeof window === 'object';
+  const isClient = typeof window === "object";
 
   function getSize() {
     return {
       width: isClient ? window.innerWidth : undefined,
-      height: isClient ? window.innerHeight : undefined
+      height: isClient ? window.innerHeight : undefined,
     };
   }
 
@@ -118,17 +119,17 @@ function useWindowSize() {
 
   useEffect(() => {
     if (!isClient) return false;
-    
+
     function handleResize() {
       setWindowSize(getSize());
     }
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return windowSize;
-};
+}
 
 export default Nav;
