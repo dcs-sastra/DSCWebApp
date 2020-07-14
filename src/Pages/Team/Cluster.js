@@ -89,7 +89,7 @@ const Cluster = (props) => {
           <div className="thumbs">{!clusterState && thumbs}</div>
         </section>
         {!clusterState && <h3>{capitalizeFirstLetter(props.name)}</h3>}
-        {!clusterState && <img src={clusters[`${props.img}.svg`]} />}
+        {!clusterState && <img src={clusters[props.img]} />}
         {clusterState && <div className="drawer">{members}</div>}
       </div>
     );
@@ -101,7 +101,7 @@ const Cluster = (props) => {
         style={newStyles}
         id={capitalizeFirstLetter(props.name).split(" ").join("_")}
       >
-        {!clusterState && <img src={clusters[`${props.img}.svg`]} />}
+        {!clusterState && <img src={clusters[props.img]} />}
         {!clusterState && <h3>{capitalizeFirstLetter(props.name)}</h3>}
         <section className={props.color} style={sectionStyle}>
           {title}

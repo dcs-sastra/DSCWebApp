@@ -39,7 +39,7 @@ const Modal = ({ isOpen, closeModal, data }) => {
               <h3 className="yellow-text">{data.name}</h3>
               <div>{data.main}</div>
               <br />
-              <div>{data.description}</div>
+              <div><pre className="preformatted-content">{data.description}</pre></div>
               <div className="other-info">
                 { data.speakers && 
                   <span>

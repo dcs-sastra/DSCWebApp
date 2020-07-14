@@ -49,6 +49,16 @@ p {
   line-height: 2;
 }
 
+h4.scalable-font {
+  font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (2560 - 300))) !important;
+  line-height: calc(1.5em + (2 - 1.5) * ((100vw - 300px) / (2560 - 300))) !important;;
+}
+
+p.scalable-font {
+  font-size: calc(12px + (24 - 12) * (100vw - 300px) / (2560 - 300)) !important;
+  line-height: calc(1.5em + (2 - 1.5) * (100vw - 300px) / (2560 - 300)) !important;
+}
+
 .loader {
   width: 80%;
   margin: 25vh auto;

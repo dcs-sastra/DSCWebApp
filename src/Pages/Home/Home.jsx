@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Terminal from "./Terminal";
 import path1 from "../../Backgrounds/BlueBG.png";
 import path2 from "../../Backgrounds/P2.svg";
@@ -162,16 +163,13 @@ const TwitterAndContact = styled.div`
   }
 `;
 const TwitterFeed = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
   width: 30%;
   @media (max-width: 768px) {
     margin: 3rem auto;
     width: 90%;
   }
-  & > iframe {
+  & iframe {
     box-shadow: 1px 1px 15px var(--shadow-grey);
     border-radius: 15px;
     margin-top: 3rem;
@@ -219,16 +217,16 @@ const Home = () => {
       <TwitterAndContact id="contact">
         <BG3 src={path3} width="100%" />
         <ContactUs />
+
         <TwitterFeed>
-          <a
-            className="twitter-timeline"
-            href="https://twitter.com/dsc_sastra?ref_src=twsrc%5Etfw"
-            data-height="550"
-            data-width="1400"
-            data-chrome="nofooter"
-          >
-            Tweets by dsc_sastra
-          </a>
+          <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="dsc_sastra"
+            options={{
+              height: 520,
+              width: 1000,
+            }}
+          />
         </TwitterFeed>
       </TwitterAndContact>
     </>

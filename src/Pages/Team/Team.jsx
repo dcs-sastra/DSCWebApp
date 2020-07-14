@@ -5,19 +5,83 @@ import bg2 from "../../Backgrounds/BG_2.png";
 import Cluster from "./Cluster";
 import arrow from "../Logos/down-arrow.svg";
 import loader from "../../loader.gif";
+import styled from "styled-components";
 
 function getRandomNumber() {
   return parseInt(1 + Math.random() * 99);
 }
 
+const CURRENT_YEAR = 2020;
+
+const BatchSwitch = styled.button`
+  padding: 0.7em;
+  border-radius: 50px;
+  background-color: ${(props) => (props.selected ? "#292929" : "#fff")};
+  font-size: 1em;
+  color: ${(props) => (props.selected ? "#fff" : "#000")};
+  outline: none;
+  border: 2px solid #000;
+  transition: background-color 0.5s ease-out, transform 0.5s ease-out;
+  cursor: pointer;
+`;
+
 const Teams = () => {
   const [data, setData] = useState(null);
+  const [allData, setAllData] = useState(null);
+  const [batchSelected, setBatchSelected] = useState("current");
   useEffect(() => {
     fetch("https://dscsastraapi.herokuapp.com/MembersbyCluster")
       .then((res) => res.json())
-      .then((jsonData) => setData(jsonData[0]));
-  }, [setData]);
-  console.log(data);
+      .then((jsonData) => {
+        console.log(jsonData[0]);
+        let batchData = { current: {}, previous: {} };
+        for (let cluster in jsonData[0]) {
+          let currentCluster = jsonData[0][cluster];
+          if (cluster == "lead") {
+            let batchAssign =
+              parseInt(currentCluster.batch) - CURRENT_YEAR >= 0
+                ? "current"
+                : "previous";
+            batchData[batchAssign][cluster] = currentCluster;
+            //Delete this
+            batchData["previous"][cluster] = {
+              batch: 2019,
+              github: "https://github.com/kavinraju",
+              imgUrl: "https://i.postimg.cc/yNYKtWvw/Kavin-Raju.jpg",
+              linkedin: "https://www.linkedin.com/in/kavinraju/",
+              name: "XYZ",
+              role: "DSC Lead, App Developer",
+              twitter: "https://twitter.com/kavinRajuS",
+            };
+          }
+          if (Array.isArray(currentCluster)) {
+            batchData["previous"][cluster] = [];
+            batchData["current"][cluster] = [];
+
+            currentCluster.forEach((member) => {
+              let batchAssign =
+                parseInt(member.batch) - CURRENT_YEAR >= 0
+                  ? "current"
+                  : "previous";
+              batchData[batchAssign][cluster].push(member);
+            });
+
+            // currentCluster.forEach((member) => {
+            //   batchData["previous"][cluster].push(member);
+            // });
+          }
+        }
+        setData(batchData[batchSelected]);
+        setAllData(batchData);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (allData) {
+      setData(allData[batchSelected]);
+    }
+  }, [batchSelected]);
+
   if (data == null) {
     return (
       <div className="loader">
@@ -46,10 +110,37 @@ const Teams = () => {
               <p>{data.lead.role}</p>
             </div>
           </section>
+          <div className="batch-button">
+            {batchSelected == "current" ? (
+              <>
+                <BatchSwitch
+                  onClick={() => setBatchSelected("current")}
+                  selected
+                >
+                  Current Batch
+                </BatchSwitch>
+                <BatchSwitch onClick={() => setBatchSelected("previous")}>
+                  Previous Batch
+                </BatchSwitch>
+              </>
+            ) : (
+              <>
+                <BatchSwitch onClick={() => setBatchSelected("current")}>
+                  Current Batch
+                </BatchSwitch>
+                <BatchSwitch
+                  onClick={() => setBatchSelected("previous")}
+                  selected
+                >
+                  Previous Batch
+                </BatchSwitch>
+              </>
+            )}
+          </div>
           <section className="others">
             <Cluster
               name="android"
-              img="android"
+              img="android.svg"
               color="green"
               right={true}
               id={0}
@@ -57,7 +148,7 @@ const Teams = () => {
             />
             <Cluster
               name="web"
-              img="coding"
+              img="coding.svg"
               right={false}
               color="blue"
               id={1}
@@ -65,7 +156,7 @@ const Teams = () => {
             />
             <Cluster
               name="machine learning"
-              img="learning"
+              img="learning.svg"
               color="yellow"
               right={true}
               id={2}
@@ -74,7 +165,7 @@ const Teams = () => {
 
             <Cluster
               name="AR / VR"
-              img="vr-glasses"
+              img="vr-glasses.svg"
               right={false}
               color="red"
               id={3}
@@ -82,7 +173,7 @@ const Teams = () => {
             />
             <Cluster
               name="Flutter"
-              img="flutterio-icon"
+              img="flutterio-icon.svg"
               color="blue"
               right={true}
               id={4}
@@ -90,7 +181,7 @@ const Teams = () => {
             />
             <Cluster
               name="Cloud"
-              img="setting"
+              img="setting.svg"
               right={false}
               color="yellow"
               id={5}
@@ -98,7 +189,7 @@ const Teams = () => {
             />
             <Cluster
               name="Graphic Designing"
-              img="tools"
+              img="tools.svg"
               color="green"
               right={true}
               id={6}
@@ -106,7 +197,7 @@ const Teams = () => {
             />
             <Cluster
               name="Content Writing"
-              img="report"
+              img="report.svg"
               right={false}
               color="blue"
               id={7}
@@ -114,7 +205,7 @@ const Teams = () => {
             />
             <Cluster
               name="Marketing"
-              img="setting"
+              img="setting.svg"
               color="red"
               right={true}
               id={8}
@@ -122,7 +213,7 @@ const Teams = () => {
             />
             <Cluster
               name="Event Coverage"
-              img="android"
+              img="camera.jpg"
               right={false}
               color="yellow"
               id={9}
@@ -130,7 +221,6 @@ const Teams = () => {
             />
           </section>
         </main>
-        <br />
       </div>
     );
   }

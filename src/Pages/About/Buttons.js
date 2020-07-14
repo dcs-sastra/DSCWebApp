@@ -6,12 +6,15 @@ import youTube from "./assets/youTube.png";
 import insta from "./assets/insta.png";
 import linkedin from "./assets/linkedIn.png";
 import twitter from "./assets/twitter.png";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Buttons = ({ type }) => {
   if (type === 1) {
     return (
       <div className="AboutContactBtn">
-        <button> Contact Us </button>
+        <Link to="/#contact">
+          <button> Contact Us </button>
+        </Link>
       </div>
     );
   }

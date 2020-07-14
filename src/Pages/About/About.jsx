@@ -8,12 +8,16 @@ import learn from "../Logos/learn.svg";
 import connect from "../Logos/connect.svg";
 
 const AboutUs = styled.div`
-  font-size: 2em;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  text-align: justify;
+  text-align-last: center;
   width: 80%;
   padding: 10vh 0;
   margin: auto;
   @media (max-width: 768px) {
-    font-size: 1.5em;
+    font-size: 1rem;
+    line-height: 1.75rem;
   }
 `;
 
@@ -59,7 +63,7 @@ const About = () => {
     <div>
       <main className="about-jumbotron">
         <div className="quote-wrapper">
-          <h2>About Developers Student Club</h2>
+          <h2>About Developer Student Clubs</h2>
           <h3>
             We are inspired by the energy created when people come together
           </h3>
