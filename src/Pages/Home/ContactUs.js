@@ -3,13 +3,14 @@ import styled from "styled-components";
 
 const Card = styled.div`
   background-color: white;
-  width: 90%;
   margin: auto auto;
   border-radius: 30px;
   position: relative;
+  width: 50%;
   box-shadow: 1px 1px 15px var(--shadow-grey);
   @media (max-width: 768px) {
     padding-top: 20px;
+    width: 90%;
   }
 `;
 
@@ -44,7 +45,7 @@ const Form = styled.form`
   }
 
   & > button {
-    width: 20%;
+    width: auto;
     background-color: var(--green);
     color: white;
     font-size: 20px;
