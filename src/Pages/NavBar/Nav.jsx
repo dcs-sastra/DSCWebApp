@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import logo from "../Logos/dsc-logo.png";
+import logo from "../Logos/dsc-logo.jpg";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./nav.css";
