@@ -3,15 +3,18 @@ import styled from "styled-components";
 
 const Card = styled.div`
   background-color: white;
+  margin: auto auto;
   width: 40%;
   margin: 0 auto;
   border-radius: 30px;
   height: 520px;
   position: relative;
+  width: 50%;
   box-shadow: 1px 1px 15px var(--shadow-grey);
   @media (max-width: 768px) {
     width: 90%;
     padding-top: 20px;
+    width: 90%;
   }
 `;
 
@@ -46,7 +49,7 @@ const Form = styled.form`
   }
 
   & > button {
-    width: 100px;
+    width: auto;
     background-color: var(--green);
     color: white;
     font-size: 20px;

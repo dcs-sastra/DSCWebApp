@@ -6,21 +6,17 @@
   --shadow-grey: rgb(165, 165, 165);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-  scroll-behavior: smooth;
-}
-
 @font-face {
   font-family: "Google Sans";
   src: url("./fonts/GoogleSans-Regular-v1.27.ttf");
 }
 
 * {
-  font-family: "Google Sans" !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -50,13 +46,19 @@ p {
 }
 
 h4.scalable-font {
-  font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (2560 - 300))) !important;
-  line-height: calc(1.5em + (2 - 1.5) * ((100vw - 300px) / (2560 - 300))) !important;;
+  font-size: calc(
+    18px + (30 - 18) * ((100vw - 300px) / (2560 - 300))
+  ) !important;
+  line-height: calc(
+    1.5em + (2 - 1.5) * ((100vw - 300px) / (2560 - 300))
+  ) !important;
 }
 
 p.scalable-font {
   font-size: calc(12px + (24 - 12) * (100vw - 300px) / (2560 - 300)) !important;
-  line-height: calc(1.5em + (2 - 1.5) * (100vw - 300px) / (2560 - 300)) !important;
+  line-height: calc(
+    1.5em + (2 - 1.5) * (100vw - 300px) / (2560 - 300)
+  ) !important;
 }
 
 .loader {

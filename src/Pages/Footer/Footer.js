@@ -8,7 +8,9 @@ import { useLocation } from "react-router-dom";
 
 const Address = styled.div`
   padding: 0px 10% 50px 10%;
+  margin-top: 10%;
   position: relative;
+  bottom: 0;
   width: 100%;
   color: #666;
   background-color: #f2f2f2;
@@ -59,7 +61,9 @@ const Footer = () => {
         ) : (
           <br />
         )}
-        <h4 className="scalable-font">DSC SASTRA - Powered By Google Developers</h4>
+        <h4 className="scalable-font">
+          DSC SASTRA - Powered By Google Developers
+        </h4>
         <p className="scalable-font">Sastra Deemed to be University,</p>
         <p className="scalable-font">Thanjavur, Tamil Nadu</p>
       </Address>

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Terminal from "./Terminal";
-import path1 from "../../Backgrounds/P1.svg";
+import path1 from "../../Backgrounds/BlueBG.png";
 import path2 from "../../Backgrounds/P2.svg";
 import path3 from "../../Backgrounds/P3.svg";
 import styled from "styled-components";
@@ -10,23 +10,21 @@ import ContactUs from "./ContactUs";
 
 const BG1 = styled.img`
   position: absolute;
-  width: 130vw;
-  left: 50%;
-  top: 10vh;
   z-index: -10;
-  transform: translate(-50%, -50%);
+  top: 0;
   @media (max-width: 768px) {
-    top: 2vh;
-    width: 200vw;
+    width: 100vw;
+    height: 80vw;
   }
 `;
 
 const BG2 = styled.img`
   position: absolute;
   width: 120vw;
+  height: auto;
   left: 50%;
   z-index: -10;
-  top: 50vh;
+  top: 15vh;
   transform: translate(-50%, -50%);
   @media (max-width: 768px) {
     top: 40vh;
@@ -57,10 +55,11 @@ const BG4 = styled.img`
 `;
 const Section = styled.section`
   position: relative;
-  height: 91vh;
   display: ${(props) => (props.sm ? "none" : "flex")};
+  margin-bottom: 15rem;
   @media (max-width: 768px) {
     display: ${(props) => (props.sm ? "block" : "")};
+    margin-bottom: 5rem;
   }
 `;
 
@@ -157,28 +156,23 @@ const ClusterCard = styled.div`
 const TwitterAndContact = styled.div`
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-space-evenly;
   align-items: center;
-  width: 100%;
-  min-height: 91vh;
-  margin-bottom: 10vh;
+  justify-content: space-evenly;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 const TwitterFeed = styled.div`
   margin: 0 auto;
-  width: 40%;
-  height: 520px;
-  box-shadow: 1px 1px 15px var(--shadow-grey);
-  border-radius: 30px;
-  overflow: hidden;
-  padding-top: 10px;
-  padding-left: 10px;
-  background-color: white;
+  width: 30%;
   @media (max-width: 768px) {
-    margin: 0 auto;
-    margin-top: 10vh;
+    margin: 3rem auto;
     width: 90%;
+  }
+  & iframe {
+    box-shadow: 1px 1px 15px var(--shadow-grey);
+    border-radius: 15px;
+    margin-top: 3rem;
   }
 `;
 
