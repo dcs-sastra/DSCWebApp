@@ -65,6 +65,10 @@
   background-color: white;
 }
 
+.terminal-body-sidebar {
+  width: 35%;
+}
+
 .terminal-body-sidebar,
 .terminal-body-workspace {
   box-shadow: 5px 0 10px -5px #a5a5a5;
@@ -101,6 +105,7 @@
 
 .terminal-body-output {
   flex-grow: 1;
+  color: grey;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -112,6 +117,7 @@
 .terminal-build-status {
   font-size: 1.7rem;
   margin-bottom: 5rem;
+  font-weight: bold;
 }
 .terminal-build-message {
   font-size: 1.3rem;
