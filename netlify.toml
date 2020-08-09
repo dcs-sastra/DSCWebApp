@@ -1,4 +1,20 @@
 [[redirects]]
+  from = "/*.json"
+  to = "/:splat.json"
+  status = 200
+  
+[[redirects]]
+  from = "/*.txt"
+  to = "/:splat.txt"
+  status = 200
+  
+[[redirects]]
+  from = "/static/*"
+  to = "/static/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
