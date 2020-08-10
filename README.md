@@ -10,7 +10,7 @@ Checkout our App <a href="https://play.google.com/store/apps/details?id=dsc.sast
 - React Router
 - Styled Components💅️
 
-### This app is supported by a backend service. Checkout the <a href = "https://github.com">repo</a> to know more.
+### This app is supported by a backend service. Checkout the <a href = "https://github.com/dsc-sastra-university/dsc-api">repo</a> to know more.
 
 #### How to run this app locally
 
