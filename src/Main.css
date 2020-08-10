@@ -1,0 +1,84 @@
+:root {
+  --blue: #4285f4;
+  --red: #db4437;
+  --yellow: #f4b400;
+  --green: #0f9d58;
+  --shadow-grey: rgb(165, 165, 165);
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("./fonts/GoogleSans-Regular-v1.27.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 2;
+}
+
+p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+h4.scalable-font {
+  font-size: calc(
+    18px + (30 - 18) * ((100vw - 300px) / (2560 - 300))
+  ) !important;
+  line-height: calc(
+    1.5em + (2 - 1.5) * ((100vw - 300px) / (2560 - 300))
+  ) !important;
+}
+
+p.scalable-font {
+  font-size: calc(12px + (24 - 12) * (100vw - 300px) / (2560 - 300)) !important;
+  line-height: calc(
+    1.5em + (2 - 1.5) * (100vw - 300px) / (2560 - 300)
+  ) !important;
+}
+
+.loader {
+  width: 80%;
+  margin: 25vh auto;
+  text-align: center;
+}
+
+.loader img {
+  width: 200px;
+}
+
+.more {
+  color: #195faa;
+  font-size: 85%;
+  box-shadow: rgba(255, 255, 255, 0.85) -8px 0px 8px;
+  padding-left: 4px;
+}
+
+.more:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

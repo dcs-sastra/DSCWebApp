@@ -1,0 +1,103 @@
+.events-container {
+  width: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.event-wrapper {
+  position: relative;
+}
+
+.event-title {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.cards-wrapper {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-text {
+  font-size: 80%;
+}
+
+.card {
+  flex: 1 0 300px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 40px var(--shadow-grey);
+  padding: 20px 20px;
+  background-color: white;
+  position: relative;
+  /* margin-bottom: 70px; */
+  transition: 0.15s;
+  max-height: 400px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.card > h3 {
+  text-align: center;
+  line-height: 2;
+  color: black;
+}
+
+.card > p {
+  /* padding: 10px; */
+  text-align: justify;
+  font-size: 1.25rem;
+}
+
+.learn-more {
+  background-color: var(--green);
+  color: white;
+  padding: 10px 70px;
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  /* position: absolute; */
+  border-radius: 40px;
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* bottom: -45px; */
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+  .learn-more {
+    padding: 10px 30px;
+  }
+  .card {
+    padding: 30px 10px;
+  }
+
+  .card > p {
+    padding: 15px 10px;
+    font-size: 20px;
+  }
+}
+
+.hide
+{
+  opacity: 0;
+}

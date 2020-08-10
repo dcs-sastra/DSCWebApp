@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="708" height="2220" viewBox="0 0 708 2220">
+  <g id="Group_1" data-name="Group 1" transform="translate(156 -143)">
+    <g id="Ellipse_6" data-name="Ellipse 6" transform="translate(145 1421)" fill="#fbbc04" stroke="#707070" stroke-width="1">
+      <circle cx="40" cy="40" r="40" stroke="none"/>
+      <circle cx="40" cy="40" r="39.5" fill="none"/>
+    </g>
+    <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(145 904)" fill="#34a853" stroke="#707070" stroke-width="1">
+      <circle cx="40" cy="40" r="40" stroke="none"/>
+      <circle cx="40" cy="40" r="39.5" fill="none"/>
+    </g>
+    <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(30 674)" fill="#f66868" stroke="#707070" stroke-width="1">
+      <circle cx="40" cy="40" r="40" stroke="none"/>
+      <circle cx="40" cy="40" r="39.5" fill="none"/>
+    </g>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="109" cy="109" r="109" transform="translate(-120 1769)" fill="#34a853"/>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="109" cy="109" r="109" transform="translate(334 706)" fill="#1a73e8"/>
+    <path id="Path_2" data-name="Path 2" d="M109,0A109,109,0,1,1,0,109,109,109,0,0,1,109,0Z" transform="translate(-156 143)" fill="#f66868"/>
+    <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(70 2283)" fill="#1a73e8" stroke="#707070" stroke-width="1">
+      <circle cx="40" cy="40" r="40" stroke="none"/>
+      <circle cx="40" cy="40" r="39.5" fill="none"/>
+    </g>
+  </g>
+</svg>
