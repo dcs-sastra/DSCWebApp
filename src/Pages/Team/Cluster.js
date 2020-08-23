@@ -28,6 +28,9 @@ const Cluster = (props) => {
   const handleClusterClick = () => {
     setClusterState(!clusterState);
   };
+  if (props.data.length === 0) {
+    return "";
+  }
   const thumbs = props.data.map((person) => (
     <img
       key={person._id}
