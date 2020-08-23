@@ -1,0 +1,33 @@
+.banner-wrapper {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+}
+
+.banner-relative-wrapper > span {
+  position: absolute;
+  top: 70px;
+  right: 25px;
+  font-weight: 900;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .banner-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+  .banner-relative-wrapper > span {
+    position: absolute;
+    font-weight: 900;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+  }
+}
+.banner-relative-wrapper {
+  position: relative;
+}
+
+.banner-wrapper img {
+  width: 100%;
+}
