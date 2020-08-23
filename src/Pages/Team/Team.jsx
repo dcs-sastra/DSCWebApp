@@ -11,7 +11,7 @@ function getRandomNumber() {
   return parseInt(1 + Math.random() * 99);
 }
 
-const CURRENT_YEAR = 2020;
+const CURRENT_YEAR = Date.now();
 
 const BatchSwitch = styled.button`
   padding: 0.7em;
@@ -30,49 +30,43 @@ const Teams = () => {
   const [allData, setAllData] = useState(null);
   const [batchSelected, setBatchSelected] = useState("current");
   useEffect(() => {
-    fetch("https://dscsastraapi.herokuapp.com/MembersbyCluster")
+    fetch("https://dscsastraapi.herokuapp.com/MembersbyCluster/")
       .then((res) => res.json())
       .then((jsonData) => {
-        console.log(jsonData[0]);
-        let batchData = { current: {}, previous: {} };
-        for (let cluster in jsonData[0]) {
-          let currentCluster = jsonData[0][cluster];
-          if (cluster == "lead") {
-            let batchAssign =
-              parseInt(currentCluster.batch) - CURRENT_YEAR >= 0
-                ? "current"
-                : "previous";
-            batchData[batchAssign][cluster] = currentCluster;
-            //Delete this
-            batchData["previous"][cluster] = {
-              batch: 2019,
-              github: "https://github.com/kavinraju",
-              imgUrl: "https://i.postimg.cc/yNYKtWvw/Kavin-Raju.jpg",
-              linkedin: "https://www.linkedin.com/in/kavinraju/",
-              name: "XYZ",
-              role: "DSC Lead, App Developer",
-              twitter: "https://twitter.com/kavinRajuS",
-            };
-          }
-          if (Array.isArray(currentCluster)) {
-            batchData["previous"][cluster] = [];
-            batchData["current"][cluster] = [];
-
-            currentCluster.forEach((member) => {
-              let batchAssign =
-                parseInt(member.batch) - CURRENT_YEAR >= 0
-                  ? "current"
-                  : "previous";
-              batchData[batchAssign][cluster].push(member);
+        const users = jsonData[0];
+        const allData = {
+          previous: {},
+          current: {},
+        };
+        Object.keys(users).forEach((key) => {
+          if (
+            key !== "id" &&
+            key !== "updatedAt" &&
+            key !== "createdAt" &&
+            key !== "lead"
+          ) {
+            allData.previous[key] = users[key].filter((person) => {
+              let date = new Date(person.batch, 7, 1);
+              return date - CURRENT_YEAR <= 0;
             });
-
-            // currentCluster.forEach((member) => {
-            //   batchData["previous"][cluster].push(member);
-            // });
+            allData.current[key] = users[key].filter((person) => {
+              let date = new Date(person.batch, 7, 1);
+              return date - CURRENT_YEAR > 0;
+            });
           }
-        }
-        setData(batchData[batchSelected]);
-        setAllData(batchData);
+        });
+        allData.previous["lead"] = {
+          batch: 2019,
+          github: "https://github.com/kavinraju",
+          imgUrl: "https://i.postimg.cc/yNYKtWvw/Kavin-Raju.jpg",
+          linkedin: "https://www.linkedin.com/in/kavinraju/",
+          name: "Kavin Raju S",
+          role: "DSC Lead, App Developer",
+          twitter: "https://twitter.com/kavinRajuS",
+        };
+        allData.current["lead"] = users.lead;
+        setData(allData[batchSelected]);
+        setAllData(allData);
       });
   }, []);
 
