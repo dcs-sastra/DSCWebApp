@@ -2,7 +2,12 @@
   from = "/*.json"
   to = "/:splat.json"
   status = 200
-  
+
+[[redirects]]
+  from = "/*.xml"
+  to = "/:splat.xml"
+  status = 200
+
 [[redirects]]
   from = "/*.txt"
   to = "/:splat.txt"
