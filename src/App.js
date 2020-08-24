@@ -10,6 +10,8 @@ const Home = lazy(() => import("./Pages/Home/Home"));
 const EventMain = lazy(() => import("./Pages/Events"));
 const About = lazy(() => import("./Pages/About/About"));
 const Resources = lazy(() => import("./Pages/Resources/Resources"));
+const BotEvents = lazy(() => import("./Pages/Bot/AllEvents"));
+const EventBotDetail = lazy(() => import("./Pages/Bot/EventDetail"));
 
 const Loader = () => {
   return (
@@ -30,6 +32,8 @@ const App = () => {
           <Route exact path="/teams" component={Teams} />
           <Route exact path="/about" component={About} />
           <Route exact path="/resources" component={Resources} />
+          <Route exact path="/bot/events" component={BotEvents} />
+          <Route exact path="/bot/event/:id" component={EventBotDetail} />
         </Switch>
       </Suspense>
       <Footer />
