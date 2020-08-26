@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import banner from "../../Backgrounds/banner-1.png";
-import mobileBanner from "../../Backgrounds/phonebanner.png";
+import dsclogo from "../../Backgrounds/dsclogo.png";
 import "./banner.css";
 
 const Banner = () => {
@@ -8,24 +7,25 @@ const Banner = () => {
   if (open) {
     return (
       <div className="banner-wrapper">
-        <div className="banner-relative-wrapper">
-          {/* Change this URL to URL containing DSC Dairy */}
+        <div className="banner-flex">
+          <img src={dsclogo} className="banner-dsc-logo" alt="..." />
           <a
             href="https://drive.google.com/file/d/1vylyjXZs6HKssF3AQSXmzpmHOycio5yA/view?usp=sharing"
             target="_blank"
+            className="banner-link"
           >
-            <picture>
-              <source media="(min-width:650px)" srcset={banner} />
-              <img src={mobileBanner} alt="Flowers" />
-            </picture>
+            <p>
+              DSC SASTRA Diary is available now.{" "}
+              <span className="banner-blue-text"> Grab your copies here </span>
+            </p>
           </a>
-          <span onClick={() => toggle(false)}>x</span>
+          <span className="banner-close" onClick={() => toggle(false)}>
+            &#10006;
+          </span>
         </div>
       </div>
     );
-  } else {
-    return "";
   }
+  return "";
 };
-
 export default Banner;
