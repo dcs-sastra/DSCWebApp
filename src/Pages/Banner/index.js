@@ -10,7 +10,10 @@ const Banner = () => {
       <div className="banner-wrapper">
         <div className="banner-relative-wrapper">
           {/* Change this URL to URL containing DSC Dairy */}
-          <a href="" target="_blank">
+          <a
+            href="https://drive.google.com/file/d/1vylyjXZs6HKssF3AQSXmzpmHOycio5yA/view?usp=sharing"
+            target="_blank"
+          >
             <picture>
               <source media="(min-width:650px)" srcset={banner} />
               <img src={mobileBanner} alt="Flowers" />
