@@ -4,6 +4,7 @@ import Nav from "./Pages/NavBar/Nav";
 import loader from "./loader.gif";
 import "./Main.css";
 import Footer from "./Pages/Footer/Footer";
+import Banner from "./Pages/Banner";
 
 const Teams = lazy(() => import("./Pages/Team/Team"));
 const Home = lazy(() => import("./Pages/Home/Home"));
@@ -37,6 +38,7 @@ const App = () => {
         </Switch>
       </Suspense>
       <Footer />
+      <Banner />
     </BrowserRouter>
   );
 };
