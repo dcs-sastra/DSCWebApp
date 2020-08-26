@@ -16,7 +16,7 @@ const EventsBot = () => {
 
     const linksList = events.map((event) => {
         return (
-            <Link key={ event.id } to={"/bot/event/" + event.id }></Link>
+            <Link key={ event.id } to={"/bot/event/" + event.id }>{event.name}</Link>
         )
     });
 
