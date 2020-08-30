@@ -16,14 +16,16 @@ const EventsBot = () => {
 
     const linksList = events.map((event) => {
         return (
-            <Link key={ event.id } to={"/bot/event/" + event.id }>{event.name}</Link>
+            <li><Link key={ event.id } to={"/bot/event/" + event.id }>{event.name}</Link><li>
         )
     });
 
     return (
         <div>
           <header><h1>DSC SASTRA Events</h1></header>
-            {linksList}
+            <ul>
+              {linksList}
+            </ul>
         </div>
     );
   
