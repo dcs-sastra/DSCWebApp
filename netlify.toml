@@ -1,4 +1,10 @@
 [[redirects]]
+  from = "https://dsc.sastratbi.in/*"  
+  to = "https://dscsastra.com/:splat"
+  status = 301
+  force = true
+  
+[[redirects]]
   from = "/*.json"
   to = "/:splat.json"
   status = 200
