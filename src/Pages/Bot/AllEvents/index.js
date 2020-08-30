@@ -21,6 +21,7 @@ const EventsBot = () => {
     });
 
     return (
+        <h1>DSC SASTRA Events</h1>
         <div>
             {linksList}
         </div>
