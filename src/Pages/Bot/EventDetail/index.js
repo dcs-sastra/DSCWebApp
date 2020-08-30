@@ -45,9 +45,16 @@ const EventBotDetail = () => {
     
 
     return (
-        <script type="application/ld+json">
-        {getJSON()}
-        </script>
+        <>
+            <script type="application/ld+json">
+            {getJSON()}
+            </script>
+            <h1>{event.name}</h1>
+            <p>{event.description}</p>
+            <img style="height: auto; max-width: 80%" src={event.poster} alt={event.name} />
+             <h3>Performers</h3>
+             <h4>{event.speakers}</h4>
+         </>
     );
   
 };
