@@ -1,0 +1,46 @@
+@media only screen and (min-width: 500px) {
+  .banner-dsc-logo {
+    display: block !important;
+    width: 70px;
+  }
+}
+
+.banner-wrapper {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  box-shadow: -1px -1px 100px rgb(93, 93, 93);
+  padding: 10px;
+  border-radius: 2rem 2rem 0 0;
+  border: 6px solid var(--blue);
+  border-bottom: 0;
+}
+.banner-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-flex p {
+  margin: 0 20px;
+  font-size: 1.5rem;
+}
+
+.banner-dsc-logo {
+  display: none;
+}
+
+.banner-blue-text {
+  color: var(--blue);
+}
+
+.banner-link {
+  text-decoration: none;
+}
+
+.banner-close {
+  cursor: pointer;
+}
