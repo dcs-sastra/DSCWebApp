@@ -54,12 +54,12 @@ const Cluster = (props) => {
       />
       <p>{person.name}</p>
       <div className="social">
-        <a href={person.github} target="_blank">
+        {person.github && <a href={person.github} target="_blank">
           <img src={git} />
-        </a>
-        <a href={person.linkedin} target="_blank">
+        </a>}
+        {person.linkedin && <a href={person.linkedin} target="_blank">
           <img src={linkedin} />
-        </a>
+        </a>}
       </div>
     </div>
   ));
